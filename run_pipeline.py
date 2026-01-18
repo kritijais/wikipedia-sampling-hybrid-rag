@@ -7,6 +7,8 @@ import pandas as pd
 from tqdm import tqdm
 from datetime import datetime
 
+from src.dense_retriever import DenseRetriever
+from src.sparse_retriever import SparseRetriever
 from src.rag_pipeline import HybridRAG
 from src.evaluation import mrr, recall_at_k, bertscore
 from src.llm_judge import judge_answer
@@ -275,6 +277,12 @@ with open(f"{RESULTS_DIR}/metrics_summary.json", "w") as f:
 
 with open(f"{RESULTS_DIR}/llm_judge_metrics.json", "w") as f:
     json.dump(llm_judge_by_mode, f, indent=2)
+
+# -----------------------------
+# Generate Evaluation Plots
+# -----------------------------
+print("\nGenerating evaluation plots...")
+os.system("python src/plot_evaluation.py")
 
 # -----------------------------
 # HTML Report

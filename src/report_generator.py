@@ -21,16 +21,16 @@ def generate_html_report(
     # -----------------------------
     overall_summary = {
         "MRR_avg": round(
-            sum(m["MRR"] for m in metrics_by_mode.values()) / len(metrics_by_mode), 4
+            sum(m["MRR_URL_Level"] for m in metrics_by_mode.values()) / len(metrics_by_mode), 4
         ),
         "Entity_Coverage_avg": round(df["entity_coverage"].mean(), 4),
         "Hallucination_Rate_avg": round(df["hallucinated"].mean(), 4),
         "Avg_Latency_sec": round(df["latency_sec"].mean(), 3),
         "LLM_Judge_Accuracy_avg": round(
-            sum(j["LLM_Judge_Accuracy"] for j in judge_metrics.values()) / len(judge_metrics), 3
+            sum(j["accuracy"] for j in judge_metrics.values()) / len(judge_metrics), 3
         ),
         "LLM_Judge_Relevance_avg": round(
-            sum(j["LLM_Judge_Relevance"] for j in judge_metrics.values()) / len(judge_metrics), 3
+            sum(j["relevance"] for j in judge_metrics.values()) / len(judge_metrics), 3
         )
     }
 
@@ -93,12 +93,13 @@ def generate_html_report(
     {{ results_table }}
 
     <h2>6. Visualizations</h2>
-    <img src="../figures/mrr_by_mode.png">
-    <img src="../figures/recall_at_k.png">
-    <img src="../figures/latency_distribution.png">
-    <img src="../figures/calibration_curve.png">
-    <img src="../figures/error_distribution.png">
-    <img src="../figures/error_heatmap.png">
+    <img src="figures/mrr_by_mode.png">
+    <img src="figures/recall_at_k.png">
+    <img src="figures/latency_distribution.png">
+    <img src="figures/calibration_curve.png">
+    <img src="figures/error_distribution.png">
+    <img src="figures/error_heatmap.png">
+    <img src="figures/error_by_mode_heatmap.png">
 
     <h2>7. Error Analysis – Failure Examples</h2>
     <table>

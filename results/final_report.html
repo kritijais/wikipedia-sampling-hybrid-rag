@@ -1,0 +1,802 @@
+
+    <html>
+    <head>
+        <title>Hybrid RAG – Evaluation Report</title>
+        <style>
+            body { font-family: Arial; margin: 40px; }
+            h1, h2, h3 { color: #2c3e50; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+            th, td { border: 1px solid #ccc; padding: 8px; font-size: 14px; }
+            th { background-color: #f4f6f7; }
+            .metric-box { background: #eef2f3; padding: 15px; margin: 10px 0; }
+            img { max-width: 100%; margin-bottom: 20px; border: 1px solid #ccc; }
+        </style>
+    </head>
+
+    <body>
+
+    <h1>Hybrid RAG System – Evaluation Report</h1>
+
+    <h2>1. Overall Performance Summary</h2>
+    <div class="metric-box">
+        <b>Average MRR (URL Level):</b> 0.8916<br>
+        <b>Average Entity Coverage:</b> 0.3929<br>
+        <b>Average Hallucination Rate:</b> 0.8242<br>
+        <b>Average Latency (sec):</b> 2.329<br>
+        <b>LLM Judge Accuracy (avg):</b> 0.0<br>
+        <b>LLM Judge Relevance (avg):</b> 0.0
+    </div>
+
+    <h2>2. Dataset Versioning</h2>
+    <pre>{
+  "corpus_checksum": "f227cd47341736f1d9fd2d23f1b204f68f0028b91efc1bd76095a0a4f543a8ab",
+  "questions_checksum": "0fd7180f199c54dfa638c89901e81216cf1034f10074af42dd01ebd17c53d831",
+  "num_chunks": 4991,
+  "num_questions": 110,
+  "timestamp": "2026-01-17T18:31:17.878756Z"
+}</pre>
+
+    <h2>3. Retrieval & Generation Metrics (Ablation Study)</h2>
+    <pre>{
+  "dense": {
+    "MRR_URL_Level": 0.9174,
+    "Recall@5_URL": 0.963,
+    "Recall@10_URL": 1.0,
+    "BERTScore_F1": 0.8195,
+    "ECE": 0.0608,
+    "Confidence_Correctness_Correlation": 0.904,
+    "Answer_Diversity": 1.0,
+    "Hallucination_Rate": 0.7909
+  },
+  "sparse": {
+    "MRR_URL_Level": 0.8259,
+    "Recall@5_URL": 0.9643,
+    "Recall@10_URL": 1.0,
+    "BERTScore_F1": 0.8112,
+    "ECE": 0.0443,
+    "Confidence_Correctness_Correlation": 0.9918,
+    "Answer_Diversity": 0.76,
+    "Hallucination_Rate": 0.8909
+  },
+  "hybrid": {
+    "MRR_URL_Level": 0.9316,
+    "Recall@5_URL": 0.9877,
+    "Recall@10_URL": 0.9877,
+    "BERTScore_F1": 0.8046,
+    "ECE": 0.0504,
+    "Confidence_Correctness_Correlation": 0.9191,
+    "Answer_Diversity": 0.9235,
+    "Hallucination_Rate": 0.7909
+  }
+}</pre>
+
+    <h2>4. LLM-as-Judge Evaluation</h2>
+    <p>
+    An LLM (FLAN-T5) was used as an automatic evaluator to assess:
+    factual accuracy, completeness, relevance, and coherence.
+    Scores are averaged over the first 20 questions per mode.
+    </p>
+    <pre>{
+  "dense": {
+    "accuracy": 0.0,
+    "completeness": 0.0,
+    "relevance": 0.0,
+    "coherence": 0.0
+  },
+  "sparse": {
+    "accuracy": 0.0,
+    "completeness": 0.0,
+    "relevance": 0.0,
+    "coherence": 0.0
+  },
+  "hybrid": {
+    "accuracy": 0.0,
+    "completeness": 0.0,
+    "relevance": 0.0,
+    "coherence": 0.0
+  }
+}</pre>
+
+    <h2>5. Question-Level Results (Sample)</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>mode</th>
+      <th>question_id</th>
+      <th>question</th>
+      <th>question_type</th>
+      <th>rank_of_correct_url</th>
+      <th>generated_answer</th>
+      <th>latency_sec</th>
+      <th>entity_coverage</th>
+      <th>hallucinated</th>
+      <th>confidence</th>
+      <th>correct</th>
+      <th>error_type</th>
+      <th>judge_accuracy</th>
+      <th>judge_completeness</th>
+      <th>judge_relevance</th>
+      <th>judge_coherence</th>
+      <th>judge_explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dense</td>
+      <td>0</td>
+      <td>What is Department of Aerospace Science and Technology?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Air Force Squadron.</td>
+      <td>2.429</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>1</td>
+      <td>What is Orlando Magic?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>the NBA Finals, in 1995 and 2000</td>
+      <td>2.098</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>2</td>
+      <td>What is Punk ideologies?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Punk ideology</td>
+      <td>1.438</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>3</td>
+      <td>What is Gaelic Ireland?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Vikings began raiding and founding settlements along Ireland's coasts and waterways, which became its first large towns.</td>
+      <td>2.873</td>
+      <td>1.000</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>4</td>
+      <td>What is Schomburgk Line?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Mark Brandenburg</td>
+      <td>1.449</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>5</td>
+      <td>What is Human rights?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Amnesty International (2004). Amnesty International Report.</td>
+      <td>2.593</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>6</td>
+      <td>What is School of Molecular Sciences?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>fundamental molecule science</td>
+      <td>1.697</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>7</td>
+      <td>What is Method of loci?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>mnemonic method is a way to remember information by using mental images and familiar places.</td>
+      <td>2.492</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>8</td>
+      <td>What is Missile lofting?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>The disadvantages of lofting include:</td>
+      <td>1.754</td>
+      <td>1.000</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>9</td>
+      <td>What is Reward theory of attraction?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>attraction to another</td>
+      <td>1.426</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>10</td>
+      <td>What is Charles Wesley Shilling?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Distinguished Alumni Award from the University of Michigan (1959); the Golden Cross of the Order of the Phoenix from the Greek Government for creating a method of radiation sterilization of a fly, a technique which helped save the Greek olive crop (1960); Alumnus of the Year from Taylor University (1960); the Albert Behnke</td>
+      <td>6.358</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>11</td>
+      <td>What is Housing in Glasgow?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>tenement buildings were constructed to accommodate workers who migrated from the surrounding countryside, the Scottish Highlands, the rest of the United Kingdom, particularly Ireland, and further afield (Italy, Lithuania, Poland) to smaller degrees, to feed the local demand for labour during the Industrial Revolution</td>
+      <td>5.148</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>12</td>
+      <td>What is History of writing?</td>
+      <td>factual</td>
+      <td>2</td>
+      <td>language</td>
+      <td>1.317</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>0.5</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>13</td>
+      <td>What is Sound localization?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>level difference between the ears, and the elevation or vertical angle</td>
+      <td>2.791</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>14</td>
+      <td>What is County town?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>the county town of each county</td>
+      <td>1.666</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>15</td>
+      <td>What is Exploration of Mercury?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>MESSENGER</td>
+      <td>1.542</td>
+      <td>0.167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>16</td>
+      <td>What is The Shade Room?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>The Shade Room is a media company, founded by Angelica Nwandu in March 2014.</td>
+      <td>2.411</td>
+      <td>0.250</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>17</td>
+      <td>What is Geohumanities?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>places and objects in spatial representations visualized via geo-media</td>
+      <td>2.069</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>18</td>
+      <td>What is City network?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>urbanised</td>
+      <td>1.906</td>
+      <td>1.000</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>19</td>
+      <td>What is Marine technology?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>inland, coastal, short sea and deep sea shipping</td>
+      <td>2.016</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>LLM judge failed to parse response</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>20</td>
+      <td>What is Fifth Giant?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>The Fifth Giant is theorized to have been ejected from the Solar System due to gravitational interactions during the chaotic phase of planetary migration, approximately 4 billion years ago.</td>
+      <td>3.711</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>21</td>
+      <td>What is Kurdish literature?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Kurdish literature</td>
+      <td>1.508</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>22</td>
+      <td>What is Substellar object?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>0.013 solar masses)</td>
+      <td>1.615</td>
+      <td>0.500</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>success</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>23</td>
+      <td>What is Microlearning?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>a skill-based education cannot be imparte</td>
+      <td>2.209</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>24</td>
+      <td>What is Spatial justice?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Iris Marion Young</td>
+      <td>2.154</td>
+      <td>1.000</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>success</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>25</td>
+      <td>What is World Federalism?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>world government</td>
+      <td>1.369</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>26</td>
+      <td>What is Spatial frequency?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>cortex operates on a code of spatial frequency</td>
+      <td>1.794</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>27</td>
+      <td>What is Bullet journal?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>a little more advanced</td>
+      <td>1.539</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>28</td>
+      <td>What is Real economy?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>Output: real economy</td>
+      <td>1.542</td>
+      <td>1.000</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>success</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>29</td>
+      <td>What is Houston Rockets?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>the city name</td>
+      <td>1.425</td>
+      <td>0.000</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>6. Visualizations</h2>
+    <img src="figures/mrr_by_mode.png">
+    <img src="figures/recall_at_k.png">
+    <img src="figures/latency_distribution.png">
+    <img src="figures/calibration_curve.png">
+    <img src="figures/error_distribution.png">
+    <img src="figures/error_heatmap.png">
+    <img src="figures/error_by_mode_heatmap.png">
+
+    <h2>7. Error Analysis – Failure Examples</h2>
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Type</th>
+            <th>Error</th>
+            <th>Generated Answer</th>
+        </tr>
+        
+        <tr>
+            <td>What is Department of Aerospace Science and Technology?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>Air Force Squadron.</td>
+        </tr>
+        
+        <tr>
+            <td>What is Orlando Magic?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>the NBA Finals, in 1995 and 2000</td>
+        </tr>
+        
+        <tr>
+            <td>What is Punk ideologies?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>Punk ideology</td>
+        </tr>
+        
+        <tr>
+            <td>What is Gaelic Ireland?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>Vikings began raiding and founding settlements along Ireland's coasts and waterways, which became its first large towns.</td>
+        </tr>
+        
+        <tr>
+            <td>What is Schomburgk Line?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>Mark Brandenburg</td>
+        </tr>
+        
+        <tr>
+            <td>What is Human rights?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>Amnesty International (2004). Amnesty International Report.</td>
+        </tr>
+        
+        <tr>
+            <td>What is School of Molecular Sciences?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>fundamental molecule science</td>
+        </tr>
+        
+        <tr>
+            <td>What is Method of loci?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>mnemonic method is a way to remember information by using mental images and familiar places.</td>
+        </tr>
+        
+        <tr>
+            <td>What is Missile lofting?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>The disadvantages of lofting include:</td>
+        </tr>
+        
+        <tr>
+            <td>What is Reward theory of attraction?</td>
+            <td>factual</td>
+            <td>generation_failure</td>
+            <td>attraction to another</td>
+        </tr>
+        
+    </table>
+
+    <h2>8. Architecture & Innovation</h2>
+    <ul>
+        <li>Hybrid Dense + Sparse Retrieval with RRF</li>
+        <li>LLM-as-Judge evaluation</li>
+        <li>Confidence calibration (ECE)</li>
+        <li>Hallucination-aware metrics</li>
+        <li>Adversarial & unanswerable question testing</li>
+        <li>Interactive Streamlit dashboard</li>
+    </ul>
+
+    <h2>9. System Screenshots</h2>
+    <p>(Add screenshots of Streamlit app, dashboard, error analysis)</p>
+
+    </body>
+    </html>
+    

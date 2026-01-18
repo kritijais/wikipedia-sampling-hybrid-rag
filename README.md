@@ -307,7 +307,6 @@ Evaluated at **K = 5 and K = 10**.
 * High Recall@10 → system is robust even with deeper retrieval
 * Low recall → retrieval failure, even if generation seems fluent
 
----
 
 ### **BERTScore (Generation Quality)**
 
@@ -351,7 +350,6 @@ Entity Coverage = |Entities(prediction ∩ reference)| / |Entities(reference)|
 * High score → grounded, factual answers
 * Low score → missing or hallucinated content
 
----
 
 #### **Hallucination Rate**
 
@@ -369,7 +367,6 @@ An answer is flagged hallucinated if:
 * Lower is better
 * Critical for trustworthiness
 
----
 
 ### **Latency (Efficiency Metric)**
 
@@ -397,7 +394,6 @@ Measured per query and summarized using:
   * Large retrieval K
   * Slow generation
 
----
 
 ### **Answer Diversity**
 
@@ -418,7 +414,6 @@ Answer Diversity = |unique generated answers| / |total answers|
 * Low diversity → over-reliance on generic responses
 * Useful to detect mode collapse in generation
 
----
 
 ### **Confidence Calibration (Expected Calibration Error – ECE)**
 
@@ -442,7 +437,6 @@ ECE = Σ |accuracy(bin) − confidence(bin)| × (bin_size / total_samples)
 * High ECE → overconfidence or underconfidence
 * Critical for decision-making and human-AI trust
 
----
 
 ### **Confidence–Correctness Correlation**
 
@@ -515,12 +509,12 @@ Breakdowns provided:
 
 ## Advanced Experiments
 
-✔ Adversarial Testing
-✔ Dense vs Sparse vs Hybrid Ablation
-✔ Confidence Calibration Curves
-✔ Error Heatmaps
-✔ Hallucination Detection
-✔ LLM-as-Judge Scoring
+* Adversarial Testing
+* Dense vs Sparse vs Hybrid Ablation
+* Confidence Calibration Curves
+* Error Heatmaps
+* Hallucination Detection
+* LLM-as-Judge Scoring
 
 ---
 
@@ -697,7 +691,7 @@ Includes:
 
 ## Conclusion
 
-This project demonstrates a **rHybrid RAG system** with:
+This project demonstrates a **Hybrid RAG system** with:
 
 * Robust retrieval
 * Grounded generation
