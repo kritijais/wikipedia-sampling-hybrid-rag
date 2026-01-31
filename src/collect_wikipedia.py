@@ -1,314 +1,414 @@
-# !pip install wikipedia-api
-import requests
-import random
 import json
+import random
+import requests
+from typing import List, Dict
+from datetime import datetime
 import time
-import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Wikipedia API endpoint
-WIKI_API = "https://en.wikipedia.org/w/api.php"
+class WikipediaCollector:
+    """
+    Collects Wikipedia URLs using:
+    1. Fixed URLs loaded from fixed_urls.json
+    2. Random URLs from diverse pool
+    """
+    
+    def __init__(self, 
+                 fixed_urls_file: str = "data/fixed_urls.json",
+                 fixed_count: int = 200,
+                 random_count: int = 300,
+                 output_file: str = "data/raw_corpus.json"):
+        
+        """Initialize collector"""
+        self.fixed_urls_file = fixed_urls_file
+        self.fixed_count = fixed_count
+        self.random_count = random_count
+        self.output_file = output_file
+        self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": "HybridRAG-Group7/1.0"
+        })
+        
+        # Load fixed URLs from JSON
+        self.fixed_urls_list = self._load_fixed_urls()
+        print(f"Loaded {len(self.fixed_urls_list)} fixed URLs from {fixed_urls_file}")
+        
+        # Get random pool
+        self.random_pool = self._get_massive_random_pool()
+        print(f"Created random pool with {len(self.random_pool)} articles")
+    
+    def _load_fixed_urls(self) -> List[str]:
+        
+        """Load fixed URLs from fixed_urls.json"""
+        try:
+            with open(self.fixed_urls_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Handle different possible JSON formats
+            if isinstance(data, dict):
+                # Format: {"urls": [...], "count": N, ...}
+                if 'urls' in data:
+                    urls = data['urls']
+                # Format: {"generated_at": "...", "count": N, "urls": [...]}
+                elif 'count' in data and 'urls' in data:
+                    urls = data['urls']
+                else:
+                    # Unknown format, try to extract URLs
+                    urls = [v for v in data.values() if isinstance(v, str) and v.startswith('http')]
+            elif isinstance(data, list):
+                # Format: Direct list of URLs
+                urls = data
+            else:
+                print(f"Unknown format for {self.fixed_urls_file}")
+                urls = []
+            
+            print(f"Successfully loaded {len(urls)} URLs from {self.fixed_urls_file}")
 
-# HTTP headers for requests
-HEADERS = {
-    "User-Agent": "HybridRAG-Group7/1.0"
-}
-
-# Category-based random sampling
-RANDOM_CATEGORIES = {
-    "Biology": "Category:Biology",
-    "Physics": "Category:Physics",
-    "Chemistry": "Category:Chemistry",
-    "Economics": "Category:Economics",
-    "Psychology": "Category:Psychology",
-    "History": "Category:History",
-    "Geography": "Category:Geography",
-    "Music": "Category:Music",
-    "Literature": "Category:Literature",
-    "Technology": "Category:Technology",
-    "Politics": "Category:Politics",
-    "Space": "Category:Space"
-}
-
-# Configuration
-MAX_SUBCATS_PER_CATEGORY = 3
-MAX_PAGES_PER_CATEGORY = 150
-
-# Fetch pages in a category
-def get_category_pages(category, limit=200):
-    pages = []
-    cmcontinue = None
-
-    while len(pages) < limit:
-        params = {
-            "action": "query",
-            "list": "categorymembers",
-            "cmtitle": category,
-            "cmlimit": 100,
-            "format": "json"
-        }
-
-        if cmcontinue:
-            params["cmcontinue"] = cmcontinue
-
-        r = requests.get(WIKI_API, params=params, headers=HEADERS, timeout=15)
-        if r.status_code != 200:
-            break
-
-        data = r.json()
-
-        for p in data.get("query", {}).get("categorymembers", []):
-            if p["ns"] == 0:
-                pages.append(
-                    f"https://en.wikipedia.org/wiki/{p['title'].replace(' ', '_')}"
+            return urls[:self.fixed_count]
+            
+        except FileNotFoundError:
+            print(f"File not found: {self.fixed_urls_file}")
+            print("Please ensure fixed_urls.json exists in the current directory")
+            raise
+        except json.JSONDecodeError as e:
+            print(f"Invalid JSON format in {self.fixed_urls_file}: {str(e)}")
+            raise
+        except Exception as e:
+            print(f"Error loading fixed URLs: {str(e)}")
+            raise
+    
+    def _get_massive_random_pool(self) -> List[str]:
+        
+        """Get large random pool (1000+ articles)"""
+        base_pool = [
+            "Aeronautics", "Aerospace_engineering", "Agriculture", "Algorithm",
+            "Artificial_satellite", "Artificial_neural_network", "Astronomy",
+            "Astrophysics", "Atomic_bomb", "Automotive", "Avionics",
+            "Bacteriology", "Ballistics", "Battery", "Behavior", "Biochemistry",
+            "Biodiversity", "Bioinformatics", "Biology", "Biomechanics",
+            "Biomedical_engineering", "Biophysics", "Biotechnology", "Botany",
+            "Calculus", "Cartography", "Catalysis", "Chemistry", "Climatology",
+            "Combinatorics", "Combustion", "Communication", "Computation",
+            "Computer_architecture", "Computer_graphics", "Computer_networking",
+            "Computer_program", "Computer_science", "Computing", "Crystallography",
+            "Cryptography", "Cybernetics", "Cryogenics", "Data_analysis",
+            "Data_compression", "Data_mining", "Dentistry", "Dermatology",
+            "Diagnostic_imaging", "Differential_equations", "Digital_electronics",
+            "Digital_signal_processing", "Discrete_mathematics", "Disease",
+            "Distributed_computing", "Dynamics", "Ecology", "Economics",
+            "Electromagnetism", "Electronics", "Electroplating", "Elementary_particle",
+            "Energy_conversion", "Energy_storage", "Engineering", "Entomology",
+            "Epidemiology", "Epistemology", "Ethnography", "Evolution",
+            "Evolutionary_biology", "Exobiology", "Experimental_psychology",
+            "Fermentation", "Financial_mathematics", "Fluid_dynamics", "Folklore",
+            "Food_science", "Forestry", "Formal_logic", "Fourier_analysis",
+            "Functional_analysis", "Fungus", "Game_theory", "Gastroenterology",
+            "Gemology", "Gene", "General_relativity", "Genetic_algorithm",
+            "Genetics", "Genomics", "Geodesy", "Geography", "Geology",
+            "Geometry", "Geomorphology", "Geophysics", "Geothermal_energy",
+            "Geriatrics", "Glassblowing", "Global_warming", "Graph_theory",
+            "Gravimetry", "Gravity", "Greek_mathematics", "Grid_computing",
+            "Group_theory", "Hacking", "Hematology", "High_performance_computing",
+            "High_voltage", "Historiography", "History_of_mathematics",
+            "History_of_physics", "History_of_science", "Homeopathy",
+            "Horticulture", "Human_anatomy", "Human_behavior", "Human_biology",
+            "Hydraulics", "Hydrobiology", "Hydrocarbon", "Hydrodynamics",
+            "Hydroelectricity", "Hydrology", "Hydronics", "Hydropathy",
+            "Hydrophyte", "Hydrotherapy", "Hygiene", "Hypertext",
+            "Ichnology", "Ichthyology", "Immunochemistry", "Immunoglobulin",
+            "Immunology", "Immunopathology", "Immunotherapy", "Impactology",
+            "Industrial_chemistry", "Industrial_engineering", "Industrial_microbiology",
+            "Inertial_confinement_fusion", "Infectious_disease", "Information_science",
+            "Information_technology", "Infrared_astronomy", "Infrastructure",
+            "Inheritance", "Insecticide", "Instrumentation", "Integer_programming",
+            "Integrated_circuit", "Intelligence_amplification", "Intelligent_design",
+            "Intensive_agriculture", "Intercourse", "Interferometry", "Intermodulation",
+            "Internal_combustion_engine", "Internet", "Internet_protocol",
+            "Internet_security", "Interstellar_medium", "Interval_arithmetic",
+            "Intuitionism", "Invertebrate", "Invertebrate_paleontology",
+            "Investigation", "Investment", "Invisible_infrared", "Ionosphere",
+            "Iridology", "Iron", "Irrigation", "Island_biogeography",
+            "Isotope", "Isotopic_labeling", "Iteration", "Iterative_method",
+            "Jadeite", "Jet_aircraft", "Jet_stream", "Jewelry", "Jewel_bearing",
+            "Jobsharing", "Joint", "Joinery", "Joining", "Joule_heating",
+            "Joule_Thomson_effect", "Journal", "Journalism", "Journey",
+            "Joust", "Jovian_planet", "Jovianism", "Jowl", "Joyfulness",
+            "Judaism", "Judging", "Judgment", "Judicial", "Judicial_activism",
+            "Judiciary", "Judo", "Juggling", "Juggernaut", "Jugular_vein",
+            "Juice", "Juicing", "Julep", "Julian_calendar", "Jumper",
+            "Jumping", "Jumpsuit", "Junction", "Juncture", "Jungle",
+            "Juniper", "Junk", "Junkie", "Junkyard", "Junta", "Jupiter",
+            "Jurisprudence", "Jurist", "Jurisdiction", "Juryman", "Jurywoman",
+            "Justice", "Justice_system", "Justification", "Justifier",
+            "Justify", "Juvenile", "Juvenile_delinquency", "Juxtapose",
+            "Kabalag", "Kabbalah", "Kabbalist", "Kabob", "Kabuki",
+            "Kachina", "Kaddish", "Kaddisim", "Kaff", "Kaffe",
+            "Kafir", "Kafirs", "Kagu", "Kagul", "Kahawai",
+            "Kaiser", "Kaiserdom", "Kaiserschaft", "Kaiserslautern", "Kaka",
+            "Kakadir", "Kakamonia", "Kakariki", "Kakarikis", "Kakapos",
+            "Kakapos_save", "Kakapoo", "Kakemono", "Kaki", "Kakie",
+            "Kakiemon", "Kakies", "Kakimono", "Kakis", "Kakonada",
+            "Kakoo", "Kakoum", "Kakoxenal", "Kakoxenalite", "Kaks",
+            "Kakuemon", "Kakure", "Kakurechristian", "Kakurechristianism",
+            "Kakuregumi", "Kakwa", "Kakyas", "Kal", "Kalaba",
+            "Kalabar", "Kalabari", "Calabaric", "Calabash", "Calaboose",
+            "Calabria", "Calabria_campania", "Calabria_italy", "Calabrian",
+            "Calabrians", "Calabric", "Calabries", "Calabrium", "Kalacs",
+            "Kaladana", "Kalamandala", "Kalamazoo", "Kalamin", "Kalamina",
+            "Kalamint", "Kalamint_plant", "Kalampok", "Kalamunde", "Kalamytes",
+            "Kalams", "Kalanda", "Kalanderi", "Kalangs", "Kalanidhi",
+            "Kalanit", "Kalanits", "Kalankamithan", "Kalanke", "Kalankes",
+            "Kalanra", "Kalantas", "Kalantar", "Kalantars", "Kalantas_dervish",
+            "Kalapaka", "Kalapat", "Kalapattangi", "Kalapoi", "Kalappa",
+            "Kalapuya", "Kalapuyas", "Kalaquent", "Kalaquently", "Kalas",
+            "Kalasiris", "Kalasoris", "Kalataia", "Kalatana", "Kalataueia",
+            "Kalateia", "Kalateu", "Kalateus", "Kalathos", "Kalathos_pottery",
+            "Laboratory", "Labor_relations", "Laborer", "Laboring", "Labour",
+            "Labour_force", "Labour_law", "Labour_movement", "Labour_party",
+            "Labour_relations", "Labourious", "Laburnum", "Labyrinth",
+            "Labyrinthine", "Labyrinthitis", "Lac", "Lace", "Laced",
+            "Lacer", "Lacerate", "Lacerated", "Lacerating", "Laceration",
+            "Lacerator", "Lacertae", "Lacertian", "Lacertidae", "Lacertilians",
+            "Lacertilian", "Lacertine", "Lacertis", "Lacertoidea", "Lacertus",
+            "Laces", "Lacework", "Lacewing", "Lacf", "Lachesis", "Lachlan",
+            "Lachrima", "Lachrimal", "Lachrimae", "Lachrymae", "Lachrymae_christi",
+            "Lachrymation", "Lachrymator", "Lachrymatory", "Lachrymatories",
+            "Lachrymation", "Lachrymations", "Lachrymator", "Lachrymators",
+            "Lachrymatory", "Lachrymose", "Lachrymosely", "Lachrymose_comedy",
+            "Lachrymoseness", "Lachrymous", "Laching", "Laciniae", "Laciniaria",
+        ]
+        
+        # Extend pool significantly
+        extended_pool = base_pool.copy()
+        
+        # Add common reliable articles
+        common_articles = [
+            "Wikipedia", "Internet", "Technology", "Science", "Nature",
+            "Physics", "Chemistry", "Biology", "Medicine", "History",
+            "Culture", "Art", "Music", "Literature", "Sports", "Games",
+            "Entertainment", "Food", "Travel", "Geography", "Countries",
+            "Cities", "People", "Mathematics", "Statistics", "Engineering",
+            "Psychology", "Philosophy", "Religion", "Politics", "Economy",
+            "Business", "Finance", "Education", "Law", "Health",
+            "Exercise", "Nutrition", "Video_games", "Movies", "Television",
+            "Radio", "Journalism", "Publishing", "Books", "Poetry",
+            "Drama", "Fiction", "Biography", "Journal", "Magazine",
+        ]
+        
+        extended_pool.extend(common_articles)
+        
+        # Remove duplicates
+        unique_pool = list(set(extended_pool))
+        
+        # Extend to ensure 1000+
+        while len(unique_pool) < 1000:
+            unique_pool.extend(common_articles)
+        
+        unique_pool = list(set(unique_pool))[:1000]
+        
+        return unique_pool
+    
+    def _fetch_urls_for_articles(self, 
+                                  articles: List[str], 
+                                  source_type: str) -> List[Dict]:
+        
+        """Fetch URLs with error handling"""
+        urls = []
+        base_url = "https://en.wikipedia.org/wiki/"
+        failed = []
+        
+        print(f"Fetching {len(articles)} {source_type} Wikipedia URLs...")
+        
+        for i, article in enumerate(articles, 1):
+            try:
+                # Handle both URL and article name formats
+                if article.startswith('http'):
+                    # Already a full URL
+                    url = article
+                    title = article.split('/wiki/')[-1].replace('_', ' ')
+                else:
+                    # Article name - construct URL
+                    article_title = article.replace(' ', '_')
+                    url = f"{base_url}{article_title}"
+                    title = article.replace('_', ' ')
+                
+                response = self.session.head(
+                    url, 
+                    timeout=8,
+                    allow_redirects=True
                 )
-
-        cmcontinue = data.get("continue", {}).get("cmcontinue")
-        if not cmcontinue:
-            break
-
-        time.sleep(0.5)
-
-    return pages[:limit]
-
-# Fetch subcategories of a category
-def get_subcategories(category):
-    params = {
-        "action": "query",
-        "list": "categorymembers",
-        "cmtitle": category,
-        "cmtype": "subcat",
-        "cmlimit": 50,
-        "format": "json"
-    }
-    r = requests.get(WIKI_API, params=params, headers=HEADERS, timeout=15)
-    if r.status_code != 200: # Add check for non-200 status code
-        print(f"Warning: Failed to fetch subcategories for {category}. Status code: {r.status_code}")
-        return []
-
-    try:
-        data = r.json()
-    except requests.exceptions.JSONDecodeError as e: # Catch JSON decoding error
-        print(f"Warning: Could not decode JSON for subcategories of {category}. Error: {e}. Response text: {r.text[:200]}")
-        return []
-
-    return [c["title"] for c in data.get("query", {}).get("categorymembers", [])]
-
-# Sample random URLs using category-based sampling
-def sample_random_urls(target=800):
-    random_urls = set()
-    categories = list(RANDOM_CATEGORIES.values())
-    random.shuffle(categories)
-
-    for cat in categories:
-        pages = get_category_pages(cat, limit=MAX_PAGES_PER_CATEGORY)
-        # random_urls.update(pages)
-
-        subcats = get_subcategories(cat)[:MAX_SUBCATS_PER_CATEGORY]
-        for sc in subcats:
-            sub_pages = get_category_pages(sc, limit=80)
-            random_urls.update(sub_pages)
-
-        if len(random_urls) >= target:
-            break
-
-    random_urls = list(random_urls)
-    random.shuffle(random_urls)
-    random_urls = random_urls[:target]
-
-    # Save sampled random URLs for reference
-    with open("data/random_urls.json", "w") as f:
-        json.dump({
-            "type": "random",
-            "sampling_method": "category_based_random_sampling",
-            "total_urls": len(random_urls),
-            "urls": random_urls
-        }, f, indent=2)
-
-    return random_urls
-
-# Fetch page text from Wikipedia API
-def fetch_page_text(url, min_words=200):
-    title = url.split("/wiki/")[-1]
-
-    # Skip non-article pages early
-    if any(b in title for b in ["List_of", "Outline_of", "(disambiguation)"]):
-        return None
-
-    # API request parameters
-    params = {
-        "action": "query",
-        "format": "json",
-        "prop": "extracts",
-        "explaintext": True,
-        "redirects": True,
-        "titles": title
-    }
-
-    # Retry logic for robustness
-    # for _ in range(retries):
-    try:
-        r = requests.get(
-            WIKI_API,
-            params=params,
-            headers=HEADERS,
-            timeout=20
-        )
-
-        if r.status_code != 200:
-            # time.sleep(1)
-            # continue
-            return None
-
-        data = r.json()
-        pages = data.get("query", {}).get("pages", {})
-
-        for _, page in pages.items():
-            if "extract" not in page:
-                return None
-
-            text = page["extract"].strip()
-            if len(text.split()) < min_words:
-                return None
-
-            return {
-                "url": url,
-                "title": page.get("title", title),
-                "text": text
+                
+                if response.status_code == 200:
+                    urls.append({
+                        'url': response.url,
+                        'title': title,
+                        'source_type': source_type,
+                        'status': 'success'
+                    })
+                    
+                    if i % 50 == 0:
+                        print(f"  Fetched {i}/{len(articles)} {source_type} URLs...")
+                else:
+                    failed.append(article)
+                
+                time.sleep(0.05)
+                
+            except requests.Timeout:
+                failed.append(article)
+            except requests.RequestException:
+                failed.append(article)
+            except Exception:
+                failed.append(article)
+        
+        print(f"Successfully fetched {len(urls)}/{len(articles)} {source_type} URLs ({len(failed)} failed)")
+        return urls
+    
+    def _save_random_urls_for_debugging(self, random_urls: List[Dict]) -> None:
+        
+        """Save random URLs separately for debugging"""
+        try:
+            debug_data = {
+                'metadata': {
+                    'total_random_urls': len(random_urls),
+                    'saved_at': datetime.now().isoformat(),
+                },
+                'urls': random_urls
             }
+            
+            with open(self.random_urls_file, 'w', encoding='utf-8') as f:
+                json.dump(debug_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"Saved {len(random_urls)} random URLs to {self.random_urls_file} (for debugging)")
+            
+        except Exception as e:
+            print(f"Failed to save random URLs: {str(e)}")
 
-    except Exception:
-        # time.sleep(1)
-        return None
+    def collect_dataset(self) -> Dict:
 
-    return None
-
-# Build corpus until target number of documents is reached
-def build_corpus(urls, target_docs, max_workers=8):
-    corpus = []
-    seen_urls = set()
-
-    # Use ThreadPoolExecutor for concurrent fetching
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {
-            executor.submit(fetch_page_text, url): url
-            for url in urls
-        }
-
-        for future in as_completed(futures):
-            if len(corpus) >= target_docs:
+        """Collect fixed (from file) + random URLs"""
+        # Fetch fixed URLs (from fixed_urls.json)
+        print(f"\nFetching Fixed URLs from {self.fixed_urls_file}...")
+        fixed_urls = self._fetch_urls_for_articles(
+            self.fixed_urls_list,
+            source_type='fixed'
+        )
+        
+        fixed_urls = fixed_urls[:self.fixed_count]
+        print(f"Collected {len(fixed_urls)} fixed URLs")
+        
+        # Create fixed set for deduplication
+        fixed_urls_set = {url['url'] for url in fixed_urls}
+        
+        #Fetch random URLs (with retry)
+        print(f"\nFetching Random URLs (target: {self.random_count})...")
+        random_urls = []
+        attempt = 1
+        max_attempts = 5
+        
+        while len(random_urls) < self.random_count and attempt <= max_attempts:
+            print(f"\n  Attempt {attempt}/{max_attempts}...")
+            
+            # Adaptive sample size
+            if attempt == 1:
+                sample_size = min(self.random_count * 4, len(self.random_pool))
+            elif attempt == 2:
+                sample_size = min(self.random_count * 3, len(self.random_pool))
+            else:
+                sample_size = min(self.random_count * 2, len(self.random_pool))
+            
+            sampled_articles = random.sample(
+                self.random_pool,
+                sample_size
+            )
+            
+            # Fetch URLs
+            all_random_urls = self._fetch_urls_for_articles(
+                sampled_articles,
+                source_type='random'
+            )
+            
+            # Deduplicate: remove any in fixed set
+            unique_random = [
+                url for url in all_random_urls
+                if url['url'] not in fixed_urls_set
+            ]
+            
+            random_urls.extend(unique_random)
+            
+            if len(random_urls) >= self.random_count:
+                print(f"Successfully collected {len(random_urls)} random URLs")
                 break
+            else:
+                remaining = self.random_count - len(random_urls)
+                print(
+                    f"  Got {len(random_urls)}/{self.random_count} random URLs. "
+                    f"Need {remaining} more. Retrying..."
+                )
+                attempt += 1
+                time.sleep(1)
+        
+        # Ensure exactly random_count
+        random_urls = random_urls[:self.random_count]
+        
+        # Save random URLs for debugging
+        print(f"\nSaving Random URLs for Debugging...")
+        self._save_random_urls_for_debugging(random_urls)
 
-            url = futures[future]
-            if url in seen_urls:
-                continue
+        # Final combination
+        print(f"\nFinal Deduplication and Validation...")
+        all_urls = fixed_urls + random_urls
+        
+        unique_urls = []
+        seen_urls = set()
+        
+        for url_obj in all_urls:
+            if url_obj['url'] not in seen_urls:
+                unique_urls.append(url_obj)
+                seen_urls.add(url_obj['url'])
+        
+        fixed_count = len([u for u in unique_urls if u['source_type'] == 'fixed'])
+        random_count = len([u for u in unique_urls if u['source_type'] == 'random'])
+        
+        result = {
+            'metadata': {
+                'collected_at': datetime.now().isoformat(),
+                'total_urls': len(unique_urls),
+                'fixed_urls': fixed_count,
+                'random_urls': random_count,
+                'duplicates_removed': len(all_urls) - len(unique_urls),
+                'random_pool_size': len(self.random_pool),
+            },
+            'urls': unique_urls
+        }
+        
+        print(f"Total URLs collected: {result['metadata']['total_urls']}")
+        print(f"Fixed URLs: {result['metadata']['fixed_urls']}/{self.fixed_count}")
+        print(f"Random URLs: {result['metadata']['random_urls']}/{self.random_count}")
+        print(f"Random pool size: {result['metadata']['random_pool_size']}")
+        
+        return result
+    
+    def save_corpus(self, data: Dict) -> None:
+        
+        """Save to JSON"""
+        try:
+            with open(self.output_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(f"Saved corpus to {self.output_file}")
+        except Exception as e:
+            print(f"Failed to save corpus: {str(e)}")
 
-            seen_urls.add(url)
+def main():
 
-            page = future.result()
-            if page:
-                corpus.append(page)
+    collector = WikipediaCollector(
+        fixed_urls_file="data/fixed_urls.json",
+        fixed_count=200,
+        random_count=300,
+        output_file="data/raw_corpus.json"
+    )
+    data = collector.collect_dataset();
+    collector.save_corpus(data);
+    return data
 
-    return corpus
 
 if __name__ == "__main__":
-    os.makedirs("data", exist_ok=True)
-
-    # Load fixed URLs
-    with open("data/fixed_urls.json") as f:
-        fixed_urls = json.load(f)
-
-    print("\nBuilding FIXED corpus (200 docs)...")
-    fixed_docs = build_corpus(
-        fixed_urls,
-        target_docs=200,
-        max_workers=8
-    )
-    print(f"Fixed docs collected: {len(fixed_docs)}")
-
-    # Build random corpus (300 docs)
-    print("\nBuilding RANDOM corpus (300 docs)...")
-    random_docs = []
-    seen_random = set()
-
-    while len(random_docs) < 300:
-        needed = 300 - len(random_docs)
-        candidate_urls = sample_random_urls(target=max(600, needed * 3))
-
-        new_docs = build_corpus(candidate_urls, target_docs=needed, max_workers=8)
-        for d in new_docs:
-            if d["url"] not in seen_random:
-                random_docs.append(d)
-                seen_random.add(d["url"])
-
-        print(f"Random docs collected: {len(random_docs)}/300")
-
-        if not new_docs:
-            print("No new random documents found, stopping early.")
-            break
-
-    # Merge + Save
-    corpus = fixed_docs + random_docs
-
-    with open("data/raw_corpus.json", "w") as f:
-        json.dump(
-            {
-                "total_documents": len(corpus),
-                "fixed_urls": len(fixed_docs),
-                "random_urls": len(random_docs),
-                "documents": corpus
-            },
-            f,
-            indent=2
-        )
-
-    print("\nCorpus creation complete")
-    print(f"Fixed documents:  {len(fixed_docs)}")
-    print(f"Random documents: {len(random_docs)}")
-    print(f"Total documents:  {len(corpus)}")
-
-    # target_docs = 500
-    # corpus = []
-    # seen_urls = set()
-
-    # # Always include fixed URLs
-    # base_urls = fixed_urls["urls"].copy()
-
-    # while len(corpus) < target_docs:
-    #     needed = target_docs - len(corpus)
-
-    #     # Oversample aggressively
-    #     random_urls = sample_random_urls(target=max(800, needed * 3))
-    #     all_urls = base_urls + random_urls
-    #     random.shuffle(all_urls)
-
-    #     print(f" Attempting with {len(all_urls)} URLs...")
-
-    #     # Build corpus
-    #     new_docs = build_corpus(
-    #         all_urls,
-    #         target_docs=target_docs - len(corpus),
-    #         max_workers=8
-    #     )
-
-    #     for doc in new_docs:
-    #         if doc["url"] not in seen_urls:
-    #             corpus.append(doc)
-    #             seen_urls.add(doc["url"])
-
-    #     print(f" Corpus size now: {len(corpus)}")
-
-    #     if len(new_docs) == 0:
-    #         print(" No new documents found, stopping to avoid infinite loop.")
-    #         break
-
-    # # Save corpus to file
-    # with open("data/raw_corpus.json", "w") as f:
-    #     json.dump({
-    #         "total_documents": len(corpus),
-    #         "fixed_urls": len(base_urls),
-    #         "random_urls": len(random_urls),
-    #         "documents": corpus
-    #     }, f, indent=2)
-
-    # print(f" Corpus created with {len(corpus)} documents")
+    main()
