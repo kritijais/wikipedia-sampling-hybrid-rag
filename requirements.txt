@@ -10,6 +10,7 @@ requests>=2.31.0
 
 # Text processing
 nltk>=3.8.1
+spacy>=3.7.0
 
 # Dense retrieval
 sentence-transformers>=2.2.2
