@@ -32,10 +32,10 @@ RANDOM_CATEGORIES = {
 
 # Configuration
 MAX_SUBCATS_PER_CATEGORY = 3
-MAX_PAGES_PER_CATEGORY = 120
+MAX_PAGES_PER_CATEGORY = 150
 
 # Fetch pages in a category
-def get_category_pages(category, limit=300):
+def get_category_pages(category, limit=200):
     pages = []
     cmcontinue = None
 
@@ -95,21 +95,21 @@ def get_subcategories(category):
     return [c["title"] for c in data.get("query", {}).get("categorymembers", [])]
 
 # Sample random URLs using category-based sampling
-def sample_random_urls(target=300):
+def sample_random_urls(target=800):
     random_urls = set()
     categories = list(RANDOM_CATEGORIES.values())
     random.shuffle(categories)
 
     for cat in categories:
         pages = get_category_pages(cat, limit=MAX_PAGES_PER_CATEGORY)
-        random_urls.update(pages)
+        # random_urls.update(pages)
 
         subcats = get_subcategories(cat)[:MAX_SUBCATS_PER_CATEGORY]
         for sc in subcats:
             sub_pages = get_category_pages(sc, limit=80)
             random_urls.update(sub_pages)
 
-        if len(random_urls) >= target * 2:
+        if len(random_urls) >= target:
             break
 
     random_urls = list(random_urls)
@@ -128,7 +128,7 @@ def sample_random_urls(target=300):
     return random_urls
 
 # Fetch page text from Wikipedia API
-def fetch_page_text(url, min_words=200, retries=3):
+def fetch_page_text(url, min_words=200):
     title = url.split("/wiki/")[-1]
 
     # Skip non-article pages early
@@ -146,43 +146,45 @@ def fetch_page_text(url, min_words=200, retries=3):
     }
 
     # Retry logic for robustness
-    for _ in range(retries):
-        try:
-            r = requests.get(
-                WIKI_API,
-                params=params,
-                headers=HEADERS,
-                timeout=20
-            )
+    # for _ in range(retries):
+    try:
+        r = requests.get(
+            WIKI_API,
+            params=params,
+            headers=HEADERS,
+            timeout=20
+        )
 
-            if r.status_code != 200:
-                time.sleep(1)
-                continue
+        if r.status_code != 200:
+            # time.sleep(1)
+            # continue
+            return None
 
-            data = r.json()
-            pages = data.get("query", {}).get("pages", {})
+        data = r.json()
+        pages = data.get("query", {}).get("pages", {})
 
-            for _, page in pages.items():
-                if "extract" not in page:
-                    return None
+        for _, page in pages.items():
+            if "extract" not in page:
+                return None
 
-                text = page["extract"].strip()
-                if len(text.split()) < min_words:
-                    return None
+            text = page["extract"].strip()
+            if len(text.split()) < min_words:
+                return None
 
-                return {
-                    "url": url,
-                    "title": page.get("title", title),
-                    "text": text
-                }
+            return {
+                "url": url,
+                "title": page.get("title", title),
+                "text": text
+            }
 
-        except Exception:
-            time.sleep(1)
+    except Exception:
+        # time.sleep(1)
+        return None
 
     return None
 
 # Build corpus until target number of documents is reached
-def build_corpus(urls, target_docs=500, max_workers=8):
+def build_corpus(urls, target_docs, max_workers=8):
     corpus = []
     seen_urls = set()
 
@@ -216,48 +218,97 @@ if __name__ == "__main__":
     with open("data/fixed_urls.json") as f:
         fixed_urls = json.load(f)
 
-    target_docs = 500
-    corpus = []
-    seen_urls = set()
+    print("\nBuilding FIXED corpus (200 docs)...")
+    fixed_docs = build_corpus(
+        fixed_urls,
+        target_docs=200,
+        max_workers=8
+    )
+    print(f"Fixed docs collected: {len(fixed_docs)}")
 
-    # Always include fixed URLs
-    base_urls = fixed_urls["urls"].copy()
+    # Build random corpus (300 docs)
+    print("\nBuilding RANDOM corpus (300 docs)...")
+    random_docs = []
+    seen_random = set()
 
-    while len(corpus) < target_docs:
-        needed = target_docs - len(corpus)
+    while len(random_docs) < 300:
+        needed = 300 - len(random_docs)
+        candidate_urls = sample_random_urls(target=max(600, needed * 3))
 
-        # Oversample aggressively
-        random_urls = sample_random_urls(target=max(800, needed * 3))
-        all_urls = base_urls + random_urls
-        random.shuffle(all_urls)
+        new_docs = build_corpus(candidate_urls, target_docs=needed, max_workers=8)
+        for d in new_docs:
+            if d["url"] not in seen_random:
+                random_docs.append(d)
+                seen_random.add(d["url"])
 
-        print(f" Attempting with {len(all_urls)} URLs...")
+        print(f"Random docs collected: {len(random_docs)}/300")
 
-        # Build corpus
-        new_docs = build_corpus(
-            all_urls,
-            target_docs=target_docs - len(corpus),
-            max_workers=8
-        )
-
-        for doc in new_docs:
-            if doc["url"] not in seen_urls:
-                corpus.append(doc)
-                seen_urls.add(doc["url"])
-
-        print(f" Corpus size now: {len(corpus)}")
-
-        if len(new_docs) == 0:
-            print(" No new documents found, stopping to avoid infinite loop.")
+        if not new_docs:
+            print("No new random documents found, stopping early.")
             break
 
-    # Save corpus to file
-    with open("data/raw_corpus.json", "w") as f:
-        json.dump({
-            "total_documents": len(corpus),
-            "fixed_urls": len(base_urls),
-            "random_urls_sampled": len(random_urls),
-            "documents": corpus
-        }, f, indent=2)
+    # Merge + Save
+    corpus = fixed_docs + random_docs
 
-    print(f" Corpus created with {len(corpus)} documents")
+    with open("data/raw_corpus.json", "w") as f:
+        json.dump(
+            {
+                "total_documents": len(corpus),
+                "fixed_urls": len(fixed_docs),
+                "random_urls": len(random_docs),
+                "documents": corpus
+            },
+            f,
+            indent=2
+        )
+
+    print("\nCorpus creation complete")
+    print(f"Fixed documents:  {len(fixed_docs)}")
+    print(f"Random documents: {len(random_docs)}")
+    print(f"Total documents:  {len(corpus)}")
+
+    # target_docs = 500
+    # corpus = []
+    # seen_urls = set()
+
+    # # Always include fixed URLs
+    # base_urls = fixed_urls["urls"].copy()
+
+    # while len(corpus) < target_docs:
+    #     needed = target_docs - len(corpus)
+
+    #     # Oversample aggressively
+    #     random_urls = sample_random_urls(target=max(800, needed * 3))
+    #     all_urls = base_urls + random_urls
+    #     random.shuffle(all_urls)
+
+    #     print(f" Attempting with {len(all_urls)} URLs...")
+
+    #     # Build corpus
+    #     new_docs = build_corpus(
+    #         all_urls,
+    #         target_docs=target_docs - len(corpus),
+    #         max_workers=8
+    #     )
+
+    #     for doc in new_docs:
+    #         if doc["url"] not in seen_urls:
+    #             corpus.append(doc)
+    #             seen_urls.add(doc["url"])
+
+    #     print(f" Corpus size now: {len(corpus)}")
+
+    #     if len(new_docs) == 0:
+    #         print(" No new documents found, stopping to avoid infinite loop.")
+    #         break
+
+    # # Save corpus to file
+    # with open("data/raw_corpus.json", "w") as f:
+    #     json.dump({
+    #         "total_documents": len(corpus),
+    #         "fixed_urls": len(base_urls),
+    #         "random_urls": len(random_urls),
+    #         "documents": corpus
+    #     }, f, indent=2)
+
+    # print(f" Corpus created with {len(corpus)} documents")
