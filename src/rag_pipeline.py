@@ -14,7 +14,7 @@ class HybridRAG:
             sparse_retriever=None, 
             mode="hybrid", 
             top_k=10, 
-            top_n=5, 
+            top_n=8, 
             rrf_k=60):
         self.chunks = chunks
         self.mode = mode

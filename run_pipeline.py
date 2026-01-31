@@ -127,7 +127,8 @@ for mode in ["dense", "sparse", "hybrid"]:
         "accuracy": [],
         "completeness": [],
         "relevance": [],
-        "coherence": []
+        "coherence": [],
+        "explanation": []
     }
 
     for q in tqdm(questions, desc=mode.upper()):
@@ -171,13 +172,20 @@ for mode in ["dense", "sparse", "hybrid"]:
         judge_result = None
         if q["id"] < 20:
             judge_result = judge_answer(question, gt_answer, answer)
+
+            # print(f"\n[LLM Judge] QID: {q['id']}")
+            # print(f"Question: {question}")
+            # print(f"Ground Truth Answer: {gt_answer}")
+            # print(f"Predicted Answer: {answer}")
+            # print(f"Judge Result: {judge_result}")
+
             if not isinstance(judge_result, dict):
                 judge_result = {
                     "accuracy": 0,
                     "completeness": 0,
                     "relevance": 0,
                     "coherence": 0,
-                    "explanation": "Invalid judge output type"
+                    "explanation": "Invalid judge output",
                 }
 
             for k in judge_scores:
@@ -263,10 +271,23 @@ for mode in ["dense", "sparse", "hybrid"]:
         "Hallucination_Rate": round(hallucination_rate(hallucination_flags), 4)
     }
 
-    llm_judge_by_mode[mode] = {
-        k: round(sum(v) / len(v), 3) if v else 0.0
-        for k, v in judge_scores.items()
+    # llm_judge_by_mode[mode] = {
+    #     k: round(sum(v) / len(v), 3) if v else 0.0
+    #     for k, v in judge_scores.items()
+    # }
+
+    NUMERIC_METRICS = {
+        'accuracy',
+        'completeness',
+        'relevance',
+        'coherence'
     }
+
+    llm_judge_by_mode[mode] = {}
+    for k, v in judge_scores.items():
+        if k in NUMERIC_METRICS:
+            numeric_vals = [x for x in v if isinstance(x, (int, float))]
+            llm_judge_by_mode[mode][k] = round(sum(numeric_vals) / len(numeric_vals), 3) if numeric_vals else 0.0
 
 # -----------------------------
 # Save Outputs

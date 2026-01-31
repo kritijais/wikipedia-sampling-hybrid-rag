@@ -7,7 +7,7 @@
       "BERTScore_F1": 0.8195,
       "ECE": 0.0608,
       "Confidence_Correctness_Correlation": 0.904,
-      "Answer_Diversity": 1.0,
+      "Answer_Diversity": 0.96,
       "Hallucination_Rate": 0.7909
     },
     "sparse": {
@@ -17,7 +17,7 @@
       "BERTScore_F1": 0.8112,
       "ECE": 0.0443,
       "Confidence_Correctness_Correlation": 0.9918,
-      "Answer_Diversity": 0.76,
+      "Answer_Diversity": 0.84,
       "Hallucination_Rate": 0.8909
     },
     "hybrid": {
@@ -27,7 +27,7 @@
       "BERTScore_F1": 0.8046,
       "ECE": 0.0504,
       "Confidence_Correctness_Correlation": 0.9191,
-      "Answer_Diversity": 0.9235,
+      "Answer_Diversity": 0.9681,
       "Hallucination_Rate": 0.7909
     }
   },
@@ -36,6 +36,6 @@
     "questions_checksum": "0fd7180f199c54dfa638c89901e81216cf1034f10074af42dd01ebd17c53d831",
     "num_chunks": 4991,
     "num_questions": 110,
-    "timestamp": "2026-01-17T18:31:17.878756Z"
+    "timestamp": "2026-01-31T10:53:57.842498Z"
   }
 }

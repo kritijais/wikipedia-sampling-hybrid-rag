@@ -1,4 +1,3 @@
-# Hybrid RAG System with Advanced Evaluation
 
 ## Overview
 
@@ -215,6 +214,31 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
+## Dependencies
+
+* Python 3.8+
+* Required Python packages listed in `requirements.txt`
+
+## Run Instructions
+
+### System
+
+To run the Hybrid RAG system:
+```bash
+python run_pipeline.py
+```
+
+### Evaluation
+
+To rebuild the dataset and run evaluation:
+```bash
+python run_pipeline.py --rebuild
+```
+
+## Fixed Wikipedia URLs
+
+The fixed Wikipedia URLs used in the project are listed in `data/fixed_urls.json`.
+
 ## System Architecture
 
 **Hybrid RAG Pipeline**
@@ -341,9 +365,9 @@ BERTScore_F1 = mean semantic similarity between generated and reference answers
 
 ---
 
-### Additional Custom Metrics
+## Additional Custom Metrics
 
-#### **Entity Coverage Score**
+### **Entity Coverage Score**
 
 **Why chosen:**
 Evaluates factual grounding by measuring overlap between entities in ground truth and generated answers.
@@ -360,7 +384,7 @@ Entity Coverage = |Entities(prediction ∩ reference)| / |Entities(reference)|
 * Low score → missing or hallucinated content
 
 
-#### **Hallucination Rate**
+### **Hallucination Rate**
 
 **Why chosen:**
 Directly measures unsafe or fabricated answers.

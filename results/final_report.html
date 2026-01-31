@@ -22,7 +22,7 @@
         <b>Average MRR (URL Level):</b> 0.8916<br>
         <b>Average Entity Coverage:</b> 0.3929<br>
         <b>Average Hallucination Rate:</b> 0.8242<br>
-        <b>Average Latency (sec):</b> 2.329<br>
+        <b>Average Latency (sec):</b> 2.873<br>
         <b>LLM Judge Accuracy (avg):</b> 0.0<br>
         <b>LLM Judge Relevance (avg):</b> 0.0
     </div>
@@ -33,7 +33,7 @@
   "questions_checksum": "0fd7180f199c54dfa638c89901e81216cf1034f10074af42dd01ebd17c53d831",
   "num_chunks": 4991,
   "num_questions": 110,
-  "timestamp": "2026-01-17T18:31:17.878756Z"
+  "timestamp": "2026-01-31T10:53:57.842498Z"
 }</pre>
 
     <h2>3. Retrieval & Generation Metrics (Ablation Study)</h2>
@@ -45,7 +45,7 @@
     "BERTScore_F1": 0.8195,
     "ECE": 0.0608,
     "Confidence_Correctness_Correlation": 0.904,
-    "Answer_Diversity": 1.0,
+    "Answer_Diversity": 0.96,
     "Hallucination_Rate": 0.7909
   },
   "sparse": {
@@ -55,7 +55,7 @@
     "BERTScore_F1": 0.8112,
     "ECE": 0.0443,
     "Confidence_Correctness_Correlation": 0.9918,
-    "Answer_Diversity": 0.76,
+    "Answer_Diversity": 0.84,
     "Hallucination_Rate": 0.8909
   },
   "hybrid": {
@@ -65,7 +65,7 @@
     "BERTScore_F1": 0.8046,
     "ECE": 0.0504,
     "Confidence_Correctness_Correlation": 0.9191,
-    "Answer_Diversity": 0.9235,
+    "Answer_Diversity": 0.9681,
     "Hallucination_Rate": 0.7909
   }
 }</pre>
@@ -128,7 +128,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Air Force Squadron.</td>
-      <td>2.429</td>
+      <td>2.880</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -138,7 +138,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -147,7 +147,7 @@
       <td>factual</td>
       <td>1</td>
       <td>the NBA Finals, in 1995 and 2000</td>
-      <td>2.098</td>
+      <td>2.487</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -157,7 +157,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -166,7 +166,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Punk ideology</td>
-      <td>1.438</td>
+      <td>2.047</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -176,7 +176,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -185,7 +185,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Vikings began raiding and founding settlements along Ireland's coasts and waterways, which became its first large towns.</td>
-      <td>2.873</td>
+      <td>4.023</td>
       <td>1.000</td>
       <td>0</td>
       <td>1.0</td>
@@ -195,7 +195,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -204,7 +204,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Mark Brandenburg</td>
-      <td>1.449</td>
+      <td>2.060</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -214,7 +214,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -223,7 +223,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Amnesty International (2004). Amnesty International Report.</td>
-      <td>2.593</td>
+      <td>2.763</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -233,7 +233,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -242,7 +242,7 @@
       <td>factual</td>
       <td>1</td>
       <td>fundamental molecule science</td>
-      <td>1.697</td>
+      <td>2.074</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -252,7 +252,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -261,7 +261,7 @@
       <td>factual</td>
       <td>1</td>
       <td>mnemonic method is a way to remember information by using mental images and familiar places.</td>
-      <td>2.492</td>
+      <td>4.098</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -271,7 +271,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -280,7 +280,7 @@
       <td>factual</td>
       <td>1</td>
       <td>The disadvantages of lofting include:</td>
-      <td>1.754</td>
+      <td>2.250</td>
       <td>1.000</td>
       <td>0</td>
       <td>1.0</td>
@@ -290,7 +290,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Extra data: line 1 column 2 (char 1)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -299,7 +299,7 @@
       <td>factual</td>
       <td>1</td>
       <td>attraction to another</td>
-      <td>1.426</td>
+      <td>1.961</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -309,7 +309,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -318,7 +318,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Distinguished Alumni Award from the University of Michigan (1959); the Golden Cross of the Order of the Phoenix from the Greek Government for creating a method of radiation sterilization of a fly, a technique which helped save the Greek olive crop (1960); Alumnus of the Year from Taylor University (1960); the Albert Behnke</td>
-      <td>6.358</td>
+      <td>6.542</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -328,7 +328,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -337,7 +337,7 @@
       <td>factual</td>
       <td>1</td>
       <td>tenement buildings were constructed to accommodate workers who migrated from the surrounding countryside, the Scottish Highlands, the rest of the United Kingdom, particularly Ireland, and further afield (Italy, Lithuania, Poland) to smaller degrees, to feed the local demand for labour during the Industrial Revolution</td>
-      <td>5.148</td>
+      <td>5.406</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -347,7 +347,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -356,7 +356,7 @@
       <td>factual</td>
       <td>2</td>
       <td>language</td>
-      <td>1.317</td>
+      <td>2.304</td>
       <td>0.000</td>
       <td>1</td>
       <td>0.5</td>
@@ -366,7 +366,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -375,7 +375,7 @@
       <td>factual</td>
       <td>1</td>
       <td>level difference between the ears, and the elevation or vertical angle</td>
-      <td>2.791</td>
+      <td>2.958</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -385,7 +385,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -394,7 +394,7 @@
       <td>factual</td>
       <td>1</td>
       <td>the county town of each county</td>
-      <td>1.666</td>
+      <td>2.152</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -404,7 +404,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -413,7 +413,7 @@
       <td>factual</td>
       <td>1</td>
       <td>MESSENGER</td>
-      <td>1.542</td>
+      <td>2.030</td>
       <td>0.167</td>
       <td>1</td>
       <td>1.0</td>
@@ -423,7 +423,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Extra data: line 1 column 3 (char 2)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -432,7 +432,7 @@
       <td>factual</td>
       <td>1</td>
       <td>The Shade Room is a media company, founded by Angelica Nwandu in March 2014.</td>
-      <td>2.411</td>
+      <td>3.664</td>
       <td>0.250</td>
       <td>1</td>
       <td>1.0</td>
@@ -442,7 +442,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -451,7 +451,7 @@
       <td>factual</td>
       <td>1</td>
       <td>places and objects in spatial representations visualized via geo-media</td>
-      <td>2.069</td>
+      <td>2.548</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -461,7 +461,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -470,7 +470,7 @@
       <td>factual</td>
       <td>1</td>
       <td>urbanised</td>
-      <td>1.906</td>
+      <td>1.869</td>
       <td>1.000</td>
       <td>0</td>
       <td>1.0</td>
@@ -480,7 +480,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -489,7 +489,7 @@
       <td>factual</td>
       <td>1</td>
       <td>inland, coastal, short sea and deep sea shipping</td>
-      <td>2.016</td>
+      <td>2.407</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -499,7 +499,7 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>LLM judge failed to parse response</td>
+      <td>Judge parse failure: Expecting value: line 1 column 1 (char 0)</td>
     </tr>
     <tr>
       <td>dense</td>
@@ -508,7 +508,7 @@
       <td>factual</td>
       <td>1</td>
       <td>The Fifth Giant is theorized to have been ejected from the Solar System due to gravitational interactions during the chaotic phase of planetary migration, approximately 4 billion years ago.</td>
-      <td>3.711</td>
+      <td>5.365</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -527,7 +527,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Kurdish literature</td>
-      <td>1.508</td>
+      <td>1.988</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -546,7 +546,7 @@
       <td>factual</td>
       <td>1</td>
       <td>0.013 solar masses)</td>
-      <td>1.615</td>
+      <td>2.144</td>
       <td>0.500</td>
       <td>0</td>
       <td>1.0</td>
@@ -565,7 +565,7 @@
       <td>factual</td>
       <td>1</td>
       <td>a skill-based education cannot be imparte</td>
-      <td>2.209</td>
+      <td>2.405</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -584,7 +584,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Iris Marion Young</td>
-      <td>2.154</td>
+      <td>2.261</td>
       <td>1.000</td>
       <td>0</td>
       <td>1.0</td>
@@ -603,7 +603,7 @@
       <td>factual</td>
       <td>1</td>
       <td>world government</td>
-      <td>1.369</td>
+      <td>2.984</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -622,7 +622,7 @@
       <td>factual</td>
       <td>1</td>
       <td>cortex operates on a code of spatial frequency</td>
-      <td>1.794</td>
+      <td>2.308</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -641,7 +641,7 @@
       <td>factual</td>
       <td>1</td>
       <td>a little more advanced</td>
-      <td>1.539</td>
+      <td>2.043</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
@@ -660,7 +660,7 @@
       <td>factual</td>
       <td>1</td>
       <td>Output: real economy</td>
-      <td>1.542</td>
+      <td>2.055</td>
       <td>1.000</td>
       <td>0</td>
       <td>1.0</td>
@@ -679,7 +679,7 @@
       <td>factual</td>
       <td>1</td>
       <td>the city name</td>
-      <td>1.425</td>
+      <td>1.987</td>
       <td>0.000</td>
       <td>1</td>
       <td>1.0</td>
