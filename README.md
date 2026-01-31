@@ -192,6 +192,7 @@ Group_07_Hybrid_RAG/
 │   ├── plot_evaluation.py
 │
 ├── run_pipeline.py
+│
 ├── app.py
 ├── results/
 │   ├── evaluation_results.csv
@@ -205,6 +206,14 @@ Group_07_Hybrid_RAG/
 ```
 
 ---
+
+## Setup and Installation
+
+To set up the project, first install the required dependencies:
+```bash
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
 
 ## System Architecture
 
@@ -536,24 +545,6 @@ python plot_evaluation.py
 
 ---
 
-## Interactive Dashboard
-
-Run the Streamlit app:
-
-```bash
-streamlit run app.py
-```
-
-Features:
-
-* Real-time querying
-* Dense / Sparse / Hybrid comparison
-* Retrieval explanations
-* Chunk-level inspection
-* Latency tracking
-
----
-
 ## One-Command Pipeline
 
 The entire Hybrid RAG system—from data ingestion to evaluation and reporting—can be executed using a **single command**, with optional rebuilding of the dataset.
@@ -657,6 +648,24 @@ This guarantees:
 | No flag            | Fast evaluation, parameter tuning   |
 | Checksums          | Version control for data            |
 | Single entry point | CI/CD & automation friendly         |
+
+---
+
+## Interactive Dashboard
+
+Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+Features:
+
+* Real-time querying
+* Dense / Sparse / Hybrid comparison
+* Retrieval explanations
+* Chunk-level inspection
+* Latency tracking
 
 ---
 
