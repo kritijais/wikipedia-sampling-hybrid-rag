@@ -171,8 +171,17 @@ for mode in ["dense", "sparse", "hybrid"]:
         judge_result = None
         if q["id"] < 20:
             judge_result = judge_answer(question, gt_answer, answer)
+            if not isinstance(judge_result, dict):
+                judge_result = {
+                    "accuracy": 0,
+                    "completeness": 0,
+                    "relevance": 0,
+                    "coherence": 0,
+                    "explanation": "Invalid judge output type"
+                }
+
             for k in judge_scores:
-                judge_scores[k].append(judge_result[k])
+                judge_scores[k].append(judge_result.get(k, 0))
 
         # -----------------------------
         # Novel Metrics
