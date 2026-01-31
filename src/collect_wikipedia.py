@@ -4,6 +4,8 @@ import requests
 from typing import List, Dict
 from datetime import datetime
 import time
+import re
+from bs4 import BeautifulSoup
 
 class WikipediaCollector:
     """
@@ -16,13 +18,15 @@ class WikipediaCollector:
                  fixed_urls_file: str = "data/fixed_urls.json",
                  fixed_count: int = 200,
                  random_count: int = 300,
-                 output_file: str = "data/raw_corpus.json"):
+                 output_file: str = "data/raw_corpus.json",
+                 min_word_count: int = 100):
         
         """Initialize collector"""
         self.fixed_urls_file = fixed_urls_file
         self.fixed_count = fixed_count
         self.random_count = random_count
         self.output_file = output_file
+        self.min_word_count = min_word_count
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "HybridRAG-Group7/1.0"
@@ -207,6 +211,63 @@ class WikipediaCollector:
         
         return unique_pool
     
+    def _extract_text_from_wikipedia(self, url: str) -> tuple:
+        
+        """Extract text content from Wikipedia page"""
+        try:
+            response = self.session.get(url, timeout=8)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Get title
+            title_elem = soup.find('h1', class_='firstHeading')
+            if not title_elem:
+                return None, None
+            title = title_elem.get_text()
+            
+            # Get content
+            content_div = soup.find('div', id='mw-content-text')
+            if not content_div:
+                return None, None
+            
+            # Extract paragraphs
+            paragraphs = content_div.find_all('p')
+            text_content = '\n\n'.join([p.get_text() for p in paragraphs if p.get_text().strip()])
+            
+            # Clean text
+            text_content = self._clean_text(text_content)
+            
+            # Check minimum word count
+            word_count = len(text_content.split())
+            if word_count < self.min_word_count:
+                print(f"Text too short ({word_count} words): {url}")
+                return None, None
+            
+            return title, text_content
+            
+        except Exception as e:
+            print(f"Failed to extract text from {url}: {str(e)}")
+            return None, None
+    
+    def _clean_text(self, text: str) -> str:
+        
+        """Clean Wikipedia text"""
+        # Remove citations [1], [2], etc.
+        text = re.sub(r'\[\d+\]', '', text)
+        
+        # Remove extra whitespace
+        text = re.sub(r'\s+', ' ', text)
+        
+        # Remove common Wikipedia artifacts
+        text = re.sub(r'\[citation needed\]', '', text)
+        text = re.sub(r'\(pronunciation\s*\)', '', text)
+        
+        # Remove URLs
+        text = re.sub(r'http\S+|www\S+', '', text)
+        
+        return text.strip()
+    
     def _fetch_urls_for_articles(self, 
                                   articles: List[str], 
                                   source_type: str) -> List[Dict]:
@@ -231,31 +292,25 @@ class WikipediaCollector:
                     url = f"{base_url}{article_title}"
                     title = article.replace('_', ' ')
                 
-                response = self.session.head(
-                    url, 
-                    timeout=8,
-                    allow_redirects=True
-                )
+                # Extract text content
+                page_title, text_content = self._extract_text_from_wikipedia(url)
                 
-                if response.status_code == 200:
+                if page_title and text_content:
                     urls.append({
-                        'url': response.url,
-                        'title': title,
+                        'url': url,
+                        'title': page_title,
+                        'text': text_content,
                         'source_type': source_type,
                         'status': 'success'
                     })
                     
                     if i % 50 == 0:
-                        print(f"  Fetched {i}/{len(articles)} {source_type} URLs...")
+                        print(f"  Fetched {i}/{len(articles)} {source_type} pages with text...")
                 else:
                     failed.append(article)
                 
                 time.sleep(0.05)
                 
-            except requests.Timeout:
-                failed.append(article)
-            except requests.RequestException:
-                failed.append(article)
             except Exception:
                 failed.append(article)
         
@@ -371,16 +426,16 @@ class WikipediaCollector:
         result = {
             'metadata': {
                 'collected_at': datetime.now().isoformat(),
-                'total_urls': len(unique_urls),
+                'total_documents': len(unique_urls),
                 'fixed_urls': fixed_count,
                 'random_urls': random_count,
                 'duplicates_removed': len(all_urls) - len(unique_urls),
                 'random_pool_size': len(self.random_pool),
             },
-            'urls': unique_urls
+            'documents': unique_urls
         }
         
-        print(f"Total URLs collected: {result['metadata']['total_urls']}")
+        print(f"Total documents collected: {result['metadata']['total_documents']}")
         print(f"Fixed URLs: {result['metadata']['fixed_urls']}/{self.fixed_count}")
         print(f"Random URLs: {result['metadata']['random_urls']}/{self.random_count}")
         print(f"Random pool size: {result['metadata']['random_pool_size']}")
