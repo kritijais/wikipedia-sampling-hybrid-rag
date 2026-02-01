@@ -162,11 +162,12 @@ save(fig, "rank_histogram.png")
 if judge_metrics:
     judge_df = pd.DataFrame(judge_metrics).T
 
-    fig = plt.figure(figsize=(8, 4))
-    judge_df.plot(kind="bar")
-    plt.title("LLM-as-Judge Scores by Retrieval Mode")
-    plt.ylabel("Score (1–5)")
-    plt.xticks(rotation=0)
+    fig, ax = plt.subplots(figsize=(8, 4))
+    judge_df.plot(kind="bar", ax=ax)
+    ax.set_title("LLM-as-Judge Scores by Retrieval Mode")
+    ax.set_ylabel("Score (1–5)")
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
+    ax.legend()
     save(fig, "llm_judge_scores.png")
 
 # -----------------------------

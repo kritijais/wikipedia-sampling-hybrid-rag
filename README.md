@@ -164,7 +164,7 @@ Generated Answer
 ## Project Structure
 
 ```
-Group_07_Hybrid_RAG/
+wikipedia-sampling-hybrid-rag
 │
 ├── data/
 │   ├── fixed_urls.json
@@ -206,38 +206,181 @@ Group_07_Hybrid_RAG/
 
 ---
 
-## Setup and Installation
+## Installation Steps
 
-To set up the project, first install the required dependencies:
-```bash
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-```
+1. Create a virtual environment (optional but recommended):
+   ```
+   python -m venv env
+   source env/bin/activate  # On macOS/Linux
+   # or env\Scripts\activate on Windows
+   ```
+
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   python -m spacy download en_core_web_sm
+   ```
+
+---
+
 
 ## Dependencies
 
-* Python 3.8+
-* Required Python packages listed in `requirements.txt`
+The project requires the following Python packages (listed in requirements.txt):
 
-## Run Instructions
+- numpy
+- pandas
+- torch
+- transformers
+- faiss-cpu
+- sentence-transformers
+- bm25
+- rank_bm25
+- nltk
+- beautifulsoup4
+- requests
+- tqdm
+- scikit-learn
+- matplotlib
+- seaborn
+- plotly
+- kaleido
+- openai
+- python-dotenv
+- streamlit
+- And various Streamlit-related packages for the UI
 
-### System
+---
 
-To run the Hybrid RAG system:
-```bash
-python run_pipeline.py
-```
 
-### Evaluation
+## Run Instructions - One-Command Pipeline
 
-To rebuild the dataset and run evaluation:
+The entire Hybrid RAG system—from data ingestion to evaluation and reporting—can be executed using a **single command**, with optional rebuilding of the dataset.
+
+### **Full Rebuild + Evaluation**
+
 ```bash
 python run_pipeline.py --rebuild
 ```
 
+**When to use:**
+
+* First-time setup
+* After modifying:
+
+  * Wikipedia sampling logic
+  * Chunking strategy
+  * Question generation (new question types, adversarial cases)
+* When dataset versions must be regenerated for reproducibility
+
+**What it does:**
+
+1. Collects a fresh Wikipedia corpus
+2. Preprocesses and chunks documents
+3. Regenerates 100+ diverse evaluation questions
+4. Runs RAG evaluation (Dense / Sparse / Hybrid)
+5. Computes all metrics
+6. Generates reports and visualizations
+
+**Outputs:**
+
+* `results/evaluation_results.csv`
+* `results/metrics_summary.json`
+* `results/llm_judge_metrics.json`
+* `results/final_report.html`
+* `results/figures/*.png`
+* Dataset checksums for version tracking
+
+
+### **Evaluation Only (No Rebuild)**
+
+```bash
+python run_pipeline.py
+```
+
+**When to use:**
+
+* After dataset is already built
+* When experimenting with:
+
+  * Retrieval parameters (K, N, RRF-k)
+  * Dense vs Sparse vs Hybrid comparison
+  * New evaluation metrics or plots
+  * Confidence calibration and error analysis
+* For rapid iteration and debugging
+
+**Why this mode exists:**
+
+* Avoids **expensive recomputation** (Wikipedia crawling, LLM-based question generation)
+* Enables **fast experimentation** on a fixed dataset
+* Ensures **fair comparison** across models using the same corpus and questions
+
+**What it does:**
+
+* Loads existing:
+
+  * `corpus_chunks.json`
+  * `questions_100.json`
+* Runs evaluation only
+* Updates metrics, plots, and reports
+
+
+### Reproducibility & Dataset Versioning
+
+Each run records:
+
+* SHA-256 checksum of:
+
+  * Corpus chunks
+  * Question set
+* Timestamp
+* Number of chunks and questions
+
+This guarantees:
+
+* Exact reproducibility
+* Traceable evaluation results
+* Fair ablation studies across system variants
+
+
+### Design Rationale
+
+| Mode               | Purpose                             |
+| ------------------ | ----------------------------------- |
+| `--rebuild`        | Dataset regeneration, major changes |
+| No flag            | Fast evaluation, parameter tuning   |
+| Checksums          | Version control for data            |
+| Single entry point | CI/CD & automation friendly         |
+
+
+---
+
+
+## Interactive Dashboard
+
+Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+Features:
+
+* Real-time querying
+* Dense / Sparse / Hybrid comparison
+* Retrieval explanations
+* Chunk-level inspection
+* Latency tracking
+
+---
+
+
 ## Fixed Wikipedia URLs
 
 The fixed Wikipedia URLs used in the project are listed in `data/fixed_urls.json`.
+
+---
+
 
 ## System Architecture
 
@@ -311,11 +454,10 @@ Each question includes:
 
 * Measures how quickly the correct Wikipedia page is retrieved.
 
----
 
-## Additional Metrics (Justified)
+### Additional Metrics (Justified)
 
-### **Recall@5 and Recall@10 (URL Level)**
+#### **Recall@5 and Recall@10 (URL Level)**
 
 **Why chosen:**
 Recall@K measures **retrieval completeness**—whether the system is able to retrieve the correct source document within the top-K results.
@@ -341,7 +483,7 @@ Evaluated at **K = 5 and K = 10**.
 * Low recall → retrieval failure, even if generation seems fluent
 
 
-### **BERTScore (Generation Quality)**
+#### **BERTScore (Generation Quality)**
 
 **Why chosen:**
 Exact string matching is insufficient for open-ended QA.
@@ -363,11 +505,10 @@ BERTScore_F1 = mean semantic similarity between generated and reference answers
 * Lower score → missing key concepts or incorrect meaning
 * Useful even when wording differs from ground truth
 
----
 
-## Additional Custom Metrics
+### Additional Custom Metrics
 
-### **Entity Coverage Score**
+#### **Entity Coverage Score**
 
 **Why chosen:**
 Evaluates factual grounding by measuring overlap between entities in ground truth and generated answers.
@@ -384,7 +525,7 @@ Entity Coverage = |Entities(prediction ∩ reference)| / |Entities(reference)|
 * Low score → missing or hallucinated content
 
 
-### **Hallucination Rate**
+#### **Hallucination Rate**
 
 **Why chosen:**
 Directly measures unsafe or fabricated answers.
@@ -401,7 +542,7 @@ An answer is flagged hallucinated if:
 * Critical for trustworthiness
 
 
-### **Latency (Efficiency Metric)**
+#### **Latency (Efficiency Metric)**
 
 **Why chosen:**
 Practical RAG systems must balance **accuracy and responsiveness**.
@@ -428,7 +569,7 @@ Measured per query and summarized using:
   * Slow generation
 
 
-### **Answer Diversity**
+#### **Answer Diversity**
 
 **Why chosen:**
 Ensures the system does not produce **overly repetitive or template-based answers**, especially across multiple questions.
@@ -448,7 +589,7 @@ Answer Diversity = |unique generated answers| / |total answers|
 * Useful to detect mode collapse in generation
 
 
-### **Confidence Calibration (Expected Calibration Error – ECE)**
+#### **Confidence Calibration (Expected Calibration Error – ECE)**
 
 **Why chosen:**
 A trustworthy system should be **confident when correct** and **uncertain when wrong**.
@@ -471,7 +612,7 @@ ECE = Σ |accuracy(bin) − confidence(bin)| × (bin_size / total_samples)
 * Critical for decision-making and human-AI trust
 
 
-### **Confidence–Correctness Correlation**
+#### **Confidence–Correctness Correlation**
 
 **Why chosen:**
 Measures whether **higher confidence actually corresponds to correctness**, beyond calibration alone.
@@ -566,130 +707,6 @@ Generated via:
 ```bash
 python plot_evaluation.py
 ```
-
----
-
-## One-Command Pipeline
-
-The entire Hybrid RAG system—from data ingestion to evaluation and reporting—can be executed using a **single command**, with optional rebuilding of the dataset.
-
----
-
-### **Full Rebuild + Evaluation**
-
-```bash
-python run_pipeline.py --rebuild
-```
-
-**When to use:**
-
-* First-time setup
-* After modifying:
-
-  * Wikipedia sampling logic
-  * Chunking strategy
-  * Question generation (new question types, adversarial cases)
-* When dataset versions must be regenerated for reproducibility
-
-**What it does:**
-
-1. Collects a fresh Wikipedia corpus
-2. Preprocesses and chunks documents
-3. Regenerates 100+ diverse evaluation questions
-4. Runs RAG evaluation (Dense / Sparse / Hybrid)
-5. Computes all metrics
-6. Generates reports and visualizations
-
-**Outputs:**
-
-* `results/evaluation_results.csv`
-* `results/metrics_summary.json`
-* `results/llm_judge_metrics.json`
-* `results/final_report.html`
-* `results/figures/*.png`
-* Dataset checksums for version tracking
-
----
-
-### **Evaluation Only (No Rebuild)**
-
-```bash
-python run_pipeline.py
-```
-
-**When to use:**
-
-* After dataset is already built
-* When experimenting with:
-
-  * Retrieval parameters (K, N, RRF-k)
-  * Dense vs Sparse vs Hybrid comparison
-  * New evaluation metrics or plots
-  * Confidence calibration and error analysis
-* For rapid iteration and debugging
-
-**Why this mode exists:**
-
-* Avoids **expensive recomputation** (Wikipedia crawling, LLM-based question generation)
-* Enables **fast experimentation** on a fixed dataset
-* Ensures **fair comparison** across models using the same corpus and questions
-
-**What it does:**
-
-* Loads existing:
-
-  * `corpus_chunks.json`
-  * `questions_100.json`
-* Runs evaluation only
-* Updates metrics, plots, and reports
-
----
-
-### Reproducibility & Dataset Versioning
-
-Each run records:
-
-* SHA-256 checksum of:
-
-  * Corpus chunks
-  * Question set
-* Timestamp
-* Number of chunks and questions
-
-This guarantees:
-
-* Exact reproducibility
-* Traceable evaluation results
-* Fair ablation studies across system variants
-
----
-
-### Design Rationale
-
-| Mode               | Purpose                             |
-| ------------------ | ----------------------------------- |
-| `--rebuild`        | Dataset regeneration, major changes |
-| No flag            | Fast evaluation, parameter tuning   |
-| Checksums          | Version control for data            |
-| Single entry point | CI/CD & automation friendly         |
-
----
-
-## Interactive Dashboard
-
-Run the Streamlit app:
-
-```bash
-streamlit run app.py
-```
-
-Features:
-
-* Real-time querying
-* Dense / Sparse / Hybrid comparison
-* Retrieval explanations
-* Chunk-level inspection
-* Latency tracking
 
 ---
 
