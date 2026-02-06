@@ -33,7 +33,7 @@ class SemanticChunker:
         
         lines = text.split('\n')
         current_section = None
-        current_block = {'type': 'paragraph', 'content': '', 'metadata': {}}
+        current_block = {'type': 'paragraph', 'content': ''}
         
         i = 0
         while i < len(lines):
@@ -53,10 +53,9 @@ class SemanticChunker:
                 blocks.append({
                     'type': 'heading',
                     'level': level,
-                    'content': heading_text,
-                    'metadata': {'section': current_section}
+                    'content': heading_text
                 })
-                current_block = {'type': 'paragraph', 'content': '', 'metadata': {'section': current_section}}
+                current_block = {'type': 'paragraph', 'content': ''}
                 i += 1
                 continue
             
@@ -72,14 +71,9 @@ class SemanticChunker:
                 
                 blocks.append({
                     'type': 'image',
-                    'content': alt_text,
-                    'metadata': {
-                        'image_url': img_url,
-                        'section': current_section,
-                        'description': alt_text
-                    }
+                    'content': alt_text
                 })
-                current_block = {'type': 'paragraph', 'content': '', 'metadata': {'section': current_section}}
+                current_block = {'type': 'paragraph', 'content': ''}
                 i += 1
                 continue
             
@@ -98,13 +92,9 @@ class SemanticChunker:
                 
                 blocks.append({
                     'type': 'table',
-                    'content': self._parse_table(table_lines),
-                    'metadata': {
-                        'section': current_section,
-                        'raw_table': '\n'.join(table_lines)
-                    }
+                    'content': self._parse_table(table_lines)
                 })
-                current_block = {'type': 'paragraph', 'content': '', 'metadata': {'section': current_section}}
+                current_block = {'type': 'paragraph', 'content': ''}
                 continue
             
             # Regular paragraph text
@@ -113,7 +103,6 @@ class SemanticChunker:
                     current_block['content'] += ' ' + line
                 else:
                     current_block['content'] = line
-                    current_block['metadata']['section'] = current_section
             
             i += 1
         
@@ -169,14 +158,7 @@ class SemanticChunker:
                     chunks.append(current_chunk.copy())
                 
                 current_chunk = {
-                    'text': f"[SECTION: {block_text}]",
-                    'metadata': {
-                        'sections': [block_text],
-                        'has_table': False,
-                        'has_image': False,
-                        'images': [],
-                        'tables': []
-                    }
+                    'text': f"[SECTION: {block_text}]"
                 }
                 current_words = len(block_text.split())
                 continue
@@ -185,11 +167,6 @@ class SemanticChunker:
             if block['type'] == 'image':
                 image_text = f"[IMAGE: {block_text}]" if block_text else "[IMAGE]"
                 current_chunk['text'] += f" {image_text}"
-                current_chunk['metadata']['has_image'] = True
-                current_chunk['metadata']['images'].append({
-                    'url': block['metadata'].get('image_url', ''),
-                    'description': block_text
-                })
                 current_words += len(image_text.split())
                 continue
             
@@ -201,20 +178,11 @@ class SemanticChunker:
                 if current_words + len(table_text.split()) > self.chunk_size and current_chunk['text'].strip():
                     chunks.append(current_chunk.copy())
                     current_chunk = {
-                        'text': table_text,
-                        'metadata': {
-                            'sections': current_chunk['metadata']['sections'].copy(),
-                            'has_table': True,
-                            'has_image': False,
-                            'images': [],
-                            'tables': [block['metadata'].get('raw_table', '')]
-                        }
+                        'text': table_text
                     }
                     current_words = len(table_text.split())
                 else:
                     current_chunk['text'] += f" {table_text}"
-                    current_chunk['metadata']['has_table'] = True
-                    current_chunk['metadata']['tables'].append(block['metadata'].get('raw_table', ''))
                     current_words += len(table_text.split())
                 continue
             
@@ -235,13 +203,6 @@ class SemanticChunker:
                         
                         current_chunk = {
                             'text': overlap_text + ' ' + sentence,
-                            'metadata': {
-                                'sections': current_chunk['metadata']['sections'].copy(),
-                                'has_table': False,
-                                'has_image': False,
-                                'images': [],
-                                'tables': []
-                            }
                         }
                         current_words = len(current_chunk['text'].split())
                     else:
@@ -250,10 +211,7 @@ class SemanticChunker:
                             current_chunk['text'] += ' ' + sentence
                         else:
                             current_chunk['text'] = sentence
-                        
-                        if block['metadata'].get('section') and block['metadata']['section'] not in current_chunk['metadata']['sections']:
-                            current_chunk['metadata']['sections'].append(block['metadata']['section'])
-                        
+
                         current_words += sentence_words
         
         # Add final chunk
@@ -299,14 +257,7 @@ if __name__ == "__main__":
                 "chunk_id": cid,
                 "url": doc["url"],
                 "title": doc["title"],
-                "text": chunk['text'],
-                "metadata": {
-                    "sections": chunk['metadata']['sections'],
-                    "has_table": chunk['metadata']['has_table'],
-                    "has_image": chunk['metadata']['has_image'],
-                    "images": chunk['metadata']['images'],
-                    "tables": chunk['metadata']['tables']
-                }
+                "text": chunk['text']
             })
             cid += 1
     
@@ -316,5 +267,3 @@ if __name__ == "__main__":
     
     # Print statistics
     print(f"Total chunks created: {len(chunked)}")
-    print(f"Chunks with tables: {sum(1 for c in chunked if c['metadata']['has_table'])}")
-    print(f"Chunks with images: {sum(1 for c in chunked if c['metadata']['has_image'])}")
