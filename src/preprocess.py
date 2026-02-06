@@ -155,14 +155,7 @@ class SemanticChunker:
         """
         chunks = []
         current_chunk = {
-            'text': '',
-            'metadata': {
-                'sections': [],
-                'has_table': False,
-                'has_image': False,
-                'images': [],
-                'tables': []
-            }
+            'text': ''
         }
         current_words = 0
         
