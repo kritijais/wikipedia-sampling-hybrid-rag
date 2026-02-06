@@ -119,66 +119,48 @@ class WikipediaCollector:
             "Hydroelectricity", "Hydrology", "Hydronics", "Hydropathy",
             "Hydrophyte", "Hydrotherapy", "Hygiene", "Hypertext",
             "Ichnology", "Ichthyology", "Immunochemistry", "Immunoglobulin",
-            "Immunology", "Immunopathology", "Immunotherapy", "Impactology",
+            "Immunology", "Immunopathology", "Immunotherapy",
             "Industrial_chemistry", "Industrial_engineering", "Industrial_microbiology",
             "Inertial_confinement_fusion", "Infectious_disease", "Information_science",
             "Information_technology", "Infrared_astronomy", "Infrastructure",
             "Inheritance", "Insecticide", "Instrumentation", "Integer_programming",
             "Integrated_circuit", "Intelligence_amplification", "Intelligent_design",
-            "Intensive_agriculture", "Intercourse", "Interferometry", "Intermodulation",
+            "Intensive_agriculture", "Interferometry", "Intermodulation",
             "Internal_combustion_engine", "Internet", "Internet_protocol",
             "Internet_security", "Interstellar_medium", "Interval_arithmetic",
             "Intuitionism", "Invertebrate", "Invertebrate_paleontology",
-            "Investigation", "Investment", "Invisible_infrared", "Ionosphere",
+            "Investigation", "Investment", "Ionosphere",
             "Iridology", "Iron", "Irrigation", "Island_biogeography",
             "Isotope", "Isotopic_labeling", "Iteration", "Iterative_method",
             "Jadeite", "Jet_aircraft", "Jet_stream", "Jewelry", "Jewel_bearing",
-            "Jobsharing", "Joint", "Joinery", "Joining", "Joule_heating",
-            "Joule_Thomson_effect", "Journal", "Journalism", "Journey",
-            "Joust", "Jovian_planet", "Jovianism", "Jowl", "Joyfulness",
+            "Jobsharing", "Joint", "Joinery", "Joule_heating", "Journal", 
+            "Joust", "Jovian_planet", "Jowl",
             "Judaism", "Judging", "Judgment", "Judicial", "Judicial_activism",
             "Judiciary", "Judo", "Juggling", "Juggernaut", "Jugular_vein",
-            "Juice", "Juicing", "Julep", "Julian_calendar", "Jumper",
-            "Jumping", "Jumpsuit", "Junction", "Juncture", "Jungle",
-            "Juniper", "Junk", "Junkie", "Junkyard", "Junta", "Jupiter",
-            "Jurisprudence", "Jurist", "Jurisdiction", "Juryman", "Jurywoman",
-            "Justice", "Justice_system", "Justification", "Justifier",
-            "Justify", "Juvenile", "Juvenile_delinquency", "Juxtapose",
-            "Kabalag", "Kabbalah", "Kabbalist", "Kabob", "Kabuki",
-            "Kachina", "Kaddish", "Kaddisim", "Kaff", "Kaffe",
+            "Juice", "Juicing", "Julian_calendar",
+            "Jumping", "Jumpsuit", "Juncture", "Jungle",
+            "Juniper", "Jupiter",
+            "Jurisprudence", "Jurist", "Jurisdiction", "Juryman",
+            "Justice", "Justice_system",
+            "Juvenile_delinquency", "Juxtapose",
+            "Kabbalah", "Kabbalist", "Kabob", "Kabuki",
+            "Kachina", "Kaddish",
             "Kafir", "Kafirs", "Kagu", "Kagul", "Kahawai",
-            "Kaiser", "Kaiserdom", "Kaiserschaft", "Kaiserslautern", "Kaka",
-            "Kakadir", "Kakamonia", "Kakariki", "Kakarikis", "Kakapos",
-            "Kakapos_save", "Kakapoo", "Kakemono", "Kaki", "Kakie",
-            "Kakiemon", "Kakies", "Kakimono", "Kakis", "Kakonada",
-            "Kakoo", "Kakoum", "Kakoxenal", "Kakoxenalite", "Kaks",
-            "Kakuemon", "Kakure", "Kakurechristian", "Kakurechristianism",
-            "Kakuregumi", "Kakwa", "Kakyas", "Kal", "Kalaba",
-            "Kalabar", "Kalabari", "Calabaric", "Calabash", "Calaboose",
-            "Calabria", "Calabria_campania", "Calabria_italy", "Calabrian",
-            "Calabrians", "Calabric", "Calabries", "Calabrium", "Kalacs",
-            "Kaladana", "Kalamandala", "Kalamazoo", "Kalamin", "Kalamina",
-            "Kalamint", "Kalamint_plant", "Kalampok", "Kalamunde", "Kalamytes",
-            "Kalams", "Kalanda", "Kalanderi", "Kalangs", "Kalanidhi",
-            "Kalanit", "Kalanits", "Kalankamithan", "Kalanke", "Kalankes",
-            "Kalanra", "Kalantas", "Kalantar", "Kalantars", "Kalantas_dervish",
-            "Kalapaka", "Kalapat", "Kalapattangi", "Kalapoi", "Kalappa",
-            "Kalapuya", "Kalapuyas", "Kalaquent", "Kalaquently", "Kalas",
-            "Kalasiris", "Kalasoris", "Kalataia", "Kalatana", "Kalataueia",
-            "Kalateia", "Kalateu", "Kalateus", "Kalathos", "Kalathos_pottery",
-            "Laboratory", "Labor_relations", "Laborer", "Laboring", "Labour",
-            "Labour_force", "Labour_law", "Labour_movement", "Labour_party",
-            "Labour_relations", "Labourious", "Laburnum", "Labyrinth",
-            "Labyrinthine", "Labyrinthitis", "Lac", "Lace", "Laced",
-            "Lacer", "Lacerate", "Lacerated", "Lacerating", "Laceration",
-            "Lacerator", "Lacertae", "Lacertian", "Lacertidae", "Lacertilians",
-            "Lacertilian", "Lacertine", "Lacertis", "Lacertoidea", "Lacertus",
-            "Laces", "Lacework", "Lacewing", "Lacf", "Lachesis", "Lachlan",
-            "Lachrima", "Lachrimal", "Lachrimae", "Lachrymae", "Lachrymae_christi",
-            "Lachrymation", "Lachrymator", "Lachrymatory", "Lachrymatories",
-            "Lachrymation", "Lachrymations", "Lachrymator", "Lachrymators",
-            "Lachrymatory", "Lachrymose", "Lachrymosely", "Lachrymose_comedy",
-            "Lachrymoseness", "Lachrymous", "Laching", "Laciniae", "Laciniaria",
+            "Kaiser", "Kaiserdom", "Kaiserslautern",
+            "Kakemono", "Kakie",
+            "Kalanda", "Kalanit", "Kalantas", "Kalantar",
+            "Kalasiris",
+            "Kalathos",
+            "Laboratory", "Labor_relations", "Laborer", "Labour_movement",
+            "Labour_relations", "Laburnum", "Labyrinth",
+            "Labyrinthine", "Labyrinthitis", "Lace",
+            "Lacerate", "Lacerated", "Lacerating", "Laceration",
+            "Lacertae", "Lacertian", "Lacertidae",
+            "Lacertilian", "Lacertine", "Lacertoidea", "Lacertus",
+            "Lacework", "Lacewing", "Lachesis",
+            "Lachrimae", "Lachrymae",
+            "Lachrymation",
+            "Laching",
         ]
         
         # Extend pool significantly
@@ -317,26 +299,6 @@ class WikipediaCollector:
         print(f"Successfully fetched {len(urls)}/{len(articles)} {source_type} URLs ({len(failed)} failed)")
         return urls
     
-    def _save_random_urls_for_debugging(self, random_urls: List[Dict]) -> None:
-        
-        """Save random URLs separately for debugging"""
-        try:
-            debug_data = {
-                'metadata': {
-                    'total_random_urls': len(random_urls),
-                    'saved_at': datetime.now().isoformat(),
-                },
-                'urls': random_urls
-            }
-            
-            with open(self.random_urls_file, 'w', encoding='utf-8') as f:
-                json.dump(debug_data, f, indent=2, ensure_ascii=False)
-            
-            print(f"Saved {len(random_urls)} random URLs to {self.random_urls_file} (for debugging)")
-            
-        except Exception as e:
-            print(f"Failed to save random URLs: {str(e)}")
-
     def collect_dataset(self) -> Dict:
 
         """Collect fixed (from file) + random URLs"""
@@ -403,10 +365,6 @@ class WikipediaCollector:
         
         # Ensure exactly random_count
         random_urls = random_urls[:self.random_count]
-        
-        # Save random URLs for debugging
-        print(f"\nSaving Random URLs for Debugging...")
-        self._save_random_urls_for_debugging(random_urls)
 
         # Final combination
         print(f"\nFinal Deduplication and Validation...")
