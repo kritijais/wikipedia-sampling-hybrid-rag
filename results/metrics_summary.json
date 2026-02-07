@@ -1,41 +1,41 @@
 {
   "metrics_by_mode": {
     "dense": {
-      "MRR_URL_Level": 0.9174,
-      "Recall@5_URL": 0.963,
+      "MRR_URL_Level": 0.8838,
+      "Recall@5_URL": 1.0,
       "Recall@10_URL": 1.0,
-      "BERTScore_F1": 0.8412,
-      "ECE": 0.0608,
-      "Confidence_Correctness_Correlation": 0.904,
-      "Answer_Diversity": 0.5359,
-      "Hallucination_Rate": 0.7545
+      "BERTScore_F1": 0.8468,
+      "ECE": 0.1141,
+      "Confidence_Correctness_Correlation": 0.3852,
+      "Answer_Diversity": 0.6298,
+      "Hallucination_Rate": 0.5091
     },
     "sparse": {
-      "MRR_URL_Level": 0.8259,
-      "Recall@5_URL": 0.9643,
+      "MRR_URL_Level": 0.4982,
+      "Recall@5_URL": 0.75,
       "Recall@10_URL": 1.0,
-      "BERTScore_F1": 0.8381,
-      "ECE": 0.0443,
-      "Confidence_Correctness_Correlation": 0.9918,
-      "Answer_Diversity": 0.4436,
-      "Hallucination_Rate": 0.9
+      "BERTScore_F1": 0.8417,
+      "ECE": 0.1018,
+      "Confidence_Correctness_Correlation": 0.9921,
+      "Answer_Diversity": 0.367,
+      "Hallucination_Rate": 0.9455
     },
     "hybrid": {
-      "MRR_URL_Level": 0.9316,
-      "Recall@5_URL": 0.9877,
-      "Recall@10_URL": 0.9877,
-      "BERTScore_F1": 0.8433,
-      "ECE": 0.0504,
-      "Confidence_Correctness_Correlation": 0.9191,
-      "Answer_Diversity": 0.551,
-      "Hallucination_Rate": 0.7273
+      "MRR_URL_Level": 0.8376,
+      "Recall@5_URL": 0.9697,
+      "Recall@10_URL": 0.9899,
+      "BERTScore_F1": 0.8465,
+      "ECE": 0.1692,
+      "Confidence_Correctness_Correlation": 0.2988,
+      "Answer_Diversity": 0.5959,
+      "Hallucination_Rate": 0.5091
     }
   },
   "dataset_version": {
-    "corpus_checksum": "f227cd47341736f1d9fd2d23f1b204f68f0028b91efc1bd76095a0a4f543a8ab",
-    "questions_checksum": "0fd7180f199c54dfa638c89901e81216cf1034f10074af42dd01ebd17c53d831",
-    "num_chunks": 4991,
+    "corpus_checksum": "b8af2362d5f10dedbbd8ff40b34290507466ffaaf59b955f691b83d09ff305ea",
+    "questions_checksum": "ce12183d6628a530ea32fb620382c843876841f4def16e4197bcf3bccc483ff0",
+    "num_chunks": 7264,
     "num_questions": 110,
-    "timestamp": "2026-01-31T16:14:09.484230Z"
+    "timestamp": "2026-02-07T09:23:17.446221Z"
   }
 }

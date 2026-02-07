@@ -19,54 +19,54 @@
 
     <h2>1. Overall Performance Summary</h2>
     <div class="metric-box">
-        <b>Average MRR (URL Level):</b> 0.8916<br>
-        <b>Average Entity Coverage:</b> 0.4139<br>
-        <b>Average Hallucination Rate:</b> 0.7939<br>
-        <b>Average Latency (sec):</b> 16.398<br>
-        <b>LLM Judge Accuracy (avg):</b> 2.147<br>
-        <b>LLM Judge Relevance (avg):</b> 2.317
+        <b>Average MRR (URL Level):</b> 0.7399<br>
+        <b>Average Entity Coverage:</b> 0.4849<br>
+        <b>Average Hallucination Rate:</b> 0.6545<br>
+        <b>Average Latency (sec):</b> 26.299<br>
+        <b>LLM Judge Accuracy (avg):</b> 1.918<br>
+        <b>LLM Judge Relevance (avg):</b> 2.083
     </div>
 
     <h2>2. Dataset Versioning</h2>
     <pre>{
-  "corpus_checksum": "f227cd47341736f1d9fd2d23f1b204f68f0028b91efc1bd76095a0a4f543a8ab",
-  "questions_checksum": "0fd7180f199c54dfa638c89901e81216cf1034f10074af42dd01ebd17c53d831",
-  "num_chunks": 4991,
+  "corpus_checksum": "b8af2362d5f10dedbbd8ff40b34290507466ffaaf59b955f691b83d09ff305ea",
+  "questions_checksum": "ce12183d6628a530ea32fb620382c843876841f4def16e4197bcf3bccc483ff0",
+  "num_chunks": 7264,
   "num_questions": 110,
-  "timestamp": "2026-01-31T16:14:09.484230Z"
+  "timestamp": "2026-02-07T09:23:17.446221Z"
 }</pre>
 
     <h2>3. Retrieval & Generation Metrics (Ablation Study)</h2>
     <pre>{
   "dense": {
-    "MRR_URL_Level": 0.9174,
-    "Recall@5_URL": 0.963,
+    "MRR_URL_Level": 0.8838,
+    "Recall@5_URL": 1.0,
     "Recall@10_URL": 1.0,
-    "BERTScore_F1": 0.8412,
-    "ECE": 0.0608,
-    "Confidence_Correctness_Correlation": 0.904,
-    "Answer_Diversity": 0.5359,
-    "Hallucination_Rate": 0.7545
+    "BERTScore_F1": 0.8468,
+    "ECE": 0.1141,
+    "Confidence_Correctness_Correlation": 0.3852,
+    "Answer_Diversity": 0.6298,
+    "Hallucination_Rate": 0.5091
   },
   "sparse": {
-    "MRR_URL_Level": 0.8259,
-    "Recall@5_URL": 0.9643,
+    "MRR_URL_Level": 0.4982,
+    "Recall@5_URL": 0.75,
     "Recall@10_URL": 1.0,
-    "BERTScore_F1": 0.8381,
-    "ECE": 0.0443,
-    "Confidence_Correctness_Correlation": 0.9918,
-    "Answer_Diversity": 0.4436,
-    "Hallucination_Rate": 0.9
+    "BERTScore_F1": 0.8417,
+    "ECE": 0.1018,
+    "Confidence_Correctness_Correlation": 0.9921,
+    "Answer_Diversity": 0.367,
+    "Hallucination_Rate": 0.9455
   },
   "hybrid": {
-    "MRR_URL_Level": 0.9316,
-    "Recall@5_URL": 0.9877,
-    "Recall@10_URL": 0.9877,
-    "BERTScore_F1": 0.8433,
-    "ECE": 0.0504,
-    "Confidence_Correctness_Correlation": 0.9191,
-    "Answer_Diversity": 0.551,
-    "Hallucination_Rate": 0.7273
+    "MRR_URL_Level": 0.8376,
+    "Recall@5_URL": 0.9697,
+    "Recall@10_URL": 0.9899,
+    "BERTScore_F1": 0.8465,
+    "ECE": 0.1692,
+    "Confidence_Correctness_Correlation": 0.2988,
+    "Answer_Diversity": 0.5959,
+    "Hallucination_Rate": 0.5091
   }
 }</pre>
 
@@ -78,22 +78,22 @@
     </p>
     <pre>{
   "dense": {
-    "accuracy": 2.127,
-    "completeness": 2.25,
-    "relevance": 2.25,
-    "coherence": 2.25
+    "accuracy": 1.95,
+    "completeness": 2.1,
+    "relevance": 2.1,
+    "coherence": 2.1
   },
   "sparse": {
-    "accuracy": 2.098,
-    "completeness": 2.4,
-    "relevance": 2.4,
-    "coherence": 2.4
+    "accuracy": 1.788,
+    "completeness": 2.0,
+    "relevance": 2.0,
+    "coherence": 2.0
   },
   "hybrid": {
-    "accuracy": 2.215,
-    "completeness": 2.3,
-    "relevance": 2.3,
-    "coherence": 2.3
+    "accuracy": 2.015,
+    "completeness": 2.15,
+    "relevance": 2.15,
+    "coherence": 2.15
   }
 }</pre>
 
@@ -124,36 +124,36 @@
     <tr>
       <td>dense</td>
       <td>0</td>
-      <td>What is Department of Aerospace Science and Technology?</td>
+      <td>Based on the article 'Laboratory', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>the national military research center for aviation and space flight. It is subordinated to the Brazilian Air Force (FAB).</td>
-      <td>16.709</td>
-      <td>0.400</td>
+      <td>facility that provides controlled conditions in which scientific or technological research, experiments, and measurement may be performed.</td>
+      <td>34.233</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>success</td>
-      <td>2.716822</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>Single-score output from LLM</td>
+      <td>generation_failure</td>
+      <td>1.770044</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>1</td>
-      <td>What is Orlando Magic?</td>
+      <td>Based on the article 'Philosophy', what is the primary definition or role described?</td>
       <td>factual</td>
-      <td>1</td>
-      <td>an American professional basketball team based in Orlando, Florida. The name "Magic" alludes to the area's biggest</td>
-      <td>16.034</td>
-      <td>0.200</td>
-      <td>1</td>
-      <td>1.0</td>
+      <td>2</td>
+      <td>The goal is to give an unbiased description of the appearance of things. Methodological naturalism places great emphasis on</td>
+      <td>23.603</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0.5</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.887261</td>
+      <td>1.617391</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -162,55 +162,55 @@
     <tr>
       <td>dense</td>
       <td>2</td>
-      <td>What is Punk ideologies?</td>
+      <td>Based on the article 'Urban evolution', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>a group of varied social and political beliefs associated with the punk subculture and punck rock.</td>
-      <td>15.640</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>heritable genetic changes of populations in response to urban development and anthropogenic activities in urban areas.</td>
+      <td>20.693</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>2.522819</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>Single-score output from LLM</td>
+      <td>1.849102</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>3</td>
-      <td>What is Gaelic Ireland?</td>
+      <td>Based on the article 'Hydrocarbon', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>the Gaelic political and social order, and associated culture, that existed in Ireland from the late prehistoric era until the 17th century.</td>
-      <td>19.720</td>
-      <td>1.000</td>
+      <td>I cannot answer this from the provided context. The vast majority of hydrocarbons found on Earth occur in crude oil, petroleum, coal</td>
+      <td>28.137</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>success</td>
-      <td>2.232353</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>Single-score output from LLM</td>
+      <td>generation_failure</td>
+      <td>1.622973</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>4</td>
-      <td>What is Schomburgk Line?</td>
+      <td>Based on the article 'Kitchenette', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>The Schomburgk Line is the name given to a survey line that figured in 19th-century territorial dispute between Venezuela</td>
-      <td>17.036</td>
-      <td>0.250</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. A small cooking area, which usually has a refrigerator and microwave oven</td>
+      <td>24.219</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
-      <td>2.530841</td>
+      <td>success</td>
+      <td>2.303226</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -219,36 +219,36 @@
     <tr>
       <td>dense</td>
       <td>5</td>
-      <td>What is Human rights?</td>
+      <td>Based on the article 'Imagine (Gal Gadot video)', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>universally recognized moral principles or norms that establish standards of human behavior and are often protected by both national and international laws.</td>
-      <td>14.768</td>
-      <td>0.000</td>
+      <td>I cannot answer this from the provided context. A work of visual art that simulates experiences and otherwise communicates</td>
+      <td>24.779</td>
+      <td>0.00</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>2.546629</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>Single-score output from LLM</td>
+      <td>1.763354</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>6</td>
-      <td>What is School of Molecular Sciences?</td>
+      <td>Based on the article 'Facebook F8', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. The School of Molecular Sciences (SMS) is responsible for the study and teaching of the academic disciplines of Chemistry and biochemistry at Arizona State University.</td>
-      <td>20.221</td>
-      <td>0.500</td>
+      <td>I cannot answer this from the provided context. Facebook F8 was a mostly-annual conference held by</td>
+      <td>23.232</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.775000</td>
+      <td>1.646575</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -257,17 +257,17 @@
     <tr>
       <td>dense</td>
       <td>7</td>
-      <td>What is Method of loci?</td>
+      <td>Based on the article 'Indoor practice facility', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>It involves mentally associating pieces of information with specific locations in a familiar environment, such as rooms in an house or landmarks along an well-known route. To recall, they retrac</td>
-      <td>22.243</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. An indoor practice facility is a specialized structure designed to provide athletes with</td>
+      <td>25.711</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
-      <td>1.727411</td>
+      <td>success</td>
+      <td>2.301024</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -276,17 +276,17 @@
     <tr>
       <td>dense</td>
       <td>8</td>
-      <td>What is Missile lofting?</td>
+      <td>Based on the article 'Labyrinth', what is the primary definition or role described?</td>
       <td>factual</td>
+      <td>2</td>
+      <td>Prehistoric labyrinths may have served as traps for malevolent spirits or as paths</td>
+      <td>26.794</td>
+      <td>0.00</td>
       <td>1</td>
-      <td>to extend range and improve target engagement effectiveness, usually in beyond-visual range scenarios. Lofting, sometimes referred to as "trajectory</td>
-      <td>17.741</td>
-      <td>1.000</td>
-      <td>0</td>
-      <td>1.0</td>
+      <td>0.5</td>
       <td>1</td>
-      <td>success</td>
-      <td>2.055172</td>
+      <td>generation_failure</td>
+      <td>1.678571</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -295,36 +295,36 @@
     <tr>
       <td>dense</td>
       <td>9</td>
-      <td>What is Reward theory of attraction?</td>
+      <td>Based on the article 'NAKO Health Study', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. People are attracted to individuals exhibiting behaviors that are rewarding to them, whom they associate</td>
-      <td>15.585</td>
-      <td>0.000</td>
+      <td>I cannot answer this from the provided context. Its purpose is to investigate the development, distribution, and risk factors</td>
+      <td>24.351</td>
+      <td>0.00</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.723864</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>1 to 5</td>
+      <td>2.544976</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>Single-score output from LLM</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>10</td>
-      <td>What is Charles Wesley Shilling?</td>
+      <td>Based on the article 'Radio', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>an American physician who was known as a leader in the field of undersea and hyperbaric medicine</td>
-      <td>15.564</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>the technology of communicating using radio waves. Radio waves are electromagnetic waves of frequency between 3 hertz (Hz) and 300 gigahertz</td>
+      <td>28.121</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.805405</td>
+      <td>1.701676</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -333,36 +333,36 @@
     <tr>
       <td>dense</td>
       <td>11</td>
-      <td>What is Housing in Glasgow?</td>
+      <td>Based on the article 'Chemistry', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. Glasgow, the largest city in Scotland, has several distinct styles of residential buildings.</td>
-      <td>16.159</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. The 1730 definition of the word "chemistry", as used by Georg Ernst Stahl</td>
+      <td>28.778</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>2.452941</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>Single-score output from LLM</td>
+      <td>1.468702</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5</td>
     </tr>
     <tr>
       <td>dense</td>
       <td>12</td>
-      <td>What is History of writing?</td>
+      <td>Based on the article 'Interval arithmetic', what is the primary definition or role described?</td>
       <td>factual</td>
-      <td>2</td>
-      <td>I cannot answer this from the provided context. The history of writing traces the development of written systems and how their use transformed and was transformed by different societies</td>
-      <td>17.841</td>
-      <td>0.000</td>
       <td>1</td>
-      <td>0.5</td>
+      <td>I cannot answer this from the provided context. Interval multiplication often only requires two multipositions. If x1, y1 are nonnegative</td>
+      <td>32.233</td>
+      <td>0.00</td>
+      <td>1</td>
+      <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.672727</td>
+      <td>1.598795</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -371,17 +371,17 @@
     <tr>
       <td>dense</td>
       <td>13</td>
-      <td>What is Sound localization?</td>
+      <td>Based on the article 'Drone-Enhanced Emergency Medical Services', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context: Sound localization is a listener's ability to identify the location or origin of</td>
-      <td>16.231</td>
-      <td>0.000</td>
+      <td>the use of highly autonomous Beyond Visual Line of Sight (BVLOS)drones to deliver critical medical supplies</td>
+      <td>29.843</td>
+      <td>0.25</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.829878</td>
+      <td>2.445603</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -390,36 +390,17 @@
     <tr>
       <td>dense</td>
       <td>14</td>
-      <td>What is County town?</td>
+      <td>Based on the article 'Joule heating', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>usually the location of administrative or judicial functions within a county, and the place where public representatives are elected to parliament. Following</td>
-      <td>15.782</td>
-      <td>0.000</td>
+      <td>I cannot answer this from the provided context. The passage of an electric current through a conductor produces heat.</td>
+      <td>26.037</td>
+      <td>0.00</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.111765</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>Single-score output from LLM</td>
-    </tr>
-    <tr>
-      <td>dense</td>
-      <td>15</td>
-      <td>What is Exploration of Mercury?</td>
-      <td>factual</td>
-      <td>1</td>
-      <td>I cannot answer this from the provided context. It is the least explored inner planet. As of 2025, the Marine</td>
-      <td>15.362</td>
-      <td>0.167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>generation_failure</td>
-      <td>2.186408</td>
+      <td>2.194953</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -427,18 +408,37 @@
     </tr>
     <tr>
       <td>dense</td>
-      <td>16</td>
-      <td>What is The Shade Room?</td>
+      <td>15</td>
+      <td>Based on the article 'Lace', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>Instagram-based, The Shade Room offers celebrity and trending news on an hourly basis, predominantly within the African American community</td>
-      <td>16.039</td>
-      <td>0.375</td>
+      <td>I cannot answer this from the provided context. The late 16th century marked the rapid development of lace, both needle lash and</td>
+      <td>27.753</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>generation_failure</td>
+      <td>1.680220</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1 to 5&gt; ---</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>16</td>
+      <td>Based on the article 'Lowest bridging point', what is the primary definition or role described?</td>
+      <td>factual</td>
+      <td>1</td>
+      <td>The lowest bridging point (or lowest crossing point) is the location on a river which is crossed by</td>
+      <td>25.039</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
       <td>success</td>
-      <td>2.438462</td>
+      <td>2.637500</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -447,17 +447,17 @@
     <tr>
       <td>dense</td>
       <td>17</td>
-      <td>What is Geohumanities?</td>
+      <td>Based on the article 'City centre', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. These concepts are broad sets of geography philosophies bound together within</td>
-      <td>15.048</td>
-      <td>0.000</td>
+      <td>the commercial, cultural and often the historical, political, and geographic heart of a city. The concept of the "CBD"</td>
+      <td>27.706</td>
+      <td>0.00</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
       <td>generation_failure</td>
-      <td>1.695385</td>
+      <td>1.745763</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -466,17 +466,17 @@
     <tr>
       <td>dense</td>
       <td>18</td>
-      <td>What is City network?</td>
+      <td>Based on the article 'Maibaron', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>City networks can either refer to a membership organization city leaders join to connect their city to other municipalities, or</td>
-      <td>16.426</td>
-      <td>1.000</td>
+      <td>the art and science of therapeutic practice. It includes a variety of healing methods such as spiritual rituals, herbal medicine,</td>
+      <td>25.140</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>success</td>
-      <td>2.565138</td>
+      <td>generation_failure</td>
+      <td>1.953846</td>
       <td>2.0</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -485,17 +485,17 @@
     <tr>
       <td>dense</td>
       <td>19</td>
-      <td>What is Marine technology?</td>
+      <td>Based on the article 'Fan-gating', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>"technologies for the safe use, exploitation, protection of, and intervention in, the marine environment."</td>
-      <td>14.738</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. This content typically exclusive features, promotional offers, games or other material</td>
+      <td>22.650</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
-      <td>3.060784</td>
+      <td>success</td>
+      <td>2.477246</td>
       <td>3.0</td>
       <td>3.0</td>
       <td>3.0</td>
@@ -504,16 +504,16 @@
     <tr>
       <td>dense</td>
       <td>20</td>
-      <td>What is Fifth Giant?</td>
+      <td>Based on the article 'Bullet journal', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>A hypothetical ice giant proposed as part of the Five-planet Nice model, an extension of The Nice Model</td>
-      <td>17.674</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>A paper-based method of personal organization developed by digital product designer Ryder Carroll. The bullet journal system organizes journaling, time management</td>
+      <td>25.479</td>
+      <td>0.50</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
+      <td>success</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -523,16 +523,16 @@
     <tr>
       <td>dense</td>
       <td>21</td>
-      <td>What is Kurdish literature?</td>
+      <td>Based on the article 'Kabbalah', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>is literature written in the Kurdish languages. Literature has been written by poets before Nalî have written.</td>
-      <td>17.503</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>an esoteric method, discipline, and school of thought in Jewish mysticism. It forms the foundation</td>
+      <td>30.044</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
+      <td>success</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -542,16 +542,16 @@
     <tr>
       <td>dense</td>
       <td>22</td>
-      <td>What is Substellar object?</td>
+      <td>Based on the article 'Geomorphology', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>an astronomical object, the mass of which is smaller than the smallest mass at which hydrogen fusion can be sustained.</td>
-      <td>18.315</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. Geomorphology is the scientific study of the origin and evolution of topographic and bathymetric features generated</td>
+      <td>28.091</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
+      <td>success</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -561,12 +561,12 @@
     <tr>
       <td>dense</td>
       <td>23</td>
-      <td>What is Microlearning?</td>
+      <td>Based on the article 'Winter City', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>Microlearning refers to a set of compact e-learning modules that are designed to reduce learner fatigue. The modules can be educational, professional, or skill-based, and are usually designed</td>
-      <td>25.799</td>
-      <td>0.000</td>
+      <td>I cannot answer this from the provided context. Winter City or Winter Cities is a concept for communities in northern latitudes that encourage</td>
+      <td>25.289</td>
+      <td>0.00</td>
       <td>1</td>
       <td>1.0</td>
       <td>1</td>
@@ -580,12 +580,31 @@
     <tr>
       <td>dense</td>
       <td>24</td>
-      <td>What is Spatial justice?</td>
+      <td>Based on the article 'Immunopathology', what is the primary definition or role described?</td>
+      <td>factual</td>
+      <td>2</td>
+      <td>I cannot answer this from the provided context. Immunology charts, measures, and contextualizes the physiological functioning of the immune system in states</td>
+      <td>27.705</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0.5</td>
+      <td>1</td>
+      <td>success</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>dense</td>
+      <td>25</td>
+      <td>Based on the article 'Facebook', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. Spatial justice is a concept that links the principles of social justice to the spatial organisation of society.</td>
-      <td>16.708</td>
-      <td>1.000</td>
+      <td>Facebook is an American made social networking service owned by the American technology conglomerate Meta. Created in 2004</td>
+      <td>23.840</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
@@ -598,32 +617,13 @@
     </tr>
     <tr>
       <td>dense</td>
-      <td>25</td>
-      <td>What is World Federalism?</td>
-      <td>factual</td>
-      <td>1</td>
-      <td>A political ideology that advocates for a democratic, federal world government. The world federation would hold authority on issues of global concern,</td>
-      <td>18.856</td>
-      <td>0.000</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>generation_failure</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>dense</td>
       <td>26</td>
-      <td>What is Spatial frequency?</td>
+      <td>Based on the article 'Dentistry', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>how often sinusoidal components (as determined by the Fourier transform) of the structure repeat per unit of distance</td>
-      <td>14.899</td>
-      <td>1.000</td>
+      <td>the study, diagnosis, prevention, management, and treatment of diseases, disorders and conditions of the mouth.</td>
+      <td>21.772</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
@@ -637,12 +637,12 @@
     <tr>
       <td>dense</td>
       <td>27</td>
-      <td>What is Bullet journal?</td>
+      <td>Based on the article 'Electronics', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>A paper-based method of personal organization developed by digital product designer Ryder Carroll. The bullet journal system organizes journaling, time management, brainstorming</td>
-      <td>18.205</td>
-      <td>0.500</td>
+      <td>I cannot answer this from the provided context. Electronics is a scientific and engineering discipline that studies and applies the principles of physics to design,</td>
+      <td>27.725</td>
+      <td>1.00</td>
       <td>0</td>
       <td>1.0</td>
       <td>1</td>
@@ -656,16 +656,16 @@
     <tr>
       <td>dense</td>
       <td>28</td>
-      <td>What is Real economy?</td>
+      <td>Based on the article 'Kaddish', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>I cannot answer this from the provided context. The real economy concerns the production, purchase and flow of goods and services.</td>
-      <td>16.810</td>
-      <td>1.000</td>
-      <td>0</td>
+      <td>the magnification and sanctification of God's name. In the liturgy, different versions</td>
+      <td>26.136</td>
+      <td>0.00</td>
+      <td>1</td>
       <td>1.0</td>
       <td>1</td>
-      <td>success</td>
+      <td>generation_failure</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -675,16 +675,16 @@
     <tr>
       <td>dense</td>
       <td>29</td>
-      <td>What is Houston Rockets?</td>
+      <td>Based on the article 'List of national legal systems', what is the primary definition or role described?</td>
       <td>factual</td>
       <td>1</td>
-      <td>an American professional basketball team based in Houston. The Rockets compete in the National Basketball Association (NBA).</td>
-      <td>16.397</td>
-      <td>0.000</td>
-      <td>1</td>
+      <td>I cannot answer this from the provided context. It has been variously described as a science and as the art of justice</td>
+      <td>24.003</td>
+      <td>1.00</td>
+      <td>0</td>
       <td>1.0</td>
       <td>1</td>
-      <td>generation_failure</td>
+      <td>success</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -713,73 +713,73 @@
         </tr>
         
         <tr>
-            <td>What is Orlando Magic?</td>
+            <td>Based on the article 'Laboratory', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>an American professional basketball team based in Orlando, Florida. The name "Magic" alludes to the area's biggest</td>
+            <td>facility that provides controlled conditions in which scientific or technological research, experiments, and measurement may be performed.</td>
         </tr>
         
         <tr>
-            <td>What is Punk ideologies?</td>
+            <td>Based on the article 'Philosophy', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>a group of varied social and political beliefs associated with the punk subculture and punck rock.</td>
+            <td>The goal is to give an unbiased description of the appearance of things. Methodological naturalism places great emphasis on</td>
         </tr>
         
         <tr>
-            <td>What is Schomburgk Line?</td>
+            <td>Based on the article 'Urban evolution', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>The Schomburgk Line is the name given to a survey line that figured in 19th-century territorial dispute between Venezuela</td>
+            <td>heritable genetic changes of populations in response to urban development and anthropogenic activities in urban areas.</td>
         </tr>
         
         <tr>
-            <td>What is Human rights?</td>
+            <td>Based on the article 'Hydrocarbon', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>universally recognized moral principles or norms that establish standards of human behavior and are often protected by both national and international laws.</td>
+            <td>I cannot answer this from the provided context. The vast majority of hydrocarbons found on Earth occur in crude oil, petroleum, coal</td>
         </tr>
         
         <tr>
-            <td>What is School of Molecular Sciences?</td>
+            <td>Based on the article 'Imagine (Gal Gadot video)', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>I cannot answer this from the provided context. The School of Molecular Sciences (SMS) is responsible for the study and teaching of the academic disciplines of Chemistry and biochemistry at Arizona State University.</td>
+            <td>I cannot answer this from the provided context. A work of visual art that simulates experiences and otherwise communicates</td>
         </tr>
         
         <tr>
-            <td>What is Method of loci?</td>
+            <td>Based on the article 'Facebook F8', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>It involves mentally associating pieces of information with specific locations in a familiar environment, such as rooms in an house or landmarks along an well-known route. To recall, they retrac</td>
+            <td>I cannot answer this from the provided context. Facebook F8 was a mostly-annual conference held by</td>
         </tr>
         
         <tr>
-            <td>What is Reward theory of attraction?</td>
+            <td>Based on the article 'Labyrinth', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>I cannot answer this from the provided context. People are attracted to individuals exhibiting behaviors that are rewarding to them, whom they associate</td>
+            <td>Prehistoric labyrinths may have served as traps for malevolent spirits or as paths</td>
         </tr>
         
         <tr>
-            <td>What is Charles Wesley Shilling?</td>
+            <td>Based on the article 'NAKO Health Study', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>an American physician who was known as a leader in the field of undersea and hyperbaric medicine</td>
+            <td>I cannot answer this from the provided context. Its purpose is to investigate the development, distribution, and risk factors</td>
         </tr>
         
         <tr>
-            <td>What is Housing in Glasgow?</td>
+            <td>Based on the article 'Radio', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>I cannot answer this from the provided context. Glasgow, the largest city in Scotland, has several distinct styles of residential buildings.</td>
+            <td>the technology of communicating using radio waves. Radio waves are electromagnetic waves of frequency between 3 hertz (Hz) and 300 gigahertz</td>
         </tr>
         
         <tr>
-            <td>What is History of writing?</td>
+            <td>Based on the article 'Chemistry', what is the primary definition or role described?</td>
             <td>factual</td>
             <td>generation_failure</td>
-            <td>I cannot answer this from the provided context. The history of writing traces the development of written systems and how their use transformed and was transformed by different societies</td>
+            <td>I cannot answer this from the provided context. The 1730 definition of the word "chemistry", as used by Georg Ernst Stahl</td>
         </tr>
         
     </table>

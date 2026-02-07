@@ -1,1362 +1,1382 @@
 [
   {
     "id": 0,
-    "question": "What is Department of Aerospace Science and Technology?",
-    "answer": "The Brazilian Department of Science and Aerospace Technology (Portuguese: Departamento de Ci\u00eancia e Tecnologia Aeroespacial; DCTA) is the national military research center for aviation and space flight. It is subordinated to the Brazilian Air Force (FAB). It coordinates all technical and scientific ",
+    "question": "Based on the article 'Laboratory', what is the primary definition or role described?",
+    "answer": "has tailored a standard for occupational exposure to hazardous chemicals in laboratories.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Department_of_Aerospace_Science_and_Technology"
+      "https://en.wikipedia.org/wiki/Laboratory"
     ],
     "source_chunk_ids": [
-      3520
+      4549
     ]
   },
   {
     "id": 1,
-    "question": "What is Orlando Magic?",
-    "answer": "opener 97\u201389. During the month of February, the Magic waived Hughes and signed Ish Smith. On February 26, Orlando hosted the 2012 All-Star Game. The Magic struggled to win games consistently, with concerns about the uncertainty of Dwight Howard's future with the franchise. However, after Dwight resc",
+    "question": "Based on the article 'Philosophy', what is the primary definition or role described?",
+    "answer": "and obligation.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Orlando_Magic"
+      "https://en.wikipedia.org/wiki/Philosophy"
     ],
     "source_chunk_ids": [
-      481
+      408
     ]
   },
   {
     "id": 2,
-    "question": "What is Punk ideologies?",
-    "answer": "include Altar Boys, The Crucified, Five Iron Frenzy, Flatfoot 56, Side Walk Slam, and pop-punk band MxPx, who earned a gold record in 1998. === Conservatism === A moderate number of punk bands and artists are conservative, rejecting liberalism, communism and socialism in favor of conservatism. Notab",
+    "question": "Based on the article 'Urban evolution', what is the primary definition or role described?",
+    "answer": "with the later needing to be sufficiently proven.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Punk_ideologies"
+      "https://en.wikipedia.org/wiki/Urban_evolution"
     ],
     "source_chunk_ids": [
-      86
+      88
     ]
   },
   {
     "id": 3,
-    "question": "What is Gaelic Ireland?",
-    "answer": "and after this anyone might lawfully kill him. Each person had an honour-price, which varied depending on their rank in society. This honour-price was to be paid to them if their honour was violated by certain offences. Those of higher rank had a higher honour-price. However, an offence against the ",
+    "question": "Based on the article 'Hydrocarbon', what is the primary definition or role described?",
+    "answer": "their inertness.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Gaelic_Ireland"
+      "https://en.wikipedia.org/wiki/Hydrocarbon"
     ],
     "source_chunk_ids": [
-      3940
+      5306
     ]
   },
   {
     "id": 4,
-    "question": "What is Schomburgk Line?",
-    "answer": "The Schomburgk Line is the name given to a survey line that figured in a 19th-century territorial dispute between Venezuela and British Guiana. The line was named after German-born English explorer and naturalist Robert Hermann Schomburgk (1804\u20131865). The dispute arose because when the United Kingdo",
+    "question": "Based on the article 'Kitchenette', what is the primary definition or role described?",
+    "answer": "A kitchenette or kitchenet is a small cooking area, which usually has a refrigerator and a microwave oven, but may have other appliances \u2013 for example a sink.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Schomburgk_Line"
+      "https://en.wikipedia.org/wiki/Kitchenette"
     ],
     "source_chunk_ids": [
-      1477
+      1921
     ]
   },
   {
     "id": 5,
-    "question": "What is Human rights?",
-    "answer": "with the Inter-American Court of Human Rights, based in San Jos\u00e9, Costa Rica, it is one of the bodies that comprise the inter-American system for the promotion and protection of human rights. The IACHR is a permanent body which meets in regular and special sessions several times a year to examine al",
+    "question": "Based on the article 'Imagine (Gal Gadot video)', what is the primary definition or role described?",
+    "answer": "On 18 March 2020, Israeli actress Gal Gadot posted a video on Instagram of herself and two dozen celebrity friends singing a rendition of the song \"Imagine\" by John Lennon, which was intended to raise morale in the face of the COVID-19 pandemic.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Human_rights"
+      "https://en.wikipedia.org/wiki/Imagine_(Gal_Gadot_video)"
     ],
     "source_chunk_ids": [
-      1290
+      1763
     ]
   },
   {
     "id": 6,
-    "question": "What is School of Molecular Sciences?",
-    "answer": "The School of Molecular Sciences is an academic unit of The College of Liberal Arts and Sciences at Arizona State University (ASU). The School of Molecular Sciences (SMS) is responsible for the study and teaching of the academic disciplines of chemistry and biochemistry at ASU. == History == Chemist",
+    "question": "Based on the article 'Facebook F8', what is the primary definition or role described?",
+    "answer": "the creation of their own online dating service.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/School_of_Molecular_Sciences"
+      "https://en.wikipedia.org/wiki/Facebook_F8"
     ],
     "source_chunk_ids": [
-      1190
+      1682
     ]
   },
   {
     "id": 7,
-    "question": "What is Method of loci?",
-    "answer": "Nadel refer to:... \"the method of loci\", an imaginal technique known to the ancient Greeks and Romans and described by Yates (1966) in her book The Art of Memory as well as by Luria (1969). In this technique the subject memorizes the layout of some building, or the arrangement of shops on a street, ",
+    "question": "Based on the article 'Indoor practice facility', what is the primary definition or role described?",
+    "answer": "An indoor practice facility is a specialized structure designed to provide athletes with a controlled environment for training and practice sessions indoors.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Method_of_loci"
+      "https://en.wikipedia.org/wiki/Indoor_practice_facility"
     ],
     "source_chunk_ids": [
-      768
+      493
     ]
   },
   {
     "id": 8,
-    "question": "What is Missile lofting?",
-    "answer": "Lofting, sometimes referred to as \"trajectory shaping\", is a trajectory optimization technique used in some missile systems to extend range and improve target engagement effectiveness, usually in beyond-visual range scenarios. == Method == Lofting involves a missile ascending to a higher altitude af",
+    "question": "Based on the article 'Labyrinth', what is the primary definition or role described?",
+    "answer": "on a riverbank in Goa purportedly dating to circa 2500 BC.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Missile_lofting"
+      "https://en.wikipedia.org/wiki/Labyrinthine"
     ],
     "source_chunk_ids": [
-      3898
+      5282
     ]
   },
   {
     "id": 9,
-    "question": "What is Reward theory of attraction?",
-    "answer": "that it could not predict exactly what is rewarding, only determine it by observation (i.e. with studies). To solve this, Arthur & Elaine Aron developed the self-expansion model, which specifies reward as \"whatever creates expansion of the self\". Self-expansion is the human motivation to expand one'",
+    "question": "Based on the article 'NAKO Health Study', what is the primary definition or role described?",
+    "answer": "of the study, NAKO e.V., was established in 2013 and is headquartered in Heidelberg.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Reward_theory_of_attraction"
+      "https://en.wikipedia.org/wiki/NAKO_Health_Study"
     ],
     "source_chunk_ids": [
-      415
+      380
     ]
   },
   {
     "id": 10,
-    "question": "What is Charles Wesley Shilling?",
-    "answer": "first person to go from a submarine to the surface in a bell. Utilizing these techniques, they were able to rescue all 33 surviving crew members from the sunken submarine including future Rear Admiral Oliver F. Naquin. Shilling later recalled that the untested submarine rescue procedures utilized wi",
+    "question": "Based on the article 'Radio', what is the primary definition or role described?",
+    "answer": "photophone optical transmission system.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Charles_Wesley_Shilling"
+      "https://en.wikipedia.org/wiki/Radio"
     ],
     "source_chunk_ids": [
-      3650
+      4844
     ]
   },
   {
     "id": 11,
-    "question": "What is Housing in Glasgow?",
-    "answer": "They have outlasted the vast majority of the inter-war rehousing grade (lower quality material) blocks intended to replace them, with developments at Barrowfield, Blackhill, the Calton, Cowlairs, Hamiltonhill, Lilybank, 'Maryhill Valley', Moorepark Oatlands and Teucharhill having to be rebuilt from ",
+    "question": "Based on the article 'Chemistry', what is the primary definition or role described?",
+    "answer": "molecules.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Glasgow_tower_blocks"
+      "https://en.wikipedia.org/wiki/Chemistry"
     ],
     "source_chunk_ids": [
-      4888
+      6550
     ]
   },
   {
     "id": 12,
-    "question": "What is History of writing?",
-    "answer": "led to a revival of Greek as a significant literary language, in addition to Latin. A similar though smaller emergence occurred in Eastern Europe, especially in Russia. At the same time Arabic and Persian began a slow decline in importance as the Islamic Golden Age ended. The revival of literacy dev",
+    "question": "Based on the article 'Interval arithmetic', what is the primary definition or role described?",
+    "answer": "= x2 + y over x, y \u2208 [\u22121, 1].",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/History_of_writing"
+      "https://en.wikipedia.org/wiki/Interval_arithmetic"
     ],
     "source_chunk_ids": [
-      3012
+      3767
     ]
   },
   {
     "id": 13,
-    "question": "What is Sound localization?",
-    "answer": "inner ear's hair cells, facilitating rapid contractions and expansions. This intricate mechanism operates akin to an antique phonograph horn, amplifying sound waves within the cochlea and elevating the overall sensitivity of hearing. In 2014 Liu and others delved into the evolutionary adaptations of",
+    "question": "Based on the article 'Drone-Enhanced Emergency Medical Services', what is the primary definition or role described?",
+    "answer": "Drone Emergency Medical Services (DEMS) involve the use of highly autonomous Beyond Visual Line of Sight (BVLOS) drones to deliver critical medical supplies, such as Automated External Defibrillators (AEDs), life-saving medications, and remote diagnostic equipment, directly to emergency situations.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Sound_localization"
+      "https://en.wikipedia.org/wiki/Drone-Enhanced_Emergency_Medical_Services"
     ],
     "source_chunk_ids": [
-      334
+      339
     ]
   },
   {
     "id": 14,
-    "question": "What is County town?",
-    "answer": "English law, but in Wales they were later replaced with eight preserved counties for ceremonial purposes and the twenty two principal areas are used for administrative purposes. Neither of these subdivisions use official county towns, although their administrative headquarters and ceremonial centres",
+    "question": "Based on the article 'Joule heating', what is the primary definition or role described?",
+    "answer": " [TABLE] Table with columns: Joule heating (also known as resistive heating, resistance heating, or Ohmic heating) is the process by which the passage of an electric current through a conductor produces heat.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/County_town"
+      "https://en.wikipedia.org/wiki/Joule_heating"
     ],
     "source_chunk_ids": [
-      3249
+      4212
     ]
   },
   {
     "id": 15,
-    "question": "What is Exploration of Mercury?",
-    "answer": "The exploration of Mercury has long had a minor role in the space interests of the world. It is the least explored inner planet. As of 2025, the Mariner 10, MESSENGER, and BepiColombo missions have been the only spacecraft that have made close observations of Mercury. MESSENGER made three flybys bef",
+    "question": "Based on the article 'Lace', what is the primary definition or role described?",
+    "answer": "by burning all her lace, and commissioning new pieces.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Exploration_of_Mercury"
+      "https://en.wikipedia.org/wiki/Lacework"
     ],
     "source_chunk_ids": [
-      2408
+      2773
     ]
   },
   {
     "id": 16,
-    "question": "What is The Shade Room?",
-    "answer": "The Shade Room (TSR) is a media company, founded by Angelica Nwandu in March 2014. Instagram-based, The Shade Room offers celebrity and trending news on an hourly basis, predominantly within the African American community; The New York Times called it the \"TMZ of Instagram\". \"Shade\" in this case ref",
+    "question": "Based on the article 'Lowest bridging point', what is the primary definition or role described?",
+    "answer": "The lowest bridging point (or lowest crossing point) is the location on a river which is crossed by a bridge at its closest point to the sea.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/The_Shade_Room"
+      "https://en.wikipedia.org/wiki/Lowest_bridging_point"
+    ],
+    "source_chunk_ids": [
+      119
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Based on the article 'City centre', what is the primary definition or role described?",
+    "answer": "term \"CBD\" is not often used in the capital Canberra, where the primary activity is government; its \"city centre\" is usually identified as the district called \"City\" or \"Civic\".",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/City_centre"
+    ],
+    "source_chunk_ids": [
+      117
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Based on the article 'Maibaron', what is the primary definition or role described?",
+    "answer": "Meitei therapeutic practitioners was recognized beyond the region.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Maibaron"
+    ],
+    "source_chunk_ids": [
+      367
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Based on the article 'Fan-gating', what is the primary definition or role described?",
+    "answer": "Fan-gating (also known as \"Like-gating\") is the practice of acquiring more fans for a Facebook page by requiring Facebook users to \"like\" the page in order to access specific content associated with the page.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Fan-gating"
+    ],
+    "source_chunk_ids": [
+      1673
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Based on the article 'Bullet journal', what is the primary definition or role described?",
+    "answer": "A bullet journal (also known as a BuJo) is a paper-based method of personal organization developed by digital product designer Ryder Carroll.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Studygram"
+    ],
+    "source_chunk_ids": [
+      1746
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Based on the article 'Kabbalah', what is the primary definition or role described?",
+    "answer": "movements.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Kabbalah"
+    ],
+    "source_chunk_ids": [
+      3407
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Based on the article 'Geomorphology', what is the primary definition or role described?",
+    "answer": "of years to minutes or less.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Geomorphology"
+    ],
+    "source_chunk_ids": [
+      4284
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Based on the article 'Winter City', what is the primary definition or role described?",
+    "answer": "against it, in order to make winter a positive part of a four-season lifestyle.",
+    "question_type": "factual",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Winter_City"
     ],
     "source_chunk_ids": [
       96
     ]
   },
   {
-    "id": 17,
-    "question": "What is Geohumanities?",
-    "answer": "Geohumanities, sometimes written GeoHumanities or The GeoHumanities is a term has been used with varied meanings to describe areas of academic study. The book GeoHumanities: Art, History, Text at the Edge of Place was published in 2011 edited by Michael Dear and others, and \"explores the humanities'",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Geohumanities"
-    ],
-    "source_chunk_ids": [
-      95
-    ]
-  },
-  {
-    "id": 18,
-    "question": "What is City network?",
-    "answer": "City networks can either refer to a membership organization city leaders join to connect their city to other municipalities, or to a geographical concept used to describe inter-connectivity of cities on different levels (trade, railways, culture etc.). == In international cooperation == The term \"ci",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/City_network"
-    ],
-    "source_chunk_ids": [
-      354
-    ]
-  },
-  {
-    "id": 19,
-    "question": "What is Marine technology?",
-    "answer": "Marine technology is defined by WEGEMT (a European association of 40 universities in 17 countries) as \"technologies for the safe use, exploitation, protection of, and intervention in, the marine environment.\" In this regard, according to WEGEMT, the technologies involved in marine technology are the",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Marine_technology"
-    ],
-    "source_chunk_ids": [
-      1168
-    ]
-  },
-  {
-    "id": 20,
-    "question": "What is Fifth Giant?",
-    "answer": "such a planet could have influenced the dynamical evolution of the Solar System, shaping the orbits of the outer planets and accounting for the observed gaps in the Kuiper belt. == Ejection mechanism == The ejection of the Fifth Giant is believed to have occurred during the early Solar System's peri",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Fifth_Giant"
-    ],
-    "source_chunk_ids": [
-      1247
-    ]
-  },
-  {
-    "id": 21,
-    "question": "What is Kurdish literature?",
-    "answer": "(1700\u20131759), Almas Khan-e Kanoule'ei (17th and 18th century) Mastoureh Ardalan (Mest\u00fbrey Erdelan) (1805\u20131848) Mawlawi Tawagozi (Mewlew\u00ee Tawegoz\u00ee) (1806\u20131882) === Famous poets in Kurmanc\u00ee dialect === Mela Hesen\u00ea Batey\u00ee (Melay\u00ea Batey\u00ee) (1417\u20131491) of Hekkar\u00ee, the author of Mewl\u00fbda Kurmanc\u00ee (Birthday i",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Kurdish_literature"
-    ],
-    "source_chunk_ids": [
-      2780
-    ]
-  },
-  {
-    "id": 22,
-    "question": "What is Substellar object?",
-    "answer": "to overcome the object's ongoing gravitational contraction. Likewise, although an object with mass above approximately 0.013 solar masses will be able to fuse deuterium for a time, this source of energy will be exhausted in approximately 1\u2013100 million years. Apart from these sources, the radiation o",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Substellar_object"
-    ],
-    "source_chunk_ids": [
-      3281
-    ]
-  },
-  {
-    "id": 23,
-    "question": "What is Microlearning?",
-    "answer": "utilizing research-based findings related to the spacing effect. Learners subscribe (or are subscribed) to one or more series of learning nuggets, called \"threads\". Learning threads can be predesigned, selecting nuggets based on anticipated learner needs, or they can be dynamically created based on ",
-    "question_type": "factual",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Microlearning"
-    ],
-    "source_chunk_ids": [
-      93
-    ]
-  },
-  {
     "id": 24,
-    "question": "What is Spatial justice?",
-    "answer": "fields such as spatial planning, regional development, environmental justice, and housing policy. In practice, spatial justice frameworks are used to assess and guide policy and interventions that seek to make cities and regions more equitable, inclusive, and democratic. == Redistributive, procedura",
+    "question": "Based on the article 'Immunopathology', what is the primary definition or role described?",
+    "answer": "Immunopathology is a branch of medicine that deals with immune responses associated with disease.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Spatial_justice"
+      "https://en.wikipedia.org/wiki/Immunopathology"
     ],
     "source_chunk_ids": [
-      3086
+      3999
     ]
   },
   {
     "id": 25,
-    "question": "What is World Federalism?",
-    "answer": "global level. === Desirability === Critics argue that a concentration of power on a global level would raise the risks and probability of tyranny, deterioration of human rights, and cultural homogenization. Proponents of world federalism point out that democratic and republican principles are at the",
+    "question": "Based on the article 'Facebook', what is the primary definition or role described?",
+    "answer": "end its partnerships with data brokers who aid advertisers in targeting users.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/World_Federalism"
+      "https://en.wikipedia.org/wiki/Facebook"
     ],
     "source_chunk_ids": [
-      1058
+      1592
     ]
   },
   {
     "id": 26,
-    "question": "What is Spatial frequency?",
-    "answer": "In mathematics, physics, and engineering, spatial frequency is a characteristic of any structure that is periodic across position in space. The spatial frequency is a measure of how often sinusoidal components (as determined by the Fourier transform) of the structure repeat per unit of distance. The",
+    "question": "Based on the article 'Dentistry', what is the primary definition or role described?",
+    "answer": "problems due to their high incidence and prevalence across the globe, with the disadvantaged affected more than other socio-economic groups.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Spatial_frequency"
+      "https://en.wikipedia.org/wiki/Dentistry"
     ],
     "source_chunk_ids": [
-      3809
+      5099
     ]
   },
   {
     "id": 27,
-    "question": "What is Bullet journal?",
-    "answer": "A bullet journal (also known as a BuJo) is a paper-based method of personal organization developed by digital product designer Ryder Carroll. The bullet journal system organizes journaling, time management, brainstorming, note-taking and other productivity and organizational tasks into a single note",
+    "question": "Based on the article 'Electronics', what is the primary definition or role described?",
+    "answer": "circuits were taken over by digital circuits, and modern circuits that are entirely analog are less common; their functions being replaced by hybrid approach which, for instance, uses analog circuits at the front end of a device receiving an analog signal, and then use digital processing using microprocessor techniques thereafter.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Studygram"
+      "https://en.wikipedia.org/wiki/Electronics"
     ],
     "source_chunk_ids": [
-      3536
+      4610
     ]
   },
   {
     "id": 28,
-    "question": "What is Real economy?",
-    "answer": "classical dichotomy dictates that real and nominal values in the economy can be analysed distinctly. Thus, the real sector value is determined by an actor's tastes and preferences and the cost of production, while the monetary sector only plays the part of influencing the price level, so in this sim",
+    "question": "Based on the article 'Kaddish', what is the primary definition or role described?",
+    "answer": "some of the words are Hebrew rather than Aramaic.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Real_economy"
+      "https://en.wikipedia.org/wiki/Kaddish"
     ],
     "source_chunk_ids": [
-      3776
+      5043
     ]
   },
   {
     "id": 29,
-    "question": "What is Houston Rockets?",
-    "answer": "the 2009\u201310 season, the Rockets saw the departures of Artest in the off-season and McGrady, Joey Dorsey and Carl Landry during mid-season trades. Despite great play by Kevin Martin, who arrived from the Kings, and Aaron Brooks, who would eventually be chosen as the Most Improved Player of the season",
+    "question": "Based on the article 'List of national legal systems', what is the primary definition or role described?",
+    "answer": "the decisions in cases by judges.",
     "question_type": "factual",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Houston_Rockets"
+      "https://en.wikipedia.org/wiki/Justice_system"
     ],
     "source_chunk_ids": [
-      2388
+      2758
     ]
   },
   {
     "id": 30,
-    "question": "What is Three-dimensional space?",
-    "answer": "algebraic curves in space, the concept of tangent space and curvature, and the use of calculus for this purpose. Leonhard Euler studied the notion of a geodesic on a surface deriving the first analytical geodesic equation, and later introduced the first set of intrinsic coordinate systems on a surfa",
-    "question_type": "factual",
+    "question": "Compare the focus of Biography with that of Team learning. How do they differ?",
+    "answer": "Biography discusses: A biography, or simply bio, is a detailed description of a person's life. Whereas Team learning focuses on: have a separate job role altogether).",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Three-dimensional_space"
+      "https://en.wikipedia.org/wiki/Biography",
+      "https://en.wikipedia.org/wiki/Team_learning"
     ],
     "source_chunk_ids": [
-      1171
+      5046,
+      270
     ]
   },
   {
     "id": 31,
-    "question": "What is Electrostatic solitary wave?",
-    "answer": "In space physics, an electrostatic solitary wave (ESW) is a type of electromagnetic soliton occurring during short time scales (when compared to the general time scales of variations in the average electric field) in plasma. When a rapid change occurs in the electric field in a direction parallel to",
-    "question_type": "factual",
+    "question": "Compare the focus of Geophysics with that of Temporary capital. How do they differ?",
+    "answer": "Geophysics discusses: interdisciplinary subject, and geophysicists contribute to every area of the Earth sciences, while some geophysicists conduct research in the planetary sciences. Whereas Temporary capital focuses on: A temporary capital or a provisional capital is a city or town chosen by a government as an interim base of operations due to some difficulty in retaining or establishing control of a different metropolitan area.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Electrostatic_solitary_wave"
+      "https://en.wikipedia.org/wiki/Geophysics",
+      "https://en.wikipedia.org/wiki/Temporary_capital"
     ],
     "source_chunk_ids": [
-      2535
+      5624,
+      1980
     ]
   },
   {
     "id": 32,
-    "question": "What is Politically exposed person?",
-    "answer": "or have been entrusted with a prominent function by a state-owned enterprise or an international organisation refers to members of senior management, i.e. directors, deputy directors and board members or equivalent functions. Regulations for PEPs extend to family members or close associates, any ind",
-    "question_type": "factual",
+    "question": "Compare the focus of Ancient Greek mathematics with that of Preoperative care. How do they differ?",
+    "answer": "Ancient Greek mathematics discusses: as a letter to Pandrosion, a woman mathematician, and discusses solutions to three construction problems: doubling the cube, angle trisection, and squaring the circle. Whereas Preoperative care focuses on: When it is done immediately before surgery, the use of hair clippers might be preferable to shaving.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Politically_exposed_person"
+      "https://en.wikipedia.org/wiki/Greek_mathematics",
+      "https://en.wikipedia.org/wiki/Surgical_clearance"
     ],
     "source_chunk_ids": [
-      3241
+      6388,
+      377
     ]
   },
   {
     "id": 33,
-    "question": "What is Geography?",
-    "answer": "elevation model and cartographic base maps. Geographers increasingly use remotely sensed data to obtain information about the Earth's land surface, ocean, and atmosphere, because it: (a) supplies objective information at a variety of spatial scales (local to global), (b) provides a synoptic view of ",
-    "question_type": "factual",
+    "question": "Compare the focus of Computer network with that of Digital signal processing. How do they differ?",
+    "answer": "Computer network discusses: for instant messaging, ZRTP for telephony, and TETRA for radio. Whereas Digital signal processing focuses on: signals), spatial domain (multidimensional signals), frequency domain, and wavelet domains.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Geography"
+      "https://en.wikipedia.org/wiki/Computer_networking",
+      "https://en.wikipedia.org/wiki/Digital_signal_processing"
     ],
     "source_chunk_ids": [
-      1495
+      2992,
+      4536
     ]
   },
   {
     "id": 34,
-    "question": "What is Murder of Ava White?",
-    "answer": "Ava White was a 12-year-old British girl who was murdered by 14-year-old Harry Gilbertson on 25 November 2021, in the English city of Liverpool. She was murdered after an argument over a Snapchat video. Gilbertson was not named, for legal reasons, until 2025. == Background == Ava Martin White was bo",
-    "question_type": "factual",
+    "question": "Compare the focus of Oklahoma City Thunder with that of Jupiter. How do they differ?",
+    "answer": "Oklahoma City Thunder discusses: on drafting McGary. Whereas Jupiter focuses on: elemental carbon, oxygen, sulfur, and neon, as well as ammonia, water vapour, phosphine, hydrogen sulfide, and hydrocarbons like methane, ethane and benzene.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Murder_of_Ava_White"
+      "https://en.wikipedia.org/wiki/Oklahoma_City_Thunder",
+      "https://en.wikipedia.org/wiki/Jupiter"
     ],
     "source_chunk_ids": [
-      4285
+      925,
+      2348
     ]
   },
   {
     "id": 35,
-    "question": "What is Tribal chief?",
-    "answer": "until 1924 that the Pueblo people were granted U.S. citizenship, and it was not until 1948 that the Puebloans were granted the right to vote in state elections in New Mexico. In Wisconsin, the Menominee has its own county Menominee County, Wisconsin with special car license plates; 87% of the county",
-    "question_type": "factual",
+    "question": "Compare the focus of Lace with that of Workforce. How do they differ?",
+    "answer": "Lace discusses: lace, classified by how they are made. Whereas Workforce focuses on: Gender is frequently associated with informal labour.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Tribal_chief"
+      "https://en.wikipedia.org/wiki/Lace",
+      "https://en.wikipedia.org/wiki/Labour_force"
     ],
     "source_chunk_ids": [
-      4710
+      4811,
+      1869
     ]
   },
   {
     "id": 36,
-    "question": "What is Co-operative economics?",
-    "answer": "debate as Bakunin and the collectivists favored market distribution using currency, collectivizing production, not consumption. Left libertarians collectivize neither but define their leftness as inalienable rights to the commons, not collective ownership of it, thus rejecting Lockean homesteading. ",
-    "question_type": "factual",
+    "question": "Compare the focus of Algorithm with that of Behavior. How do they differ?",
+    "answer": "Algorithm discusses: ancient Indian mathematics included the Shulba Sutras, the Kerala School, and the Br\u0101hmasphu\u1e6dasiddh\u0101nta. Whereas Behavior focuses on: of behavior is genetically determined.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Co-operative_economics"
+      "https://en.wikipedia.org/wiki/Algorithm",
+      "https://en.wikipedia.org/wiki/Behavior"
     ],
     "source_chunk_ids": [
-      23
+      3651,
+      5236
     ]
   },
   {
     "id": 37,
-    "question": "What is Measures of conditioned emotional response?",
-    "answer": "In experimental psychology the term conditioned emotional response refers to a phenomenon that is seen in classical conditioning after a conditioned stimulus (CS) has been paired with an emotion-producing unconditioned stimulus (US) such as electric shock. The conditioned emotional response is usual",
-    "question_type": "factual",
+    "question": "Compare the focus of Energy storage with that of Kirkhill Astronomical Pillar. How do they differ?",
+    "answer": "Energy storage discusses: the Nernst equation and ranges, in practical applications, from 1.0 V to 2.2 V. Whereas Kirkhill Astronomical Pillar focuses on: model of the planet Jupiter.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Measures_of_conditioned_emotional_response"
+      "https://en.wikipedia.org/wiki/Energy_storage",
+      "https://en.wikipedia.org/wiki/Kirkhill_Astronomical_Pillar"
     ],
     "source_chunk_ids": [
-      4066
+      3034,
+      2435
     ]
   },
   {
     "id": 38,
-    "question": "What is Portland Trail Blazers?",
-    "answer": "0\u20133 to the Los Angeles Lakers. Some media outlets began to criticize the team, and questioned Whitsitt's decisions and position as manager. A popular criticism was that Whitsitt was attempting to win a championship title by assembling a roster of stars, without paying attention to team chemistry. Lo",
-    "question_type": "factual",
+    "question": "Compare the focus of Laburnum with that of General relativity. How do they differ?",
+    "answer": "Laburnum discusses: See text Laburnum, sometimes called golden chain or golden rain, is a genus of two species of small trees in the subfamily Faboideae of the pea family Fabaceae. Whereas General relativity focuses on: sufficiently accurate to describe the exceedingly weak waves that are expected to arrive here on Earth from far-off cosmic events, which typically result in relative distances increasing and decreasing by 10\u221221 or less.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Portland_Trail_Blazers"
+      "https://en.wikipedia.org/wiki/Laburnum",
+      "https://en.wikipedia.org/wiki/General_relativity"
     ],
     "source_chunk_ids": [
-      4247
+      4922,
+      3961
     ]
   },
   {
     "id": 39,
-    "question": "What is Participation inequality?",
-    "answer": "as undemocratic although there are certain nations, like India, where low participation inequality has not helped the democratic responsiveness of Indian institutions. === Robert Dahl === In his 1971 paper Polyarchy: Participation and Opposition, Robert Dahl provided a basic framework to evaluate de",
-    "question_type": "factual",
+    "question": "Compare the focus of Calculus with that of Biochemistry. How do they differ?",
+    "answer": "Calculus discusses: for counting out distances, tallying votes, and doing abacus arithmetic, the word came to be the Latin word for calculation. Whereas Biochemistry focuses on: of plant's cell walls and glycogen is used as a form of energy storage in animals.",
+    "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Participation_inequality"
+      "https://en.wikipedia.org/wiki/Calculus",
+      "https://en.wikipedia.org/wiki/Biochemistry"
     ],
     "source_chunk_ids": [
-      835
+      6141,
+      5606
     ]
   },
   {
     "id": 40,
-    "question": "Compare Washington Wizards and First Draft News.",
-    "answer": "The project \"to fight mis- and disinformation online\" was founded by nine organizations brought together by the Google News Lab.",
+    "question": "Compare the focus of Kakie with that of Lowest bridging point. How do they differ?",
+    "answer": "Kakie discusses: Simone Francesca Emmanuelle \"Frankie\" Cuneta Pangilinan (Tagalog pronunciation: [ku\u02c8n\u025bt\u0250 pa\u014b\u026a\u02c8linan]; born December 16, 2000), also known by her stage name Kakie (Tagalog pronunciation: [\u02c8kak\u026a]), is a Filipino singer-songwriter. Whereas Lowest bridging point focuses on: The lowest bridging point (or lowest crossing point) is the location on a river which is crossed by a bridge at its closest point to the sea.",
     "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Washington_Wizards",
-      "https://en.wikipedia.org/wiki/First_Draft_News"
+      "https://en.wikipedia.org/wiki/Kakie",
+      "https://en.wikipedia.org/wiki/Lowest_bridging_point"
     ],
     "source_chunk_ids": [
-      1922,
-      1109
+      5987,
+      119
     ]
   },
   {
     "id": 41,
-    "question": "Compare Phenol sulfur transferase deficiency and Middle Bengali literature.",
-    "answer": "Middle English is a colloquial term for the Middle English language.",
+    "question": "Compare the focus of Outline of India with that of Socratic questioning. How do they differ?",
+    "answer": "Outline of India discusses: The following outline is provided as an overview of and topical guide to India: Republic of India \u2013 the seventh-largest country by area, located on the Indian subcontinent in South Asia. Whereas Socratic questioning focuses on: level of thought to critical thinking, by focusing on extracting depth, interest and assessing the truth or plausibility of thought.",
     "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Phenol_sulfur_transferase_deficiency",
-      "https://en.wikipedia.org/wiki/Middle_Bengali_literature"
+      "https://en.wikipedia.org/wiki/Outline_of_India",
+      "https://en.wikipedia.org/wiki/Socratic_questioning"
     ],
     "source_chunk_ids": [
-      3287,
-      3515
+      1875,
+      265
     ]
   },
   {
     "id": 42,
-    "question": "Compare Frequency illusion and Skydrol.",
-    "answer": "stinger",
+    "question": "Compare the focus of Social Science One with that of Biology. How do they differ?",
+    "answer": "Social Science One discusses: statement \"The current situation is untenable. Whereas Biology focuses on: the Ediacaran period, while vertebrates, along with most other modern phyla originated about 525 million years ago during the Cambrian explosion.",
     "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Frequency_illusion",
-      "https://en.wikipedia.org/wiki/Skydrol"
+      "https://en.wikipedia.org/wiki/Social_Science_One",
+      "https://en.wikipedia.org/wiki/Biology"
     ],
     "source_chunk_ids": [
-      842,
-      2656
+      1665,
+      4682
     ]
   },
   {
     "id": 43,
-    "question": "Compare Department of Aerospace Science and Technology and Microscale chemistry.",
-    "answer": "The Department of Science and Aerospace Technology (DST) is the national military research center for aviation and space flight. It is subordinated to the Brazilian Air Force (FAB). It coordinates all technical and scientific activities related to the aerospace sector in which there are interests by the Ministry of Defense. It was established in 1953. It currently employs several thousand civilian and military personnel.",
+    "question": "Compare the focus of Digital electronics with that of Glassblowing. How do they differ?",
+    "answer": "Digital electronics discusses: that can invoke the software design tools in the right order. Whereas Glassblowing focuses on: the pipe, swinging it and controlling the temperature of the piece while they blow.",
     "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Department_of_Aerospace_Science_and_Technology",
-      "https://en.wikipedia.org/wiki/Microscale_chemistry"
+      "https://en.wikipedia.org/wiki/Digital_electronics",
+      "https://en.wikipedia.org/wiki/Glassblowing"
     ],
     "source_chunk_ids": [
-      3520,
-      3739
+      6518,
+      6691
     ]
   },
   {
     "id": 44,
-    "question": "Compare Uti possidetis and Seat of government.",
-    "answer": "government",
+    "question": "Compare the focus of Dancing Hot Dog with that of Indoor practice facility. How do they differ?",
+    "answer": "Dancing Hot Dog discusses: The Dancing Hot Dog is the name often used to refer to a character and an Internet meme that originated in 2017, after the Snapchat mobile app released an augmented reality camera lens that includes an animated rendering of a dancing anthropomorphic hot dog. Whereas Indoor practice facility focuses on: An indoor practice facility is a specialized structure designed to provide athletes with a controlled environment for training and practice sessions indoors.",
     "question_type": "comparative",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Uti_possidetis",
-      "https://en.wikipedia.org/wiki/Seat_of_government"
+      "https://en.wikipedia.org/wiki/Dancing_Hot_Dog",
+      "https://en.wikipedia.org/wiki/Indoor_practice_facility"
     ],
     "source_chunk_ids": [
-      1758,
-      4516
+      1865,
+      493
     ]
   },
   {
     "id": 45,
-    "question": "Compare Jupiter and India.",
-    "answer": "Lok Sabha whose delegates are directly elected by the people in general elections every five years.",
-    "question_type": "comparative",
+    "question": "Given the details about Energy transformation, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'star systems such as the Solar System and the Earth. The energy locked into uranium is released spontaneously during most types of radioactive decay, and can be suddenly released in nuclear fission bo...', it can be inferred that Energy transformation plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Jupiter",
-      "https://en.wikipedia.org/wiki/India"
+      "https://en.wikipedia.org/wiki/Energy_conversion"
     ],
     "source_chunk_ids": [
-      1215,
-      4380
+      5385
     ]
   },
   {
     "id": 46,
-    "question": "Compare Carbodiphosphoranes and Instructional design.",
-    "answer": "- and -symmetry.",
-    "question_type": "comparative",
+    "question": "Given the details about Catalysis, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'hydrogenation vs. hydrogenolysis selectivity. Many other mechanisms are also possible. Promoters can cover up the surface to prevent the production of a mat of coke, or even actively remove such mater...', it can be inferred that Catalysis plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Carbodiphosphoranes",
-      "https://en.wikipedia.org/wiki/Instructional_design"
+      "https://en.wikipedia.org/wiki/Catalysis"
     ],
     "source_chunk_ids": [
-      2211,
-      1453
+      2851
     ]
   },
   {
     "id": 47,
-    "question": "Compare Kirkhill Astronomical Pillar and Bristol perambulation.",
-    "answer": "XXIX (29): 454\u2013464.",
-    "question_type": "comparative",
+    "question": "Given the details about Biodiversity, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'the vast majority arthropods. Diversity appears to increase continually in the absence of natural selection. The existence of a global carrying capacity, limiting the amount of life that can live at o...', it can be inferred that Biodiversity plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Kirkhill_Astronomical_Pillar",
-      "https://en.wikipedia.org/wiki/Bristol_perambulation"
+      "https://en.wikipedia.org/wiki/Biodiversity"
     ],
     "source_chunk_ids": [
-      4990,
-      3115
+      4153
     ]
   },
   {
     "id": 48,
-    "question": "Compare Geocriticism and History of timekeeping devices in Egypt.",
-    "answer": "Tally, Robert T. \"Geocritical Explorations: Space, Place, and Mapping in Literary and Cultural Studies.\"  \"The New Critical Idiom.\"  \"The Intertextual, Sexually-Coded Rue Jacob: A Geocritical Idiom.\"  \"The Intertextual, Sexually-Coded Rue Jacob: A Geocritical Idiom.\"  \"The Intertextual, Sexually-Coded Rue Jacob: A Geocritical Idiom.\"  \"The Intertextual, Sexual",
-    "question_type": "comparative",
+    "question": "Given the details about Vulcan (hypothetical planet), what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'meridian observations of the planet and 14 transits. The study's rigor meant that any differences between the motion predicted and what was observed would point to the influence of an unknown factor. ...', it can be inferred that Vulcan (hypothetical planet) plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Geocriticism",
-      "https://en.wikipedia.org/wiki/History_of_timekeeping_devices_in_Egypt"
+      "https://en.wikipedia.org/wiki/Vulcan_(hypothetical_planet)"
     ],
     "source_chunk_ids": [
-      1113,
-      3545
+      2295
     ]
   },
   {
     "id": 49,
-    "question": "Compare Unseating and Power vacuum.",
-    "answer": "The term power vacuum, also known as a power void, is an analogy between a physical vacuum to the political condition \"when someone in a place of power, has lost control of something and no one has replaced them.\" The situation can occur when a government has no identifiable central power or authority, after collapse, retreat with no successor, or inability to govern due to several factors.",
-    "question_type": "comparative",
+    "question": "Given the details about Football, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'rules changed further. In 1966, rugby league officials borrowed the American football concept of downs: a team was allowed to retain possession of the ball for four tackles (rugby union retains the or...', it can be inferred that Football plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Unseating",
-      "https://en.wikipedia.org/wiki/Power_vacuum"
+      "https://en.wikipedia.org/wiki/Football"
     ],
     "source_chunk_ids": [
-      4800,
-      3529
+      488
     ]
   },
   {
     "id": 50,
-    "question": "Compare Pro-Truth Pledge and Method of loci.",
-    "answer": "The Mentalist",
-    "question_type": "comparative",
+    "question": "Given the details about Intermodulation, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: ' [TABLE] Table with columns: Intermodulation (IM) or intermodulation distortion (IMD) is the amplitude modulation of signals containing two or more different frequencies, caused by nonlinearities or t...', it can be inferred that Intermodulation plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Pro-Truth_Pledge",
-      "https://en.wikipedia.org/wiki/Method_of_loci"
+      "https://en.wikipedia.org/wiki/Intermodulation"
     ],
     "source_chunk_ids": [
-      1433,
-      775
+      3308
     ]
   },
   {
     "id": 51,
-    "question": "Compare Cybersexuality and Bulletin (service).",
-    "answer": "Facebook brand.",
-    "question_type": "comparative",
+    "question": "Given the details about Gene, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'gene is duplicated, the new copy can evolve a new function. There are many different ways to use the term \"gene\" based on different aspects of their inheritance, selection, biological function, or mol...', it can be inferred that Gene plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Cybersexuality",
-      "https://en.wikipedia.org/wiki/Bulletin_(service)"
+      "https://en.wikipedia.org/wiki/Gene"
     ],
     "source_chunk_ids": [
-      2930,
-      1432
+      5430
     ]
   },
   {
     "id": 52,
-    "question": "Compare Phoenix Suns and Girl math.",
-    "answer": ")",
-    "question_type": "comparative",
+    "question": "Given the details about Epistemology, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'value by helping a person achieve their goals. For example, knowledge of a disease helps a doctor cure their patient. The usefulness of a known fact depends on the circumstances. Knowledge of some fac...', it can be inferred that Epistemology plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Phoenix_Suns",
-      "https://en.wikipedia.org/wiki/Girl_math"
+      "https://en.wikipedia.org/wiki/Epistemology"
     ],
     "source_chunk_ids": [
-      4926,
-      3235
+      6310
     ]
   },
   {
     "id": 53,
-    "question": "Compare Three-dimensional space and Ferrous metallurgy.",
-    "answer": "_Cf,ds=int _Ab",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Three-dimensional_space",
-      "https://en.wikipedia.org/wiki/History_of_ferrous_metallurgy"
-    ],
-    "source_chunk_ids": [
-      1185,
-      758
-    ]
-  },
-  {
-    "id": 54,
-    "question": "Compare Momentus space and White power music.",
-    "answer": "Counterculture\". Journal of Contemporary Ethnography. 16 (3): 344\u2013370. doi:10.1177/0891241687163006. S2CID 145309467. Fryer, Paul.",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Momentus_space",
-      "https://en.wikipedia.org/wiki/White_power_music"
-    ],
-    "source_chunk_ids": [
-      352,
-      4064
-    ]
-  },
-  {
-    "id": 55,
-    "question": "Compare Astronautics and Beatrice M. Hinkle.",
-    "answer": "The Re-Creating of the Individual\" (1923)",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Astronautics",
-      "https://en.wikipedia.org/wiki/Beatrice_M._Hinkle"
-    ],
-    "source_chunk_ids": [
-      458,
-      828
-    ]
-  },
-  {
-    "id": 56,
-    "question": "Compare Finance and Exploration of Mercury.",
-    "answer": "The probe made three passes of Mercury, one in January 2008, one in October 2008 and one in September 2009, before entering orbit in 2011.",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/History_of_finance",
-      "https://en.wikipedia.org/wiki/Exploration_of_Mercury"
-    ],
-    "source_chunk_ids": [
-      3671,
-      2411
-    ]
-  },
-  {
-    "id": 57,
-    "question": "Compare Socratic questioning and Crucids.",
-    "answer": "The Crucids are a group of meteor showers associated with the constellation Crux (the Southern Cross), primarily visible in the Southern Hemisphere.",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Socratic_questioning",
-      "https://en.wikipedia.org/wiki/Crucids"
-    ],
-    "source_chunk_ids": [
-      2088,
-      3257
-    ]
-  },
-  {
-    "id": 58,
-    "question": "Compare Spin room and Maibaron.",
-    "answer": "Maibarol",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Spin_room",
-      "https://en.wikipedia.org/wiki/Maibaron"
-    ],
-    "source_chunk_ids": [
-      3068,
-      4612
-    ]
-  },
-  {
-    "id": 59,
-    "question": "Compare Bitmoji and Atlanta Hawks.",
-    "answer": "The Hawks won the 2024 draft lottery and used the first overall pick to select Zaccharie Risacher from France.",
-    "question_type": "comparative",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Bitmoji",
-      "https://en.wikipedia.org/wiki/Atlanta_Hawks"
-    ],
-    "source_chunk_ids": [
-      3686,
-      4825
-    ]
-  },
-  {
-    "id": 60,
-    "question": "What can be inferred from this information?",
-    "answer": "The term soccer is understood by most as an alternative name for association football",
-    "question_type": "inferential",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Football_(word)"
-    ],
-    "source_chunk_ids": [
-      3526
-    ]
-  },
-  {
-    "id": 61,
-    "question": "What can be inferred from this information?",
-    "answer": "The Magic lost seven of their first ten games in January",
-    "question_type": "inferential",
-    "source_urls": [
-      "https://en.wikipedia.org/wiki/Orlando_Magic"
-    ],
-    "source_chunk_ids": [
-      478
-    ]
-  },
-  {
-    "id": 62,
-    "question": "What can be inferred from this information?",
-    "answer": "The Bucks announced that they would not renew general manager Larry Harris's contract, which was to expire in June.",
+    "question": "Given the details about Milwaukee Bucks, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'Ervin Johnson were traded to Minnesota (for Joe Smith). Payton left via free agency, after playing only 28 games for the Bucks. Karl's tenure also ended after the season. Within a one-year period, the...', it can be inferred that Milwaukee Bucks plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
     "question_type": "inferential",
     "source_urls": [
       "https://en.wikipedia.org/wiki/Milwaukee_Bucks"
     ],
     "source_chunk_ids": [
-      2485
+      737
+    ]
+  },
+  {
+    "id": 54,
+    "question": "Given the details about Gemology, what can be inferred about its impact on its respective field?",
+    "answer": "Based on the context: 'also known as relative density, varies depending upon the chemical composition and crystal structure type. Heavy liquids with a known specific gravity are used to test loose gemstones. Specific gravit...', it can be inferred that Gemology plays a critical role in shaping outcomes by providing the necessary framework or data mentioned.",
+    "question_type": "inferential",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Gemology"
+    ],
+    "source_chunk_ids": [
+      5785
+    ]
+  },
+  {
+    "id": 55,
+    "question": "Using information from both Flow, my tears and Co-construction (learning), identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Flow, my tears provides the foundation for tears, fall from your springs! Exiled for ever, le, while Co-construction (learning) expands on as the partnership between teaching staff, pupils .",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Lachrimae",
+      "https://en.wikipedia.org/wiki/Co-construction_(learning)"
+    ],
+    "source_chunk_ids": [
+      4231,
+      262
+    ]
+  },
+  {
+    "id": 56,
+    "question": "Using information from both Flow, my tears and Poetry, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Flow, my tears provides the foundation for his First Booke of Consort Lessons (London, 1599)., while Poetry expands on usually brief, and can be on a frivolous or seriou.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Lachrimae",
+      "https://en.wikipedia.org/wiki/Poetry"
+    ],
+    "source_chunk_ids": [
+      4230,
+      3110
+    ]
+  },
+  {
+    "id": 57,
+    "question": "Using information from both Epistemology and Culture, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Epistemology provides the foundation for Epistemology is the branch of philosophy that exam, while Culture expands on development. Samuel von Pufendorf took over this m.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Epistemology",
+      "https://en.wikipedia.org/wiki/Culture"
+    ],
+    "source_chunk_ids": [
+      6303,
+      6973
+    ]
+  },
+  {
+    "id": 58,
+    "question": "Using information from both Differential equation and Clothing in ancient Egypt, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Differential equation provides the foundation for is locally a solution to this problem if g ( x , y, while Clothing in ancient Egypt expands on ankle, while the upper edge could be worn above or.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Differential_equations",
+      "https://en.wikipedia.org/wiki/Kalasiris"
+    ],
+    "source_chunk_ids": [
+      4903,
+      6526
+    ]
+  },
+  {
+    "id": 59,
+    "question": "Using information from both Biochemistry and Publishing, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Biochemistry provides the foundation for are an example of proteins that attach to one spec, while Publishing expands on articles, and features written by journalists. The.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Biochemistry",
+      "https://en.wikipedia.org/wiki/Publishing"
+    ],
+    "source_chunk_ids": [
+      5609,
+      4556
+    ]
+  },
+  {
+    "id": 60,
+    "question": "Using information from both Metropolitan area and Integer programming, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Metropolitan area provides the foundation for to a single urban settlement; comparative statisti, while Integer programming expands on can be used to provide a worst-case estimate of ho.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Metropolitan_area",
+      "https://en.wikipedia.org/wiki/Integer_programming"
+    ],
+    "source_chunk_ids": [
+      2005,
+      2870
+    ]
+  },
+  {
+    "id": 61,
+    "question": "Using information from both City marketing and Geothermal energy, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. City marketing provides the foundation for headquarters as a primary attraction for tourists., while Geothermal energy expands on electrical power generation. However, the system s.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/City_marketing",
+      "https://en.wikipedia.org/wiki/Geothermal_energy"
+    ],
+    "source_chunk_ids": [
+      7,
+      7092
+    ]
+  },
+  {
+    "id": 62,
+    "question": "Using information from both Data mining and Minnesota Timberwolves, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Data mining provides the foundation for companies who in turn provided the data to pharmac, while Minnesota Timberwolves expands on sent Marbury to the New Jersey Nets, the Wolves go.",
+    "question_type": "multi-hop",
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Data_mining",
+      "https://en.wikipedia.org/wiki/Minnesota_Timberwolves"
+    ],
+    "source_chunk_ids": [
+      5529,
+      1292
     ]
   },
   {
     "id": 63,
-    "question": "What can be inferred from this information?",
-    "answer": "The original lawsuit was eventually settled in 2009",
-    "question_type": "inferential",
+    "question": "Using information from both Kaiser and Immunotherapy, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Kaiser provides the foundation for before the imperial coronation); they saw their ru, while Immunotherapy expands on immunological diseases and allergies, and have pro.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Unfollow_Everything"
+      "https://en.wikipedia.org/wiki/Kaiser",
+      "https://en.wikipedia.org/wiki/Immunotherapy"
     ],
     "source_chunk_ids": [
-      2541
+      6416,
+      4508
     ]
   },
   {
     "id": 64,
-    "question": "What can be inferred from this information?",
-    "answer": "Pluto shares features with comets",
-    "question_type": "inferential",
+    "question": "Using information from both Insular biogeography and Exercise, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Insular biogeography provides the foundation for represents the measure of diversity of a species (, while Exercise expands on is modeled in a J curve. Moderate exercise has bee.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Pluto"
+      "https://en.wikipedia.org/wiki/Island_biogeography",
+      "https://en.wikipedia.org/wiki/Exercise"
     ],
     "source_chunk_ids": [
-      3839
+      3413,
+      4315
     ]
   },
   {
     "id": 65,
-    "question": "What can be inferred from this information?",
-    "answer": "The following is a list of events that happened during the time period mentioned.",
-    "question_type": "inferential",
+    "question": "Using information from both Planetary Science Institute and Data mining, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Planetary Science Institute provides the foundation for The Planetary Science Institute (PSI) is a 501(c)(, while Data mining expands on companies who in turn provided the data to pharmac.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Bulletin_(service)"
+      "https://en.wikipedia.org/wiki/Planetary_Science_Institute",
+      "https://en.wikipedia.org/wiki/Data_mining"
     ],
     "source_chunk_ids": [
-      1432
+      2376,
+      5529
     ]
   },
   {
     "id": 66,
-    "question": "What can be inferred from this information?",
-    "answer": "The relevant information to answer the above question is: History is relevant to many fields through the study of their past, including the history of science, mathematics, philosophy, and art.",
-    "question_type": "inferential",
+    "question": "Using information from both Geothermal energy and Infrared astronomy, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Geothermal energy provides the foundation for electrical power generation. However, the system s, while Infrared astronomy expands on Infrared astronomy is a sub-discipline of astronom.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/History"
+      "https://en.wikipedia.org/wiki/Geothermal_energy",
+      "https://en.wikipedia.org/wiki/Infrared_astronomy"
     ],
     "source_chunk_ids": [
-      2810
+      7092,
+      5699
     ]
   },
   {
     "id": 67,
-    "question": "What can be inferred from this information?",
-    "answer": "World War II\" (1985).",
-    "question_type": "inferential",
+    "question": "Using information from both Experimental psychology and Valley of Flowers National Park, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Experimental psychology provides the foundation for possibilities. A pilot study may be run before a m, while Valley of Flowers National Park expands on Valley of Flowers National Park is an Indian natio.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Intelligence_literature"
+      "https://en.wikipedia.org/wiki/Experimental_psychology",
+      "https://en.wikipedia.org/wiki/Valley_of_Flowers_National_Park"
     ],
     "source_chunk_ids": [
-      455
+      4247,
+      2066
     ]
   },
   {
     "id": 68,
-    "question": "What can be inferred from this information?",
-    "answer": "ed., 'The Second World War: The US-Japanese Naval War (1941\u20131945)', 'The Second World War: The US-Japanese Naval War (1941\u20131945)', 'The Second World War: The US-Japanese Naval War (1941\u20131945)', 'The Second World War: The US-Japanese Naval War (1941\u20131945)', 'The Second World War: The US-Japanese Naval War (1941\u20131945)', '",
-    "question_type": "inferential",
+    "question": "Using information from both Philosophy and History of mathematics, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Philosophy provides the foundation for all things. Latin American philosophy during the c, while History of mathematics expands on 5 decimal places (i.e. 3.14159). Though more of a .",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/History_of_naval_warfare"
+      "https://en.wikipedia.org/wiki/Philosophy",
+      "https://en.wikipedia.org/wiki/History_of_mathematics"
     ],
     "source_chunk_ids": [
-      1651
+      405,
+      6851
     ]
   },
   {
     "id": 69,
-    "question": "What can be inferred from this information?",
-    "answer": "SULT1A1 gene is a genetic variant of the SULT1A1 gene",
-    "question_type": "inferential",
+    "question": "Using information from both Instagram face and Instructional design, identify a common thread or potential intersection between these two topics.",
+    "answer": "The connection lies in their shared relevance to the broader context provided in the corpus. Instagram face provides the foundation for Instagram face is a beauty standard based on the f, while Instructional design expands on origin of the concept could be traced back to syst.",
+    "question_type": "multi-hop",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Phenol_sulfur_transferase_deficiency"
+      "https://en.wikipedia.org/wiki/Instagram_face",
+      "https://en.wikipedia.org/wiki/Instructional_design"
     ],
     "source_chunk_ids": [
-      3287
+      1758,
+      225
     ]
   },
   {
     "id": 70,
-    "question": "What can be inferred from this information?",
-    "answer": "Assimilation",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Electronic health record (Germany).",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Beatrice_M._Hinkle"
+      "https://en.wikipedia.org/wiki/Electronic_health_record_(Germany)"
     ],
     "source_chunk_ids": [
-      824
+      338
     ]
   },
   {
     "id": 71,
-    "question": "What can be inferred from this information?",
-    "answer": "The focus of the article is now shifting again.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Dermatology.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Atmospheric_chemistry"
+      "https://en.wikipedia.org/wiki/Dermatology"
     ],
     "source_chunk_ids": [
-      4073
+      5933
     ]
   },
   {
     "id": 72,
-    "question": "What can be inferred from this information?",
-    "answer": "Social security net",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Geography.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Political_demography"
+      "https://en.wikipedia.org/wiki/Geography"
     ],
     "source_chunk_ids": [
-      2935
+      5516
     ]
   },
   {
     "id": 73,
-    "question": "What can be inferred from this information?",
-    "answer": "The \"chemical space\" of all possible organic chemicals is large",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Human behavior.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Chemical_library"
+      "https://en.wikipedia.org/wiki/Human_behavior"
     ],
     "source_chunk_ids": [
-      2
+      5572
     ]
   },
   {
     "id": 74,
-    "question": "What can be inferred from this information?",
-    "answer": "The influence of digital filters has influenced the popularity of Instagram face.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Football (ball).",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Instagram_face"
+      "https://en.wikipedia.org/wiki/Football_(ball)"
     ],
     "source_chunk_ids": [
-      1745
+      433
     ]
   },
   {
     "id": 75,
-    "question": "What can be inferred from this information?",
-    "answer": "a perfect fluid is a fluid solution used in general relativity to model idealized distributions of matter, such as the interior of a star or an isotropic universe.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Jurisdiction.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Perfect_fluid"
+      "https://en.wikipedia.org/wiki/Jurisdiction"
     ],
     "source_chunk_ids": [
-      49
+      7044
     ]
   },
   {
     "id": 76,
-    "question": "What can be inferred from this information?",
-    "answer": "The use of these nanowires in nanosensor elements increases the sensitivity in electrode response.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Boston Celtics.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Nanochemistry"
+      "https://en.wikipedia.org/wiki/Boston_Celtics"
     ],
     "source_chunk_ids": [
-      2006
+      961
     ]
   },
   {
     "id": 77,
-    "question": "What can be inferred from this information?",
-    "answer": "Identity disturbance is characterized by a deficiency or inability to maintain one or more of the following major components of identity:",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Biophysics.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Identity_disturbance"
+      "https://en.wikipedia.org/wiki/Biophysics"
     ],
     "source_chunk_ids": [
-      1262
+      3608
     ]
   },
   {
     "id": 78,
-    "question": "What can be inferred from this information?",
-    "answer": "The boundaries of a few Anglo-Saxon estates were described in the boundary clauses of Anglo-Saxon Charters.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in Fluid dynamics.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Boundaries_in_landscape_history"
+      "https://en.wikipedia.org/wiki/Fluid_dynamics"
     ],
     "source_chunk_ids": [
-      1265
+      7186
     ]
   },
   {
     "id": 79,
-    "question": "What can be inferred from this information?",
-    "answer": "The program offers high school students three different levels of projects, ranging from a mid-sized rocket traveling to a one mile apogee to rockets weighing several hundred pounds with the potential to reach near-space altitudes.",
-    "question_type": "inferential",
+    "question": "Tell me more about the 'various factors' involved in History of mathematics.",
+    "answer": "This is an ambiguous query. While the text mentions the subject, it does not provide a specific list of 'various factors' without further clarification on the aspect of interest.",
+    "question_type": "ambiguous",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/SystemsGo"
+      "https://en.wikipedia.org/wiki/History_of_mathematics"
     ],
     "source_chunk_ids": [
-      314
+      6866
     ]
   },
   {
     "id": 80,
-    "question": "How are City and Magnetochemistry related?",
-    "answer": "is polarized",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Gene are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Gene but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/City",
-      "https://en.wikipedia.org/wiki/Magnetochemistry"
+      "https://en.wikipedia.org/wiki/Gene"
     ],
     "source_chunk_ids": [
-      4324,
-      269
+      5452
     ]
   },
   {
     "id": 81,
-    "question": "How are Closed-loop geothermal and Hot stab related?",
-    "answer": "The hydraulic hot stabs are designed for use in subsea production systems, and are designed to be able to be used in the subsea production system.",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Folklore are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Folklore but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Closed-loop_geothermal",
-      "https://en.wikipedia.org/wiki/Hot_stab"
+      "https://en.wikipedia.org/wiki/Folklore"
     ],
     "source_chunk_ids": [
-      632,
-      3551
+      4931
     ]
   },
   {
     "id": 82,
-    "question": "How are Five Capitals System and Pro-Truth Pledge related?",
-    "answer": "The Five Capitals in Various Dynasties",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Ichthyology are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Ichthyology but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Five_Capitals_System",
-      "https://en.wikipedia.org/wiki/Pro-Truth_Pledge"
+      "https://en.wikipedia.org/wiki/Ichthyology"
     ],
     "source_chunk_ids": [
-      848,
-      1433
+      5094
     ]
   },
   {
     "id": 83,
-    "question": "How are Geocriticism and Political demography related?",
-    "answer": "Population aging is a problem that has been largely ignored by scientists.",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Communication are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Communication but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Geocriticism",
-      "https://en.wikipedia.org/wiki/Political_demography"
+      "https://en.wikipedia.org/wiki/Communication"
     ],
     "source_chunk_ids": [
-      1111,
-      2936
+      2530
     ]
   },
   {
     "id": 84,
-    "question": "How are Monarch and Gorakshep related?",
-    "answer": "Nepalese mountain range",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Ballistics are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Ballistics but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Monarch",
-      "https://en.wikipedia.org/wiki/Gorakshep"
+      "https://en.wikipedia.org/wiki/Ballistics"
     ],
     "source_chunk_ids": [
-      1711,
-      2210
+      2885
     ]
   },
   {
     "id": 85,
-    "question": "How are Preoperative care and Religion in politics related?",
-    "answer": "religion in politics",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Ionosphere are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Ionosphere but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Surgical_clearance",
-      "https://en.wikipedia.org/wiki/Religion_in_politics"
+      "https://en.wikipedia.org/wiki/Ionosphere"
     ],
     "source_chunk_ids": [
-      4951,
-      2818
+      2950
     ]
   },
   {
     "id": 86,
-    "question": "How are Iranian literature and Gilchrist\u2013Thomas process related?",
-    "answer": "The Gilchrist\u2013Thomas process or Thomas process is a historical process for refining pig iron, derived from the Bessemer converter. It is named after its inventors who patented it in 1877: Percy Carlyle Gil,",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Social media marketing are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Social media marketing but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Iranian_literature",
-      "https://en.wikipedia.org/wiki/Gilchrist\u2013Thomas_process"
+      "https://en.wikipedia.org/wiki/Social_media_marketing"
     ],
     "source_chunk_ids": [
-      1308,
-      1194
+      1773
     ]
   },
   {
     "id": 87,
-    "question": "How are Technology and society and Politically exposed person related?",
-    "answer": " \"Children of invention\". In Morton Winston; Ralph Edel.",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Co-construction (learning) are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Co-construction (learning) but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Technology_and_society",
-      "https://en.wikipedia.org/wiki/Politically_exposed_person"
+      "https://en.wikipedia.org/wiki/Co-construction_(learning)"
     ],
     "source_chunk_ids": [
-      68,
-      3243
+      262
     ]
   },
   {
     "id": 88,
-    "question": "How are Politically exposed person and Three-dimensional space related?",
-    "answer": "Leonhard Euler studied the notion of a geodesic on a surface deriving the first analytical geodesic equation, and later introduced the first set of intrinsic coordinate systems on a surface, beginning the theory of intrinsic geometry upon which modern geometric ideas are based.",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Hobohemia are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Hobohemia but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Politically_exposed_person",
-      "https://en.wikipedia.org/wiki/Three-dimensional_space"
+      "https://en.wikipedia.org/wiki/Hobohemia"
     ],
     "source_chunk_ids": [
-      3240,
-      1171
+      77
     ]
   },
   {
     "id": 89,
-    "question": "How are Capital city and Dallas Mavericks related?",
-    "answer": "Butler suffered a season-ending knee injury himself only four nights later.",
-    "question_type": "multi-hop",
+    "question": "Which modern criticisms of Irrigation are NOT addressed in the text?",
+    "answer": "The text focuses on the definition and history of Irrigation but fails to mention contemporary criticisms or modern-day controversies.",
+    "question_type": "negated",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Capital_city",
-      "https://en.wikipedia.org/wiki/Dallas_Mavericks"
+      "https://en.wikipedia.org/wiki/Irrigation"
     ],
     "source_chunk_ids": [
-      3786,
-      3474
+      4189
     ]
   },
   {
     "id": 90,
-    "question": "How are Naval architecture and Western District Public Cargo Working Area related?",
-    "answer": "clouds",
-    "question_type": "multi-hop",
+    "question": "Can you explain the concept of C40 Cities Climate Leadership Group in your own words?",
+    "answer": "C40 Cities Climate Leadership Group is a group of 96 cities that represents one twelfth of the world's population and one quarter of the global economy. Created and led by cities, C40 is focused on fighting the climate crisis and driving urban action that reduces greenhouse gas emissions and climate risks, while increasing the health, wellbeing and economic opportunities of urban residents. From 2023, Mayor of London, Sadiq Khan and Mayor of Freetown, Yvonne Aki-Sawyerr serve as C40's Co-Chair, former mayor of New York City Michael Bloomberg as Board President, and Mark Watts as Executive Director. All four work closely with the 13-member steering committee, the Board of Directors and professional staff. The rotating steering committee of C40 mayors provides strategic direction and governance. Steering committee members include: London, Freetown, Phoenix, Medellin, Copenhagen, Paris, Dhaka North, Nairobi, Tokyo, Rio de Janeiro, Montreal, Milan, Seoul, Oslo and Hong Kong. Working across multiple sectors and initiative areas, C40 convenes networks of cities providing a suite of services in support of their efforts, including: direct technical assistance; facilitation of peer-to-peer exchange; and research, knowledge sharing & communications. C40 is also positioning cities as a leading force for climate action around the world, defining and amplifying their call to national governments for greater support and autonomy in creating a sustainable future. C40 started in October 2005 when London Mayor Ken Livingstone convened representatives from 18 megacities to forge an agreement on cooperatively reducing climate pollution and created the 'C20'. In 2006, Mayor Livingstone and the Clinton Climate Initiative (CCI) - led by the efforts of former U.S. President Bill Clinton - combined to strengthen both organizations, bringing the number of cities in the network to 40 and helping to deliver projects and project management for participating cities to further enhance emissions reductions efforts.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/History_of_naval_architecture",
-      "https://en.wikipedia.org/wiki/Western_District_Public_Cargo_Working_Area"
+      "https://en.wikipedia.org/wiki/C40_Cities_Climate_Leadership_Group"
     ],
     "source_chunk_ids": [
-      260,
-      4958
+      10
     ]
   },
   {
     "id": 91,
-    "question": "How are Cycler and Technological platform related?",
-    "answer": "European Commission document \"Industrial policy in an enlarged Europe\" (2002)).",
-    "question_type": "multi-hop",
+    "question": "Can you explain the concept of Instagram in your own words?",
+    "answer": "deal between Instagram and Facebook officially closed with a purchase price of $300 million in cash and 23 million shares of stock. The deal closed just before Facebook's scheduled initial public offering according to CNN. The deal price was compared to the $35 million Yahoo! paid for Flickr in 2005. Mark Zuckerberg said Facebook was \"committed to building and growing Instagram independently\". According to Wired, the deal netted Systrom $400 million. In November 2012, Instagram launched website profiles, allowing anyone to see user feeds from a web browser with limited functionality, as well as a selection of badges, and web widget buttons to link to profiles. Since the app's launch it had used the Foursquare API technology to provide named location tagging. In March 2014, Instagram started to test and switch the technology to use Facebook Places. In June 2015, the desktop website user interface was redesigned to become more flat and minimalistic, but with more screen space for each photo and to resemble the layout of Instagram's mobile website. Furthermore, one row of pictures only has three instead of five photos to match the mobile layout. The slideshow banner on the top of profile pages, which simultaneously slide-showed seven picture tiles of pictures posted by the user, alternating at different times in a random order, has been removed. In addition, the formerly angular profile pictures became circular. In April 2016, Instagram released a Windows 10 Mobile app, after years of demand from Microsoft and the public to release an app for the platform. The platform previously had a beta version of Instagram, first released on November 21, 2013, for Windows Phone 8. The new app added support for videos (viewing and creating posts or stories, and viewing live streams), album posts and direct messages.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Cycler",
-      "https://en.wikipedia.org/wiki/Technological_platform"
+      "https://en.wikipedia.org/wiki/Instagram"
     ],
     "source_chunk_ids": [
-      279,
-      2817
+      1694
     ]
   },
   {
     "id": 92,
-    "question": "How are Border checkpoint and George Barton Cutten related?",
-    "answer": "Minnie W. Brown",
-    "question_type": "multi-hop",
+    "question": "How would you describe Epistemology to someone who has never heard of it?",
+    "answer": "relation between knowing and acting. It sees the pursuit of knowledge as an ongoing process guided by common sense and experience while always open to revision. This approach reinterprets some core epistemological notions, for example, by conceptualizing beliefs as habits that shape actions rather than representations that mirror the world. Motivated by pragmatic considerations, epistemic conservatism is a view about belief revision. It prioritizes pre-existing beliefs, asserting that a person should only change their beliefs if they have a good reason to. One argument for epistemic conservatism rests on the recognition that the cognitive resources of humans are limited, making it impractical to constantly reexamine every belief. Postmodern epistemology critiques the conditions of knowledge in advanced societies. This concerns in particular the metanarrative of a constant progress of scientific knowledge leading to a universal and foundational understanding of reality. [r] Similarly, feminist epistemology adopts a critical perspective, focusing on the effect of gender on knowledge. Among other topics, it explores how preconceptions about gender influence who has access to knowledge, how knowledge is produced, and which types of knowledge are valued in society. Some postmodern and feminist thinkers adopt a constructivist approach, arguing that the way people view the world is not a simple reflection of external reality but a social construction. This view emphasizes the creative role of interpretation while undermining objectivity since social constructions can vary across societies. Another critical approach, found in decolonial scholarship, opposes the global influence of Western knowledge systems. It seeks to undermine Western hegemony and decolonize knowledge. The decolonial outlook is also present in African epistemology. Grounded in African ontology, it emphasizes the interconnectedness of reality as a continuum between knowing subject and known object.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Border_checkpoint",
-      "https://en.wikipedia.org/wiki/George_Barton_Cutten"
+      "https://en.wikipedia.org/wiki/Epistemology"
     ],
     "source_chunk_ids": [
-      3623,
-      2714
+      6324
     ]
   },
   {
     "id": 93,
-    "question": "How are Public interest and Politics related?",
-    "answer": "The New York Times, the far-right is a political ideology that aims to conserve what it sees as the important elements of society such as law and order, limited government and preserving individual freedoms.",
-    "question_type": "multi-hop",
+    "question": "Explain the meaning of Kaiserslautern based on the provided text.",
+    "answer": "after the Second World War. The establishment of the state of Rhineland-Palatinate was ordered on 30 August 1946 as the last state in the western occupation zones by ordinance No. 57 of the French military government under General Marie-Pierre K\u0153nig. Little reconstruction took place until the currency reform of 1948. The pace of the economy remained slow until 1952, when construction for newly established garrisons of American troops brought economic growth to the area. Unexploded ordnance from WWII continues to be discovered in and around Kaiserslautern. In May 2012 an unexploded 250-pound (110 kg) Allied bomb was found, buried deeply and reportedly covered by water pipe, during a construction project in the downtown area of the city. On 5 September 2013, another WWII bomb was found during construction near the train station in Enkenbach-Alsenborn. In the late 1940s, Kaiserslautern area became the largest U.S. garrison outside the United States (Kaiserslautern Military Community). On 14 November 1956, a U.S. Air Force F-86 fighter jet crashed into the district office in the Burgstrasse / Maxstrasse area. In addition to the pilot, two civilians were killed, and numerous wounded. With the incorporation of the previously independent communities of Dansenberg, Erfenbach, Erlenbach, Hohenecken, M\u00f6lschbach, Morlautern and Siegelbach on 7 June 1969, Kaiserslautern became a city. The University of Kaiserslautern was founded in 1970. Industry flourished around the time of the first oil crisis (1973). In the 1970s, many industrial companies went through a crisis. In 1981, the spinning mill went bankrupt; Pfaff and Opel fired employees. The downsizing of the American garrison and the withdrawal of the French garrison cost more jobs. Kaiserslautern has a moderate climate with adequate rainfall year-round. It is classified as a \"Cfb\" (Marine West Coast Climate/Oceanic climate) by the K\u00f6ppen Climate Classification system.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Public_interest",
-      "https://en.wikipedia.org/wiki/Political_terminology"
+      "https://en.wikipedia.org/wiki/Kaiserslautern"
     ],
     "source_chunk_ids": [
-      704,
-      3861
+      3489
     ]
   },
   {
     "id": 94,
-    "question": "How are Electroconductive carbon black and Counterphobic attitude related?",
-    "answer": "Didier Anzieu",
-    "question_type": "multi-hop",
+    "question": "Provide a brief overview of what Biomedical engineering entails.",
+    "answer": "some undergraduate BME programs will actively discourage students from majoring in BME without an expressed intention to also obtain a master's degree or apply to medical school afterwards. Graduate programs in BME, like in other scientific fields, are highly varied, and particular programs may emphasize certain aspects within the field. They may also feature extensive collaborative efforts with programs in other fields (such as the university's Medical School or other engineering divisions), owing again to the interdisciplinary nature of BME. M.S. and Ph.D. programs will typically require applicants to have an undergraduate degree in BME, or another engineering discipline (plus certain life science coursework), or life science (plus certain engineering coursework). Education in BME also varies greatly around the world. By virtue of its extensive biotechnology sector, its numerous major universities, and relatively few internal barriers, the U.S. has progressed a great deal in its development of BME education and training opportunities. Europe, which also has a large biotechnology sector and an impressive education system, has encountered trouble in creating uniform standards as the European community attempts to supplant some of the national jurisdictional barriers that still exist. Recently, initiatives such as BIOMEDEA have sprung up to develop BME-related education and professional standards. Other countries, such as Australia, are recognizing and moving to correct deficiencies in their BME education. Also, as high technology endeavors are usually marks of developed nations, some areas of the world are prone to slower development in education, including in BME.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Electroconductive_carbon_black",
-      "https://en.wikipedia.org/wiki/Counterphobic_attitude"
+      "https://en.wikipedia.org/wiki/Biomedical_engineering"
     ],
     "source_chunk_ids": [
-      2676,
-      1268
+      4806
     ]
   },
   {
     "id": 95,
-    "question": "How are Spatial intelligence (psychology) and History of the automobile related?",
-    "answer": "NSU's",
-    "question_type": "multi-hop",
+    "question": "Describe the nature of Lacertidae using the available information.",
+    "answer": "See text The Lacertidae are the family of the wall lizards, true lizards, or sometimes simply lacertas, which are native to Afro-Eurasia. It is a diverse family with at about 360 species in 39 genera. They represent the dominant group of reptiles found in Europe. The European and Mediterranean species of lacertids live mainly in forest and scrub habitats. Eremias and Ophisops species replace these in the grassland and desert habitats of Asia. African species usually live in rocky, arid areas. Holaspis species are among the few arboreal lacertids, and its two species, Holaspis guentheri and Holaspis laevis, are gliders (although apparently poor ones), using their broad tail and flattened body as an aerofoil. Lacertids are small to medium-sized lizards. Most species are less than 9cm long, excluding the tail. The largest living species, Gallotia stehlini, reaches 46cm, and some extinct forms were larger still. They are primarily insectivorous. An exception is Meroles anchietae, one of the few wall lizards that regularly eat seeds \u2013 an appropriate food for a lizard of the harsh Namib Desert. [clarification needed] Lacertids are remarkably similar in form, with slender bodies and long tails, but have highly varied patterns and colours, even within the same species. Their scales are large on the head, which often also has osteoderms, small and granular on the back, and rectangular on the underside. Most species are sexually dimorphic, with the males and females having different patterns. At least eight species from the Caucasus are parthenogenetic, and three species give birth to live young, including the viviparous lizard, Zootoca vivipara. Lacertids are suspected to have originated in Europe, due to their earliest fossils being found in the region, alongside those of their sister group, the extinct Eolacertidae.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Spatial_intelligence_(psychology)",
-      "https://en.wikipedia.org/wiki/History_of_the_automobile"
+      "https://en.wikipedia.org/wiki/Lacertidae"
     ],
     "source_chunk_ids": [
-      1024,
-      376
+      3691
     ]
   },
   {
     "id": 96,
-    "question": "How are Boundary (real estate) and Washington Wizards related?",
-    "answer": "The Wizards supporters",
-    "question_type": "multi-hop",
+    "question": "What is meant by the phrase 'Instagram husband'?",
+    "answer": "Week. A writer for Harper's Bazaar who hired one found the experience awkward at first, as the photographer didn't know her, and she found it hard to explain what she wanted. The Atlantic characterized the role of an Instagram husband as shifting from a negative one to a positive one. At first, it was considered trivial or pointless to take photos of one's spouse. But as the monetary value of having a large social media following has grown, photography for social media posts can be an integral part of an online business. For serious influencers, their romantic partner can be responsible for photo editing, captions, planning photo shoots, and even the business side of things such as reviewing contracts, talking to brands and other business partners, and attending events. The services of a romantic partner are typically almost free, compared to expensive rates for things like professional photographers or an administrative assistant. An editor for Racked hired a professional Instagram husband to take photos of her at an event. Despite planning to hire a 'husband', she noted that the person that showed up to work for her was a woman. Jeff Houghton, the creator of the original viral video, connected the use of the photo shoot for average people to the rise of social media. He claimed that social media platforms allow anyone to play the role of a model or influencer if they want, regardless of their success, and taking lots of photos can be one way to indulge that urge.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Boundary_(real_estate)",
-      "https://en.wikipedia.org/wiki/Washington_Wizards"
+      "https://en.wikipedia.org/wiki/Instagram_husband"
     ],
     "source_chunk_ids": [
-      2447,
-      1931
+      1762
     ]
   },
   {
     "id": 97,
-    "question": "How are Pasqualina Perrig-Chiello and Oklahoma City Thunder related?",
-    "answer": "Thunder's practice facility completion date was pushed back to about March 2011.",
-    "question_type": "multi-hop",
+    "question": "How would you describe Criticism of Facebook to someone who has never heard of it?",
+    "answer": "Protection Act. According to whistleblower Frances Haugen, the company intentionally targets children below the age of 18. Research shows that people who are feeling suicidal use the internet to search for suicide methods. Websites provide graphic details and information on how to take your own life. This cannot be right. Where this content breaches the policies of internet and social media providers it must be removed. \u2014 Matt Hancock, Health Secretary of the United Kingdom I do not think it is going too far to question whether even you, the owners, any longer have any control over [the sites'] content. If that is the case, then children should not be accessing your services at all, and parents should be aware that the idea of any authority overseeing algorithms and content is a mirage. \u2014 Anne Longfield, Children's Commissioner for England In January 2019, both the Health Secretary of the United Kingdom, and the Children's Commissioner for England, urged Facebook and other social media companies to take responsibility for the risk to children posed by content on their platforms related to self-harm and suicide. Facebook has been criticized for making people envious and unhappy due to the constant exposure to positive yet unrepresentative highlights of their peers. Such highlights include, but are not limited to, journal posts, videos, and photos that depict or reference such positive or otherwise outstanding activities, experiences, and facts. This effect is caused mainly by the fact that most users of Facebook usually only display the positive aspects of their lives while excluding the negative, though it is also strongly connected to inequality and the disparities between social groups as Facebook is open to users from all classes of society.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Pasqualina_Perrig-Chiello",
-      "https://en.wikipedia.org/wiki/Oklahoma_City_Thunder"
+      "https://en.wikipedia.org/wiki/Unfollow_Everything"
     ],
     "source_chunk_ids": [
-      2665,
-      4689
+      1501
     ]
   },
   {
     "id": 98,
-    "question": "How are Impact of the COVID-19 pandemic on time perception and Musical escapism related?",
-    "answer": "Musical escapism is a psychological phenomenon characterized by the use of music to elicit vivid daydreams and imaginative scenarios, facilitating a temporary disconnection from immediate surroundings. == See also: Musical escapism is a psychological phenomenon characterized by the use of music to elicit vivid daydreams and imaginative scenarios, facilitating a temporary disconnection from immediate surroundings. == See also: Musical escapism is a psychological phenomenon characterized by the use of music to elicit vivid daydreams and imaginative scenarios, facilitating a temporary",
-    "question_type": "multi-hop",
+    "question": "Give me a summary of the information regarding Politics.",
+    "answer": "politics). The words \"politics\" and \"political\" are sometimes used as pejoratives to mean political action that is deemed to be overzealous, performative, or insincere. Macropolitics can either describe political issues that affect an entire political system (e.g. the nation state), or refer to interactions between political systems (e.g. international relations). Global politics (or world politics) covers all aspects of politics that affect multiple political systems, in practice meaning any political phenomenon crossing national borders. This can include cities, nation-states, multinational corporations, non-governmental organizations or international organizations. An important element is international relations: the relations between nation-states may be peaceful when they are conducted through diplomacy, or they may be violent, which is described as war. States that are able to exert strong international influence are referred to as superpowers, whereas less-powerful ones may be called regional or middle powers. The international system of power is called the world order, which is affected by the balance of power that defines the degree of polarity in the system. Emerging powers are potentially destabilizing to it, especially if they display revanchism or irredentism. Politics inside the limits of political systems, which in contemporary context correspond to national borders, are referred to as domestic politics. This includes most forms of public policy, such as social policy, economic policy, or law enforcement, which are executed by the state bureaucracy. Mesopolitics describes the politics of intermediary structures within a political system, such as national political parties or movements. A political party is a political organization that typically seeks to attain and maintain political power within government, usually by participating in political campaigns, educational outreach, or protest actions. Parties often espouse an expressed ideology or vision, bolstered by a written platform with specific goals, forming a coalition among disparate interests.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_time_perception",
-      "https://en.wikipedia.org/wiki/Musical_escapism"
+      "https://en.wikipedia.org/wiki/Politics"
     ],
     "source_chunk_ids": [
-      3544,
-      3530
+      4714
     ]
   },
   {
     "id": 99,
-    "question": "How are International Mars Ice Mapper Mission and Folk economics related?",
-    "answer": "economics.",
-    "question_type": "multi-hop",
+    "question": "Describe the nature of Lace using the available information.",
+    "answer": "by burning all her lace, and commissioning new pieces. This may be the origin of the lacemaker's holiday, Cattern's Day. On this day (25 or 26 November) lacemakers were given a day off from work, and Cattern cakes - small dough cakes made with caraway seeds, were used to celebrate. The English diarist Samuel Pepys often wrote about the lace used for his, his wife's, and his acquaintances' clothing, and on 10 May 1669, noted that he intended to remove the gold lace from the sleeves of his coat \"as it is fit [he] should\", possibly in order to avoid charges of ostentatious living. In 1840, Britain's Queen Victoria was married in lace, influencing the wedding dress style until now. The decline of the lace industry in England began about 1780, as was happening elsewhere. Some of the reasons include the increased popularity of clothing in the Classical style, the economic issues connected to war, and the increased production and use of machine-made laces. : 51\u201352 American colonists of both British and Dutch origins strove to acquire lace accessories such as caps, ruffs, and other neckwear, and handkerchiefs. American women who afford lace textiles were also able to afford aprons and dresses trimmed with the technique or made only from lace. Because of sumptuary laws, such as one in Massachusetts in 1634, American citizens were not allowed to own or make their lace textiles. Sumptuary laws prevented spending on extravagance and luxury and classified who could own or make lace. This indicates that lace was being made in that colony at the time. : 187\u2013189 Lacemaking was being taught in boarding schools by the mid 1700s, and newspaper advertisements starting in the early 1700s offered to teach the technique.",
+    "question_type": "paraphrased_adversarial",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/International_Mars_Ice_Mapper_Mission",
-      "https://en.wikipedia.org/wiki/Folk_economics"
+      "https://en.wikipedia.org/wiki/Lacework"
     ],
     "source_chunk_ids": [
-      2217,
-      3871
+      2773
     ]
   },
   {
     "id": 100,
-    "question": "What is the Nobel Prize year of History of books?",
-    "answer": "Not answerable from the given context.",
+    "question": "What is the secret, unpublished password for the Religion system?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Religion"
+    ],
+    "source_chunk_ids": [
+      6344
+    ]
   },
   {
     "id": 101,
-    "question": "What is the Nobel Prize year of Spatial intelligence (psychology)?",
-    "answer": "Not answerable from the given context.",
+    "question": "On what exact date will Vocal learning be officially discontinued in the year 2099?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Vocal_learning"
+    ],
+    "source_chunk_ids": [
+      251
+    ]
   },
   {
     "id": 102,
-    "question": "What is the Nobel Prize year of Electrostatic solitary wave?",
-    "answer": "Not answerable from the given context.",
+    "question": "Which specific individual wrote the 4th sentence of the Chemical industry Wikipedia entry?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Industrial_chemistry"
+    ],
+    "source_chunk_ids": [
+      5814
+    ]
   },
   {
     "id": 103,
-    "question": "What is the Nobel Prize year of Exploration of Mercury?",
-    "answer": "Not answerable from the given context.",
+    "question": "What is the GPS coordinate of the exact center of Facebook Graph Search?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Facebook_Graph_Search"
+    ],
+    "source_chunk_ids": [
+      1556
+    ]
   },
   {
     "id": 104,
-    "question": "What is the Nobel Prize year of Geography?",
-    "answer": "Not answerable from the given context.",
+    "question": "Which specific individual wrote the 4th sentence of the Indoor practice facility Wikipedia entry?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Indoor_practice_facility"
+    ],
+    "source_chunk_ids": [
+      493
+    ]
   },
   {
     "id": 105,
-    "question": "What is the Nobel Prize year of History of books?",
-    "answer": "Not answerable from the given context.",
+    "question": "Which specific individual wrote the 4th sentence of the Borgia Apartments Wikipedia entry?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Borgia_Apartments"
+    ],
+    "source_chunk_ids": [
+      1935
+    ]
   },
   {
     "id": 106,
-    "question": "What is the Nobel Prize year of International date line in Judaism?",
-    "answer": "Not answerable from the given context.",
+    "question": "What is the GPS coordinate of the exact center of Kalanit?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Kalanit"
+    ],
+    "source_chunk_ids": [
+      6449
+    ]
   },
   {
     "id": 107,
-    "question": "What is the Nobel Prize year of Public opinion?",
-    "answer": "Not answerable from the given context.",
+    "question": "What is the secret, unpublished password for the Labyrinthitis system?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Labyrinthitis"
+    ],
+    "source_chunk_ids": [
+      5907
+    ]
   },
   {
     "id": 108,
-    "question": "What is the Nobel Prize year of K\u00e1rm\u00e1n line?",
-    "answer": "Not answerable from the given context.",
+    "question": "What is the secret, unpublished password for the Spontaneous recovery system?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Spontaneous_recovery"
+    ],
+    "source_chunk_ids": [
+      194
+    ]
   },
   {
     "id": 109,
-    "question": "What is the Nobel Prize year of Geo-replication?",
-    "answer": "Not answerable from the given context.",
+    "question": "Which specific individual wrote the 4th sentence of the Statistics Wikipedia entry?",
+    "answer": "This information is not available in the provided context. The document does not contain internal system data, future predictions, or meta-data about its own authorship.",
     "question_type": "unanswerable",
-    "source_urls": [],
-    "source_chunk_ids": []
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Statistics"
+    ],
+    "source_chunk_ids": [
+      7205
+    ]
   }
 ]

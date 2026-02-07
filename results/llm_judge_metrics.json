@@ -1,20 +1,20 @@
 {
   "dense": {
-    "accuracy": 2.127,
-    "completeness": 2.25,
-    "relevance": 2.25,
-    "coherence": 2.25
+    "accuracy": 1.95,
+    "completeness": 2.1,
+    "relevance": 2.1,
+    "coherence": 2.1
   },
   "sparse": {
-    "accuracy": 2.098,
-    "completeness": 2.4,
-    "relevance": 2.4,
-    "coherence": 2.4
+    "accuracy": 1.788,
+    "completeness": 2.0,
+    "relevance": 2.0,
+    "coherence": 2.0
   },
   "hybrid": {
-    "accuracy": 2.215,
-    "completeness": 2.3,
-    "relevance": 2.3,
-    "coherence": 2.3
+    "accuracy": 2.015,
+    "completeness": 2.15,
+    "relevance": 2.15,
+    "coherence": 2.15
   }
 }
